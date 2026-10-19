@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>项目详情 · 开源项目趋势站</title>
+    <meta name="description" content="项目 Star 增长趋势、周期榜单成绩与统计口径说明" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+    <script>
+      try {
+        var saved = JSON.parse(localStorage.getItem("gh_trends_theme") || "null");
+        var dark = saved === "dark" || (!saved && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="./src/pages/project.js"></script>
+  </body>
+</html>
