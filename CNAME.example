@@ -1,0 +1,36 @@
+# CNAME —— 自定义域名配置
+
+## 这个文件放什么
+
+把你自己的域名写在这里，一行，**不要加 https:// 不要加路径**：
+
+```
+trends.example.com
+```
+
+## 什么时候需要它
+
+- **不需要**：用默认的 `https://<用户名>.github.io/<仓库名>/` 地址
+- **需要**：想用 `https://trends.example.com` 这样的独立域名
+
+## 生效步骤
+
+1. 把本文件内容改成你的域名并提交
+2. 等 `Deploy to GitHub Pages` 跑完
+3. 在域名服务商添加 DNS 记录：
+
+   | 类型 | 主机 | 指向 |
+   |------|------|------|
+   | CNAME | `trends` | `<你的GitHub用户名>.github.io` |
+
+4. 等 GitHub 签发证书（Settings → Pages 会显示 `Your site is live at https://trends.example.com`）
+
+5. 勾选 **Enforce HTTPS**
+
+## 注意
+
+- 本文件留空或保持占位内容不影响默认地址访问
+- **不要**同时配 A 记录（A 记录指向 GitHub 的 IP），会和 CNAME 冲突导致重定向循环
+- GitHub Pages 的 DNS 生效通常几分钟，最长 48 小时
+
+详见 [docs/DEPLOY.md](docs/DEPLOY.md) 第八节。
