@@ -1,0 +1,109 @@
+# ============================================================================
+# GitHub Pages 部署
+#
+# 采用官方推荐的 Pages Actions 方案（而非老式 gh-pages 分支）：
+#   - 产物直接由 Actions 上传，无需额外提交
+#   - 天然支持私有仓库
+#   - 支持环境变量、历史部署预览、并行部署互不覆盖
+#
+# 首次启用步骤见 docs/DEPLOY.md 第 4 节。
+# ============================================================================
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+    # 纯文档改动不触发部署：改个 README 不该重新跑一遍构建与部署
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+      - "CNAME.example"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 允许一次 push 只触发一个部署；运行中的部署会被取消
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # 本项目是纯静态站点，没有编译步骤。这一步做两件事：
+      #   1. 校验数据快照是否合法，避免把坏数据推上线
+      #   2. 组装 staging 目录，只发布运行时真正需要的文件
+      #
+      # 为什么不用 path: "."：那会把 .git 之外的开发文件（workflow、docs、
+      # 临时脚本）也一起发布出去，仓库体积和部署产物都会变大。
+      - name: Validate data snapshot
+        run: |
+          if [ -f public/data/trending.json ]; then
+            node -e "
+              const d = require('./public/data/trending.json');
+              if (!Array.isArray(d.items)) { console.error('快照格式错误：items 不是数组'); process.exit(1); }
+              console.log('✓ 快照校验通过，项目数：', d.items.length);
+              console.log('  生成时间：', d.generatedAt);
+            "
+          else
+            echo "⚠ 尚无数据快照，站点将回退到浏览器直连 API。"
+          fi
+
+      - name: Assemble staging directory
+        run: |
+          set -euo pipefail
+          STAGE="_site_staging"
+          rm -rf "$STAGE"
+          mkdir -p "$STAGE"
+
+          # 页面入口（404.html 用于无扩展名路径兜底）
+          cp index.html overview.html project.html favorites.html compare.html 404.html "$STAGE/"
+
+          # 自定义域名（仅在用户创建了 CNAME 时）
+          if [ -f CNAME ]; then
+            cp CNAME "$STAGE/"
+            echo "✓ 已包含 CNAME: $(cat CNAME)"
+          fi
+
+          # 运行时资源：样式 / ES 模块 / 数据快照
+          cp -r src "$STAGE/"
+          cp -r public "$STAGE/"
+
+          # 关闭 Jekyll 处理，保证 src/ 原样发布（否则下划线开头的目录会被忽略）
+          touch "$STAGE/.nojekyll"
+
+          echo "── staging 内容 ──"
+          find "$STAGE" -type f | sed "s|$STAGE/||" | sort
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site_staging"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
