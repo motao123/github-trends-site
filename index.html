@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>开源项目趋势榜单 · GitHub Trending 统计</title>
+    <meta name="description" content="基于 GitHub REST API 的开源项目周期热度统计：周榜 / 月榜 / 季度 / 半年 / 年度，含 Star 增长量、语言分布与项目对比。" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+    <script>
+      // 在首帧前套用主题，避免深色模式下的白屏闪烁
+      try {
+        var saved = JSON.parse(localStorage.getItem("gh_trends_theme") || "null");
+        var dark = saved === "dark" || (!saved && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <noscript>
+        <div style="padding: 48px; text-align: center; font-family: system-ui">
+          本站依赖 JavaScript 渲染榜单数据，请在浏览器中启用 JavaScript。
+        </div>
+      </noscript>
+    </div>
+    <script type="module" src="./src/pages/leaderboard.js"></script>
+  </body>
+</html>
