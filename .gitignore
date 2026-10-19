@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+*.log
+.env
+.env.local
+
+# 构建产物
+_site_staging/
