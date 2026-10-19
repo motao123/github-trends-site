@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>正在跳转 · 开源项目趋势站</title>
+    <!--
+      GitHub Pages 的 SPA 路由兜底。
+      直接访问 /overview.html 这类路径能正常工作，但访问 /overview（无扩展名）
+      或深链接时会命中 404。本页拦截后回退到首页，并把原路径写进 history，
+      由前端按 ?r= 参数重新分发。
+    -->
+    <script>
+      (function () {
+        var l = window.location;
+        var target = l.pathname + l.search + l.hash;
+        // 避免真的存在的 .html 文件被误改写
+        if (/\.(html|json|css|js|svg|png|jpg|webp|ico|txt|md|xml)$/i.test(l.pathname)) {
+          if (/\.html$/i.test(l.pathname)) return; // 正常页面，放行
+        }
+        // 映射无扩展名路径 → 实际页面
+        var map = {
+          "/": "index.html",
+          "/overview": "overview.html",
+          "/favorites": "favorites.html",
+          "/compare": "compare.html",
+          "/project": "project.html",
+        };
+        var key = l.pathname.replace(/\/+$/, "") || "/";
+        var page = map[key];
+        if (!page) {
+          document.write(
+            '<div style="font-family:system-ui;padding:64px;text-align:center">' +
+              "<h1 style='font-size:20px'>404 · 页面不存在</h1>" +
+              "<p style='color:#6B7280'>请从 <a href='./index.html'>首页</a> 进入。</p></div>"
+          );
+          return;
+        }
+        l.replace(l.origin + "/" + page + "?r=" + encodeURIComponent(target));
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
