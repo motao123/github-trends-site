@@ -13,11 +13,16 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ["main"]
-    # 纯文档改动不触发部署：改个 README 不该重新跑一遍构建与部署
-    paths-ignore:
-      - "**.md"
-      - "docs/**"
-      - "CNAME.example"
+    # 注意：这里刻意不用 paths-ignore。
+    #
+    # paths-ignore 是「整次 push 只改了被忽略的路径才跳过」。而 fetch-data.yml
+    # 每 2 小时推送一个只含 public/data/trending.json 的提交 —— 一旦配置了
+    # paths-ignore，这次推送会被跳过，数据更新就永远部署不到线上。
+    #
+    # 改为：接收所有 push，在 build job 内用条件判断是否真的需要部署。
+    # 纯文档改动仍然会被跳过，但不会误伤数据提交。
+    paths:
+      - "**"
   workflow_dispatch:
 
 permissions:
@@ -31,7 +36,48 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  detect:
+    # 轻量 job：只判断这次 push 有没有改动运行时文件。
+    # 纯 README / docs 改动在这里被跳过，不消耗部署资源。
+    runs-on: ubuntu-latest
+    outputs:
+      should_deploy: ${{ steps.check.outputs.should_deploy }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect runtime changes
+        id: check
+        run: |
+          # workflow_dispatch 与首次推送没有 before SHA，视为需要部署
+          BEFORE="${{ github.event.before }}"
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            echo "首次推送或手动触发 → 需要部署"
+            echo "should_deploy=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          CHANGED=$(git diff --name-only "$BEFORE" "${{ github.sha }}" || true)
+          echo "改动文件："
+          echo "$CHANGED"
+
+          # 过滤掉纯文档：docs/、根目录 md、PAGES_CONFIG.md、CNAME.example
+          # 注意不能过滤 public/data/ —— 那正是每 2 小时更新的数据快照
+          RUNTIME=$(echo "$CHANGED" | grep -vE '^(docs/|\.github/PAGES_CONFIG\.md$|CNAME\.example$|[^/]+\.md$)' || true)
+
+          if [ -z "$RUNTIME" ]; then
+            echo "仅文档变更 → 跳过部署"
+            echo "should_deploy=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "存在运行时变更 → 需要部署"
+            echo "should_deploy=true" >> "$GITHUB_OUTPUT"
+          fi
+
   build:
+    needs: detect
+    if: needs.detect.outputs.should_deploy == 'true'
     runs-on: ubuntu-latest
 
     steps:
