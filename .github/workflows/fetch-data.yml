@@ -1,0 +1,85 @@
+# ============================================================================
+# 数据抓取定时任务
+#
+# 作用：调用 GitHub API 抓取各周期榜单，落盘为 public/data/trending.json。
+# 每 2 小时跑一次，保证站点访客永远不会消耗自己的 API 额度。
+#
+# 令牌配置（必需，否则只能用匿名 60 次/小时）：
+#   仓库 → Settings → Secrets and variables → Actions → New repository secret
+#   Name: GH_PAT    Value: <Personal Access Token>
+#
+# ⚠️ Secret 名不能用 GITHUB_ 前缀（GitHub 硬性限制：HTTP 422），
+#    因此这里统一用 GH_PAT。脚本会依次读取 GH_PAT / GITHUB_TOKEN / GH_TOKEN。
+# ============================================================================
+name: Fetch Trending Data
+
+on:
+  schedule:
+    # 每 2 小时一次。GitHub 的 schedule 队列繁忙时可能延迟 5–15 分钟，属正常现象。
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "强制刷新（忽略是否已有快照）"
+        type: boolean
+        default: true
+
+# 允许 workflow 提交快照更新（写回 main 分支）
+permissions:
+  contents: write
+
+concurrency:
+  # 防止上一次未跑完就叠加下一次，search 接口本来就吃二级限流
+  group: fetch-trending
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch trending data
+        env:
+          # 用 secrets 传入，脚本只读 env，不写进任何提交的文件。
+          # GH_PAT 是主名称；两个空值做兜底，防止 CI 里误配 GITHUB_TOKEN
+          # 时把内置的只读令牌塞进来导致限流。
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        run: node scripts/fetch-trending.mjs
+
+      # 注意：必须用 GH_PAT 推送。
+      # 默认的 actions/checkout 会把凭据持久化到本地 git config，
+      # 直接 `git push` 会以 bot 身份因分支保护而失败（HTTP 403）。
+      - name: Commit and push snapshot
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          set -euo pipefail
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add public/data/trending.json
+
+          # 必须先 add 再 diff --cached：checkout 时快照已存在于工作区，
+          # 用 `git diff`（工作区 vs 索引）会永远判定「无变化」而跳过提交。
+          if git diff --cached --quiet; then
+            echo "快照无变化，跳过提交与部署。"
+            exit 0
+          fi
+
+          COMMIT_MSG="chore(data): 更新趋势快照 $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git commit -m "$COMMIT_MSG"
+
+          # 快照更新后需要重新部署 Pages。用显式 URL 覆盖 checkout 存的凭据。
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+                   "HEAD:refs/heads/${{ github.ref_name }}"
