@@ -1,0 +1,17 @@
+# 统一换行符，避免不同系统间提交产生无意义 diff。
+# Pages 服务端按 LF 解析；混用 CRLF 可能导致 MIME 嗅探异常。
+* text=auto eol=lf
+
+*.js   text eol=lf
+*.mjs  text eol=lf
+*.css  text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.md   text eol=lf
+
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.ico  binary
