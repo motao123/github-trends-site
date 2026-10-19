@@ -1,0 +1,22 @@
+{
+  "name": "github-trends-site",
+  "version": "1.2.0",
+  "private": true,
+  "description": "基于 GitHub REST API 的开源项目趋势统计网站（纯静态，零运行时依赖）",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "fetch": "node scripts/fetch-trending.mjs",
+    "fetch:once": "node scripts/fetch-trending.mjs --once"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "github",
+    "trending",
+    "static-site",
+    "github-pages"
+  ],
+  "license": "MIT"
+}
