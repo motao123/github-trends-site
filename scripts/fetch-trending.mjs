@@ -64,6 +64,11 @@ function today() {
   return new Date().toISOString().slice(0, 10);
 }
 
+/** 时间戳 → YYYY-MM-DD（UTC，与 today() 保持同一时区口径）。 */
+function dayKey(ts) {
+  return new Date(ts).toISOString().slice(0, 10);
+}
+
 async function api(path, { retries = 3 } = {}) {
   const url = path.startsWith("http") ? path : `https://api.github.com${path}`;
   const headers = {
@@ -184,7 +189,7 @@ async function main() {
 
     for (const item of data.items || []) {
       if (!repos.has(item.full_name)) {
-        repos.set(item.full_name, { ...normalize(item), periods: {}, growth: {} });
+        repos.set(item.full_name, { ...normalize(item), periods: {}, growth: {}, covered: {} });
       }
       repos.get(item.full_name).periods[period.id] = item.stargazers_count;
     }
@@ -201,40 +206,76 @@ async function main() {
   const items = [...repos.values()];
   let withGrowth = 0;
 
+  /* ---- 先算每日的 star 增量，追加进 history ---- */
+  const day = today();
   for (const item of items) {
     const base = prevStars.get(item.fullName);
+    if (base == null) continue;
+    // 日增量用 stars（抓取时的实时总量）做差，与任何周期窗口无关 ——
+    // 这样 history 里的每一天都是「该日真实新增」，各周期再从它派生。
+    const delta = item.stars - base;
+    if (delta <= 0) continue;
+
+    if (!history[item.fullName]) history[item.fullName] = [];
+    const list = history[item.fullName];
+    const existing = list.find((point) => point.date === day);
+    // 同一天会被抓取多次（每 2 小时一次），必须累加而不是覆盖 ——
+    // 覆盖会让当天的值变成「最近一次 2 小时的增量」，
+    // 日增量之和就不再等于当天的真实增长。
+    if (existing) existing.delta += delta;
+    else list.push({ date: day, delta });
+    if (list.length > HISTORY_DAYS) list.splice(0, list.length - HISTORY_DAYS);
+  }
+
+  /* ---- 周期增长 = 该周期窗口内 history 的日增量之和 ----
+   *
+   * 为什么不用「相邻两次快照做差」：
+   *   相邻快照只隔 2 小时，做差得到的是「2 小时增量」，
+   *   五个周期算出来几乎是同一个数（实测 1347/1351/1353/1354/1354），
+   *   周期长度这个最关键的信息完全丢失。
+   *
+   * 正确口径：周期增长 = 该窗口内每天的增长量累加。
+   *
+   * 关于基线不足：站点刚部署时历史只有一两天，此时给出「暂无基线」是对的，
+   * 但如果一律置 null，五个周期全空，用户什么都看不到。
+   * 因此这里采用「有数据就给数、同时记录覆盖天数」的方式：
+   *   growth  = 窗口内日增量之和
+   *   covered = 该值实际覆盖了几天
+   * 前端据此提示「已积累 N 天」，读者能判断这个数代表多长的区间。
+   */
+  for (const item of items) {
     for (const period of PERIODS) {
       const current = item.periods[period.id];
       if (current == null) {
         item.growth[period.id] = null;
+        item.covered[period.id] = 0;
         continue;
       }
-      if (base == null) {
-        // 没有上次快照 → 无法算差值。用 null 而不是 0，前端会显示「暂无基线」。
+
+      const list = history[item.fullName] || [];
+      if (list.length === 0) {
         item.growth[period.id] = null;
+        item.covered[period.id] = 0;
         continue;
       }
-      const delta = current - base;
-      item.growth[period.id] = delta > 0 ? delta : 0;
-      if (delta > 0) withGrowth += 1;
+
+      const cutoff = dayKey(Date.now() - period.days * 86400000);
+      const inWindow = list.filter((p) => p.date >= cutoff);
+      // covered = 窗口内实际积累了多少天的日增量（数据点数量），
+      // 而不是日期跨度 —— 10-19 与 10-20 两个数据点代表 2 天有效数据。
+      const covered = inWindow.length;
+
+      if (covered === 0) {
+        item.growth[period.id] = null;
+        item.covered[period.id] = 0;
+        continue;
+      }
+
+      const sum = inWindow.reduce((acc, p) => acc + (p.delta || 0), 0);
+      item.growth[period.id] = sum;
+      item.covered[period.id] = covered;
+      if (sum > 0) withGrowth += 1;
     }
-  }
-
-  /* ---- 累计每日增长历史（趋势图数据源） ---- */
-  const day = today();
-  const dayTotals = {};
-  for (const item of items) {
-    const delta = item.growth?.week ?? 0;
-    dayTotals[item.fullName] = (dayTotals[item.fullName] || 0) + delta;
-  }
-
-  for (const [fullName, total] of Object.entries(dayTotals)) {
-    if (!history[fullName]) history[fullName] = [];
-    const list = history[fullName];
-    const existing = list.find((point) => point.date === day);
-    if (existing) existing.delta = total;
-    else list.push({ date: day, delta: total });
-    if (list.length > HISTORY_DAYS) list.splice(0, list.length - HISTORY_DAYS);
   }
 
   /* ---- 写快照 ---- */
