@@ -5,7 +5,7 @@
 import { loadSnapshot } from "../lib/data.js";
 import { getFavorites, toggleFavorite, getCompare, toggleCompare, COMPARE_LIMIT } from "../lib/store.js";
 import { el, mount, icon, formatNumber, relativeTime, toast, exportCsv } from "../lib/ui.js";
-import { renderTopbar, bindTopbarSearch, emptyState, loadingState, repoCell, langCell, renderFooter, renderCompareTray } from "../components/ui.js";
+import { renderTopbar, bindTopbarSearch, setSearchValue, emptyState, loadingState, repoCell, langCell, renderFooter, renderCompareTray } from "../components/ui.js";
 
 const app = document.querySelector("#app");
 let snapshot = null;
@@ -136,6 +136,7 @@ function render() {
     renderFooter(),
   );
 
+  setSearchValue(getState().keyword);
   bindTopbarSearch((keyword) => {
     window.location.href = `./index.html?q=${encodeURIComponent(keyword)}`;
   });
