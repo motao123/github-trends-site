@@ -9,6 +9,7 @@ import { el, mount, icon, formatNumber, relativeTime, toast, exportCsv } from ".
 import {
   renderTopbar,
   bindTopbarSearch,
+  setSearchValue,
   loadingState,
   emptyState,
   errorState,
@@ -353,7 +354,31 @@ function renderPagination(state, totalPages) {
   );
 }
 
+/**
+ * 从 URL 读取初始筛选条件。
+ *
+ * 其他页面（总览/收藏/对比）的顶栏搜索会跳转到 index.html?q=xxx，
+ * 这里负责接收并应用该参数，否则跨页搜索会失效。
+ * 优先级：URL 参数 > 本地保存的状态。
+ */
+function applyUrlParams() {
+  const params = new URLSearchParams(window.location.search);
+  const q = (params.get("q") || "").trim();
+
+  if (q) {
+    setState({ keyword: q, page: 1 });
+    setSearchValue(q);
+    return true;
+  }
+
+  // 没有 URL 参数时，用本地保存的关键词回填搜索框
+  const saved = getState().keyword;
+  if (saved) setSearchValue(saved);
+  return false;
+}
+
 async function boot() {
+  applyUrlParams();
   mount(app, renderTopbar("leaderboard"), el("main", { class: "page" }, skeletonRows()));
 
   try {
