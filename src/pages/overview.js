@@ -5,7 +5,7 @@
 import { loadSnapshot, summarize, languageDistribution, buildRanking, freshnessLabel, clockLabel } from "../lib/data.js";
 import { getState, setState } from "../lib/store.js";
 import { el, mount, icon, formatNumber, langColor, exportCsv, toast } from "../lib/ui.js";
-import { renderTopbar, bindTopbarSearch, loadingState, kpi, cacheStatusCard, renderFooter, skeletonRows } from "../components/ui.js";
+import { renderTopbar, bindTopbarSearch, setSearchValue, loadingState, kpi, cacheStatusCard, renderFooter, skeletonRows } from "../components/ui.js";
 
 const app = document.querySelector("#app");
 
@@ -111,6 +111,8 @@ function render() {
     renderFooter(),
   );
 
+  // 回填已保存的关键词，让从其他页面跳回来时搜索框内容可见
+  setSearchValue(getState().keyword);
   bindTopbarSearch((keyword) => {
     setState({ keyword, page: 1 });
     window.location.href = `./index.html?q=${encodeURIComponent(keyword)}`;
