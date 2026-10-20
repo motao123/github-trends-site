@@ -213,26 +213,29 @@ export function buildRanking(snapshot, periodId, options = {}) {
     const nb = nullRank(b.periodGrowth);
     if (na !== nb) return na - nb;
 
+    // cmp 统一按「降序」语义计算：正值表示 a 应排在 b 之前。
     let cmp = 0;
     switch (sort) {
       case "stars":
-        cmp = a.stars - b.stars;
+        cmp = b.stars - a.stars;
         break;
       case "growth":
-        cmp = (a.periodGrowth ?? 0) - (b.periodGrowth ?? 0);
+        cmp = (b.periodGrowth ?? 0) - (a.periodGrowth ?? 0);
         break;
       case "forks":
-        cmp = a.forks - b.forks;
+        cmp = b.forks - a.forks;
         break;
       case "updated":
-        cmp = new Date(a.pushedAt) - new Date(b.pushedAt);
+        cmp = new Date(b.pushedAt) - new Date(a.pushedAt);
         break;
       case "created":
-        cmp = new Date(a.createdAt) - new Date(b.createdAt);
+        cmp = new Date(b.createdAt) - new Date(a.createdAt);
         break;
       default:
-        cmp = (a.periodGrowth ?? 0) - (b.periodGrowth ?? 0);
+        cmp = (b.periodGrowth ?? 0) - (a.periodGrowth ?? 0);
     }
+
+    // 升序时整体翻转。名次相同时用项目名做稳定的次级排序。
     if (cmp === 0) cmp = collator.compare(a.fullName, b.fullName);
     return direction === "asc" ? -cmp : cmp;
   });
