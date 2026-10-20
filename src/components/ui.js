@@ -30,7 +30,7 @@ export function renderTopbar(active = "leaderboard") {
     title: "切换主题",
   });
   const paintTheme = () => {
-    mount(themeBtn, icon(getTheme() === "dark" ? "sun" : "moon", 18));
+    mount(themeBtn, icon(getTheme() === "dark" ? "sun" : "moon", 16));
   };
   paintTheme();
   themeBtn.addEventListener("click", () => {
@@ -60,7 +60,7 @@ export function renderTopbar(active = "leaderboard") {
       el(
         "a",
         { class: "brand", href: "./index.html" },
-        [el("span", { class: "brand__mark", html: icon("trend", 18).innerHTML }), "开源趋势站"],
+        [el("span", { class: "brand__mark", html: icon("trend", 15).innerHTML }), "开源趋势站"],
       ),
       nav,
     ),
@@ -92,7 +92,7 @@ export function loadingState(label = "正在拉取最新榜单数据 · 骨架�
     { class: "state", role: "status", "aria-busy": "true" },
     el(
       "div",
-      { class: "skeleton-row", style: "width:100%;max-width:640px" },
+      { class: "skeleton-row skeleton-row--inline" },
       el("div", { class: "skeleton" }),
       el("div", { class: "skeleton" }),
       el("div", { class: "skeleton" }),
@@ -116,7 +116,7 @@ export function errorState({ message, code, onRetry }) {
   return el(
     "div",
     { class: "state state--error", role: "alert" },
-    el("span", { class: "state__title", style: "display:inline-flex;align-items:center;gap:8px" }, icon("error", 18), "数据加载失败"),
+    el("span", { class: "state__title state__title--inline" }, icon("error", 16), "数据加载失败"),
     el("p", { class: "state__desc", text: message || "无法连接 GitHub API。若此前已缓存数据，已自动回退到本地快照。" }),
     code ? el("div", { class: "state__code", text: code }) : null,
     el(
@@ -135,7 +135,7 @@ export function rateLimitState({ limit, remaining, reset }) {
     { class: "card state state--rate", role: "alert" },
     el(
       "span",
-      { class: "state__title", style: "display:inline-flex;align-items:center;gap:10px" },
+      { class: "state__title state__title--inline" },
       icon("warn", 18),
       "GitHub API 速率限制提醒",
     ),
@@ -216,7 +216,7 @@ export function growthCell(growth, maxGrowth) {
       "div",
       { class: "growth" },
       el("span", { class: "growth__value", style: "color:var(--text-tertiary)", text: "暂无基线" }),
-      el("span", { class: "growth__track" }, el("span", { class: "growth__fill growth__fill--muted", style: "width:6px" })),
+      el("span", { class: "growth__track" }, el("span", { class: "growth__fill growth__fill--muted" })),
     );
   }
   const ratio = maxGrowth > 0 ? Math.max(6, Math.round((growth / maxGrowth) * 100)) : 6;
@@ -239,29 +239,31 @@ export function renderTrendChart(series, { height = 300 } = {}) {
   const yTicks = 5;
 
   if (!daily.length) {
-    return el("div", { class: "chart", style: "align-items:center;justify-content:center" }, emptyState({ title: "暂无增长数据", desc: "该时间窗口内没有采集到 Star 变化记录" }));
+    return el("div", { class: "chart chart--empty" }, emptyState({ title: "暂无增长数据", desc: "该时间窗口内没有采集到 Star 变化记录" }));
   }
 
   const maxDaily = Math.max(...daily, 1);
   const maxCum = Math.max(...cumulative, 1);
-  // 两条线共用一个归一化轴，靠双 Y 轴语义说明区分，避免误读量级
+  // 两条线共用一个归一化轴，靠图例说明区分量级，避免误读
   const scaleMax = Math.max(maxDaily, maxCum * 0.35, 1);
-  const stepX = daily.length > 1 ? 100 / (daily.length - 1) : 100;
+
+  // viewBox 用真实像素尺度，避免 preserveAspectRatio 拉伸导致描边变形
+  const H = 240;
+  const W = Math.max(240, daily.length * 9);
+  const stepX = daily.length > 1 ? W / (daily.length - 1) : W;
 
   const toPoints = (values) =>
     values
       .map((value, index) => {
-        const x = (index * stepX).toFixed(2);
-        const y = (100 - (value / scaleMax) * 100).toFixed(2);
+        const x = (index * stepX).toFixed(1);
+        const y = (H - (value / scaleMax) * H).toFixed(1);
         return `${x},${y}`;
       })
       .join(" ");
 
   const dailyPoints = toPoints(daily);
   const cumPoints = toPoints(cumulative);
-  const areaPath = `M0,100 L${dailyPoints.split(" ").join(" L")} L100,100 Z`;
-
-  const maxIndex = daily.length - 1;
+  const lastY = (H - (daily[daily.length - 1] / scaleMax) * H).toFixed(1);
 
   return el(
     "div",
@@ -279,20 +281,15 @@ export function renderTrendChart(series, { height = 300 } = {}) {
       { class: "chart__plot" },
       el("div", {
         class: "chart__canvas",
-        html: `<svg viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label="Star 增长趋势折线图">
-          <defs>
-            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="var(--accent)" stop-opacity="0.18"/>
-              <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          ${[0, 25, 50, 75, 100]
-            .map((y) => `<line x1="0" y1="${y}" x2="100" y2="${y}" stroke="var(--border-subtle)" stroke-width="0.3" vector-effect="non-scaling-stroke"/>`)
+        // 不用 preserveAspectRatio="none"：那会把描边拉变形。
+        // 改用固定 viewBox 宽度按实际数据量自适应，坐标轴用 CSS 网格对齐。
+        html: `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Star 增长趋势折线图">
+          ${[0, 0.25, 0.5, 0.75, 1]
+            .map((t) => `<line x1="0" y1="${(t * H).toFixed(1)}" x2="${W}" y2="${(t * H).toFixed(1)}" stroke="var(--border-subtle)" stroke-width="1" vector-effect="non-scaling-stroke"/>`)
             .join("")}
-          <path d="${areaPath}" fill="url(#areaGrad)"/>
-          <polyline points="${cumPoints}" fill="none" stroke="var(--success)" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke" stroke-linejoin="round" stroke-linecap="round"/>
+          <polyline points="${cumPoints}" fill="none" stroke="var(--success)" stroke-width="1.5" stroke-dasharray="4 3" vector-effect="non-scaling-stroke" stroke-linejoin="round" stroke-linecap="round"/>
           <polyline points="${dailyPoints}" fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" stroke-linecap="round"/>
-          <circle cx="100" cy="${(100 - (daily[maxIndex] / scaleMax) * 100).toFixed(2)}" r="1" fill="var(--accent)" vector-effect="non-scaling-stroke"/>
+          <circle cx="${W}" cy="${lastY}" r="3" fill="var(--accent)" stroke="var(--bg-card)" stroke-width="2"/>
         </svg>`,
       }),
       el(
@@ -308,26 +305,33 @@ export function chartLegend() {
   return el(
     "div",
     { class: "legend" },
-    el("span", { class: "legend__item" }, el("span", { class: "legend__swatch", style: "background:var(--accent)" }), "每日新增 Star"),
+    el("span", { class: "legend__item" }, el("span", { class: "legend__swatch" }), "每日新增 Star"),
     el("span", { class: "legend__item" }, el("span", { class: "legend__swatch legend__swatch--dash" }), "累计 Star 总数"),
   );
 }
 
 /* ---------------- KPI ---------------- */
 
-export function kpi({ label, value, delta, deltaKind = "up", hint }) {
-  // 「暂无基线」这类占位文案不该用 28px 的数字字号，单独降一档
+/**
+ * KPI 卡片。
+ *
+ * 关键点：不做四个一模一样的等权卡片。primary=true 的那张承担视觉焦点
+ * （更大数字、主色左边框、无边框），其余降级为次级信息 —— 这是成熟
+ * 仪表盘的做法，也打破了「千篇一律的四等分网格」。
+ */
+export function kpi({ label, value, delta, deltaKind = "up", hint, primary = false }) {
+  // 「暂无基线」这类占位文案不该用 30px 的数字字号，单独降一档
   const isPlaceholder = typeof value === "string" && !/^[-+]?[\d,.]+%?$/.test(value.trim());
   return el(
     "div",
-    { class: "kpi" },
+    { class: primary ? "kpi kpi--primary" : "kpi" },
     el("span", { class: "kpi__label", text: label }),
     el("span", {
       class: isPlaceholder ? "kpi__value kpi__value--placeholder" : "kpi__value num",
       text: value,
     }),
     delta ? el("span", { class: `kpi__delta kpi__delta--${deltaKind}`, text: delta }) : null,
-    hint ? el("span", { class: "kpi__label", style: "font-size:11px", text: hint }) : null,
+    hint ? el("span", { class: "kpi__hint", text: hint }) : null,
   );
 }
 
@@ -402,7 +406,7 @@ export function renderCompareTray(list, { onOpen, onClear, onRemove }) {
           "span",
           { class: "tray__item" },
           el("span", { text: name }),
-          el("button", { type: "button", text: "×", "aria-label": `移出对比 ${name}`, onclick: () => onRemove(name) }),
+          el("button", { class: "tray__remove", type: "button", "aria-label": `移出对比 ${name}`, onclick: () => onRemove(name) }, icon("x", 12)),
         ),
       ),
     ),
