@@ -788,17 +788,16 @@ table.rank tbody tr:hover td {
   min-width: 0;
 }
 
-.repo__avatar {
-  width: 26px;
-  height: 26px;
-  border-radius: var(--radius-sm);
+/* 详情页的项目标记：中性色仓库图标，不使用彩色色块 */
+.repo__mark {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
   flex-shrink: 0;
   display: grid;
   place-items: center;
-  color: #fff;
-  font-weight: 600;
-  font-size: 10px;
-  letter-spacing: -0.02em;
+  background: var(--bg-inset);
+  color: var(--text-tertiary);
 }
 
 .repo__text {
@@ -1349,46 +1348,6 @@ table.rank tbody tr:hover td {
   background: var(--accent-subtle);
   border: 1px solid var(--accent-border);
   color: var(--accent-text);
-}
-
-/* ============ 贡献者 ============ */
-.people {
-  display: flex;
-  flex-direction: column;
-}
-
-.person {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  height: 40px;
-}
-
-.person__avatar {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: #fff;
-  font-weight: 600;
-  font-size: 10px;
-  flex-shrink: 0;
-}
-
-.person__body {
-  flex: 1;
-  min-width: 0;
-}
-
-.person__name {
-  font-weight: 500;
-  font-size: var(--text-sm);
-}
-
-.person__meta {
-  color: var(--text-tertiary);
-  font-size: var(--text-xs);
 }
 
 /* ============ 对比托盘 ============ */
