@@ -44,7 +44,7 @@ function render() {
         ),
         el(
           "div",
-          { style: "display:flex;gap:10px" },
+          { class: "action-row" },
           el(
             "button",
             {
@@ -82,7 +82,7 @@ function renderCompareTable(repos, period) {
       { class: "table-scroll" },
       el(
         "table",
-        { class: "rank", style: "min-width:720px" },
+        { class: "rank rank--compare" },
         el(
           "thead",
           {},
@@ -92,9 +92,9 @@ function renderCompareTable(repos, period) {
             el("th", { text: "指标" }),
             repos.map((repo) =>
               el("th", { style: "text-align:right" },
-                el("div", { style: "display:flex;align-items:center;gap:8px;justify-content:flex-end" },
+                el("div", { class: "compare-head" },
                   el("span", { style: "font-weight:600;color:var(--text-primary)", text: repo.name }),
-                  el("button", { class: "tag-btn", type: "button", "aria-label": `移出对比 ${repo.fullName}`, text: "×", onclick: () => { toggleCompare(repo.fullName); render(); } }),
+                  el("button", { class: "tag-btn", type: "button", "aria-label": `移出对比 ${repo.fullName}`, onclick: () => { toggleCompare(repo.fullName); render(); } }, icon("x", 12)),
                 ),
               ),
             ),
@@ -124,11 +124,11 @@ function renderCompareTable(repos, period) {
             el("td", { style: "color:var(--text-secondary)", text: `${PERIOD_MAP.get(period)?.label || "本周"} Star 增长` }),
             repos.map((repo) => {
               const growth = repo.growth?.[period];
-              const cell = el("td", { class: "num", style: "text-align:right", text: growth == null ? "暂无基线" : `+${formatNumber(growth)}` });
+              const cell = el("td", { class: growth == null ? "cell-muted" : "num", style: "text-align:right", text: growth == null ? "暂无基线" : `+${formatNumber(growth)}` });
               const values = repos.map((r) => r.growth?.[period] ?? -1);
               const max = Math.max(...values);
               if (growth != null && growth === max && max > 0) {
-                cell.append(el("span", { style: "margin-left:6px;color:var(--success)", text: "领先" }));
+                cell.append(el("span", { class: "lead-tag", text: "领先" }));
               }
               return cell;
             }),
@@ -140,7 +140,7 @@ function renderCompareTable(repos, period) {
             repos.map((repo) => {
               const rows = buildRanking(snapshot, period, { sort: "growth" });
               const idx = rows.findIndex((r) => r.fullName === repo.fullName);
-              return el("td", { class: "num", style: "text-align:right", text: idx >= 0 ? `No.${idx + 1}` : "未在榜" });
+              return el("td", { class: idx >= 0 ? "num" : "cell-muted", style: "text-align:right", text: idx >= 0 ? `No.${idx + 1}` : "未在榜" });
             }),
           ),
         ),
@@ -165,7 +165,7 @@ function renderGrowthMatrix(repos, period) {
         return [
           el(
             "div",
-            { class: "bars__label", style: "margin-top:8px" },
+            { class: "bars__group-label" },
             el("span", { class: "bars__name", text: PERIOD_MAP.get(pid).label }),
           ),
           ...repos.map((repo, index) =>
