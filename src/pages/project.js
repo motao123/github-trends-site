@@ -43,7 +43,7 @@ function render() {
     // 头部信息
     el(
       "section",
-      { class: "page", style: "padding-bottom:0;gap:24px" },
+      { class: "page page--detail" },
       el(
         "div",
         { class: "page-head", style: "align-items:flex-start" },
@@ -51,12 +51,12 @@ function render() {
           "div",
           { class: "breadcrumb" },
           el("a", { href: "./index.html", text: "趋势榜单" }),
-          el("span", { text: "›" }),
+          el("span", { class: "breadcrumb__sep" }, icon("separator", 14)),
           el("span", { style: "color:var(--text-primary);font-weight:500", text: repo.fullName }),
         ),
         el(
           "div",
-          { style: "display:flex;gap:10px" },
+          { class: "action-row" },
           el(
             "button",
             {
@@ -89,10 +89,10 @@ function render() {
       ),
       el(
         "div",
-        { class: "card", style: "flex-direction:row;gap:20px;align-items:flex-start" },
+        { class: "card card--row" },
         el(
           "div",
-          { style: "display:flex;gap:20px;flex:1;min-width:0" },
+          { class: "card__lead" },
           el("span", {
             class: "repo__avatar",
             style: `width:64px;height:64px;border-radius:14px;background:${avatarColor(repo.owner)};font-size:20px`,
@@ -100,26 +100,26 @@ function render() {
           }),
           el(
             "div",
-            { style: "min-width:0;display:flex;flex-direction:column;gap:10px" },
-            el("h1", { class: "page-title", style: "font-size:26px", text: repo.fullName }),
-            el("p", { class: "page-sub", style: "max-width:620px", text: repo.description || "该项目没有提供描述" }),
+            { class: "card__lead-text" },
+            el("h1", { class: "page-title page-title--repo", text: repo.fullName }),
+            el("p", { class: "page-sub page-sub--wide", text: repo.description || "该项目没有提供描述" }),
             el(
               "div",
-              { style: "display:flex;gap:8px;flex-wrap:wrap" },
-              ...(repo.topics || []).slice(0, 6).map((t) => el("span", { class: "chip", style: "height:26px", text: t })),
+              { class: "tag-row" },
+              ...(repo.topics || []).slice(0, 6).map((t) => el("span", { class: "chip chip--sm", text: t })),
             ),
             el(
               "div",
-              { style: "display:flex;gap:16px;flex-wrap:wrap;margin-top:4px" },
-              el("a", { href: repo.url, target: "_blank", rel: "noopener noreferrer", text: "在 GitHub 上查看 ↗", style: "font-size:12px" }),
-              repo.homepage ? el("a", { href: repo.homepage, target: "_blank", rel: "noopener noreferrer", text: "项目主页 ↗", style: "font-size:12px" }) : null,
+              { class: "link-row" },
+              el("a", { class: "ext-link", href: repo.url, target: "_blank", rel: "noopener noreferrer" }, icon("external", 12), "在 GitHub 上查看"),
+              repo.homepage ? el("a", { class: "ext-link", href: repo.homepage, target: "_blank", rel: "noopener noreferrer" }, icon("external", 12), "项目主页") : null,
             ),
           ),
         ),
         el(
           "div",
-          { class: "kpi", style: "width:300px;flex-shrink:0;background:var(--bg-subtle)" },
-          el("div", { class: "status-list__item", style: "justify-content:space-between" }, el("span", { class: "kpi__label", text: `${periodLabel}排名` }), repo.rank ? el("span", { class: "rank-badge", style: "width:auto;min-width:52px;padding:0 10px", text: `No.${repo.rank}` }) : el("span", { class: "kpi__label", text: "未在榜" })),
+          { class: "kpi kpi--aside" },
+          el("div", { class: "status-list__item", style: "justify-content:space-between" }, el("span", { class: "kpi__label", text: `${periodLabel}排名` }), repo.rank ? el("span", { class: "rank-badge rank-badge--wide", text: `No.${repo.rank}` }) : el("span", { class: "kpi__label", text: "未在榜" })),
           metaRow("创建时间", String(repo.createdAt || "—").slice(0, 10)),
           metaRow("最近推送", relativeTime(repo.pushedAt)),
           metaRow("主要语言", repo.language),
@@ -134,7 +134,7 @@ function render() {
     el(
       "div",
       { class: "kpi-row kpi-row--5" },
-      kpi({ label: "Star 总数", value: formatNumber(repo.stars) }),
+      kpi({ primary: true, label: "Star 总数", value: formatNumber(repo.stars) }),
       kpi({
         label: `${periodLabel} Star 增长`,
         value: repo.weekGrowth == null ? "暂无基线" : `+${formatNumber(repo.weekGrowth)}`,
@@ -162,7 +162,7 @@ function render() {
         ),
         el(
           "div",
-          { style: "display:flex;gap:12px;align-items:center" },
+          { class: "chart-controls" },
           chartLegend(),
           el(
             "div",
@@ -200,7 +200,7 @@ function render() {
         el("h2", { class: "card__title", text: "统计口径说明" }),
         el(
           "ul",
-          { style: "margin:0;padding-left:18px;color:var(--text-secondary);font-size:12px;line-height:1.9" },
+          { class: "note-list" },
           el("li", { text: "Star 增长量 = 当前快照 star 数 − 上一次快照 star 数，由 Actions 每 2 小时累积。" }),
           el("li", { text: "在榜判定基于 pushed 时间窗口，捕捉老项目的新版本爆发，而非只看新建仓库。" }),
           el("li", { text: "数据源为 GitHub REST API；本地快照优先，限流时自动降级并标注数据时间。" }),
@@ -224,12 +224,18 @@ function render() {
   drawChart();
 }
 
+/**
+ * 元信息行：左标签右数值。
+ * 只有纯数值/日期才用等宽字体，中文文本用正文字体 —— 否则中文在
+ * JetBrains Mono 里会缺字回退，看起来像乱码。
+ */
 function metaRow(label, value) {
+  const isNumeric = /^[\d.,:\-\/ ]+$/.test(String(value));
   return el(
     "div",
-    { style: "display:flex;justify-content:space-between;align-items:center;gap:12px" },
+    { class: "meta-row" },
     el("span", { class: "kpi__label", text: label }),
-    el("span", { class: "num", style: "font-size:13px", text: value }),
+    el("span", { class: isNumeric ? "num meta-row__value" : "meta-row__value", text: value }),
   );
 }
 
@@ -257,8 +263,8 @@ function renderCycleTable() {
           "tr",
           {},
           el("td", { style: row.period.id === "week" ? "color:var(--accent);font-weight:500" : "", text: `本${row.period.label}` }),
-          el("td", { class: "num", text: row.rank ? `No.${row.rank}` : "—" }),
-          el("td", { class: "num", style: "color:var(--success)", text: row.growth == null ? "暂无基线" : `+${formatNumber(row.growth)}` }),
+          el("td", { class: row.rank ? "num" : "cell-muted", text: row.rank ? `No.${row.rank}` : "—" }),
+          el("td", { class: row.growth == null ? "cell-muted" : "num", style: row.growth == null ? "" : "color:var(--success)", text: row.growth == null ? "暂无基线" : `+${formatNumber(row.growth)}` }),
         ),
       ),
     ),
