@@ -40,25 +40,28 @@ function render() {
   mount(
     app,
     renderTopbar("leaderboard"),
-    // 头部信息
     el(
-      "section",
-      { class: "page page--detail" },
+      "main",
+      { class: "page" },
+      // 头部信息
       el(
-        "div",
-        { class: "page-head", style: "align-items:flex-start" },
+        "section",
+        { class: "detail-head" },
         el(
           "div",
-          { class: "breadcrumb" },
-          el("a", { href: "./index.html", text: "趋势榜单" }),
-          el("span", { class: "breadcrumb__sep" }, icon("separator", 14)),
-          el("span", { style: "color:var(--text-primary);font-weight:500", text: repo.fullName }),
-        ),
-        el(
-          "div",
-          { class: "action-row" },
+          { class: "page-head", style: "align-items:flex-start" },
           el(
-            "button",
+            "div",
+            { class: "breadcrumb" },
+            el("a", { href: "./index.html", text: "趋势榜单" }),
+            el("span", { class: "breadcrumb__sep" }, icon("separator", 14)),
+            el("span", { style: "color:var(--text-primary);font-weight:500", text: repo.fullName }),
+          ),
+          el(
+            "div",
+            { class: "action-row" },
+            el(
+              "button",
             {
               class: isFav ? "btn btn--primary" : "btn btn--ghost",
               type: "button",
@@ -89,18 +92,18 @@ function render() {
       ),
       el(
         "div",
-        { class: "card card--row" },
+        { class: "repo-head" },
         el(
           "div",
-          { class: "card__lead" },
+          { class: "repo-head__main" },
           el(
             "span",
             { class: "repo__mark" },
-            icon("repo", 26),
+            icon("repo", 24),
           ),
           el(
             "div",
-            { class: "card__lead-text" },
+            { class: "repo-head__text" },
             el("h1", { class: "page-title page-title--repo", text: repo.fullName }),
             el("p", { class: "page-sub page-sub--wide", text: repo.description || "该项目没有提供描述" }),
             el(
@@ -116,20 +119,21 @@ function render() {
             ),
           ),
         ),
+        // 元信息栏：与主信息顶部对齐，宽度固定，避免左右视觉重量失衡
         el(
-          "div",
-          { class: "kpi kpi--aside" },
-          el("div", { class: "status-list__item", style: "justify-content:space-between" }, el("span", { class: "kpi__label", text: `${periodLabel}排名` }), repo.rank ? el("span", { class: "rank-badge rank-badge--wide", text: `No.${repo.rank}` }) : el("span", { class: "kpi__label", text: "未在榜" })),
-          metaRow("创建时间", String(repo.createdAt || "—").slice(0, 10)),
-          metaRow("最近推送", relativeTime(repo.pushedAt)),
-          metaRow("主要语言", repo.language),
-          metaRow("许可证", repo.license),
-          metaRow("话题数", String((repo.topics || []).length)),
+          "dl",
+          { class: "repo-meta" },
+          metaItem(`${periodLabel}排名`, repo.rank ? `No.${repo.rank}` : "未在榜", repo.rank ? "is-strong" : ""),
+          metaItem("主要语言", repo.language || "—"),
+          metaItem("许可证", repo.license || "—"),
+          metaItem("创建时间", String(repo.createdAt || "—").slice(0, 10)),
+          metaItem("最近推送", relativeTime(repo.pushedAt)),
+          metaItem("话题数", String((repo.topics || []).length)),
         ),
       ),
     ),
 
-    // KPI 行。growth 值可能为 null（尚无历史基线），必须显式区分，
+    // KPI 行。growth 值可能为 null（历史窗口尚未覆盖完整），必须显式区分，
     // 不能让 undefined/NaN 混进界面。
     el(
       "div",
@@ -138,10 +142,21 @@ function render() {
       kpi({
         label: `${periodLabel} Star 增长`,
         value: repo.weekGrowth == null ? "暂无基线" : `+${formatNumber(repo.weekGrowth)}`,
+        hint:
+          repo.weekGrowth == null
+            ? null
+            : repo.weekCovered > 0 && repo.weekCovered < PERIOD_MAP.get(currentPeriod)?.days
+              ? `已积累 ${repo.weekCovered} 天`
+              : null,
       }),
       kpi({
         label: "近 30 日累计增长",
         value: repo.history30 == null ? "暂无基线" : `+${formatNumber(repo.history30)}`,
+        hint: repo.history30 == null
+          ? null
+          : repo.history30Complete
+            ? null
+            : `至今累计 · 已积累 ${repo.historyDays} 天`,
       }),
       kpi({ label: "Fork 数", value: formatNumber(repo.forks) }),
       kpi({ label: "开放 Issue", value: formatNumber(repo.openIssues) }),
@@ -158,12 +173,17 @@ function render() {
           "div",
           {},
           el("h2", { class: "card__title", text: "Star 增长趋势" }),
-          el("p", { class: "card__meta", text: "按日聚合 · 来源为 Actions 落盘的每日快照序列（GitHub 不提供历史 star 值）" }),
+          el("p", {
+            class: "card__meta",
+            text: repo.historyDays
+              ? `按日聚合 · 已积累 ${repo.historyDays} 天快照（GitHub 不提供历史 star 值，需逐日累积）`
+              : "按日聚合 · 尚无历史快照，积累后会显示曲线",
+          }),
         ),
         el(
           "div",
           { class: "chart-controls" },
-          chartLegend(),
+          chartLegend({ daily: chartSeries.daily }),
           el(
             "div",
             { class: "segmented" },
@@ -187,7 +207,7 @@ function render() {
     // 各周期成绩 + 说明
     el(
       "div",
-      { class: "grid-2" },
+      { class: "detail-grid" },
       el(
         "section",
         { class: "card" },
@@ -201,12 +221,14 @@ function render() {
         el(
           "ul",
           { class: "note-list" },
-          el("li", { text: "Star 增长量 = 当前快照 star 数 − 上一次快照 star 数，由 Actions 每 2 小时累积。" }),
+          el("li", { text: "Star 增长量 = 该周期窗口内每日增长量之和，由 Actions 逐日累积快照得出。" }),
+          el("li", { text: "历史天数不足整个周期时标记为「暂无基线」，不给偏小的近似值。" }),
           el("li", { text: "在榜判定基于 pushed 时间窗口，捕捉老项目的新版本爆发，而非只看新建仓库。" }),
           el("li", { text: "数据源为 GitHub REST API；本地快照优先，限流时自动降级并标注数据时间。" }),
           el("li", { text: `快照生成于 ${freshnessLabel(snapshot.generatedAt)}。` }),
         ),
       ),
+    ),
     ),
     renderCompareTray(getCompare(), {
       onOpen: () => {
@@ -225,17 +247,20 @@ function render() {
 }
 
 /**
- * 元信息行：左标签右数值。
+ * 元信息条目（语义化 dl/dt/dd）。
  * 只有纯数值/日期才用等宽字体，中文文本用正文字体 —— 否则中文在
  * JetBrains Mono 里会缺字回退，看起来像乱码。
  */
-function metaRow(label, value) {
+function metaItem(label, value, extraClass = "") {
   const isNumeric = /^[\d.,:\-\/ ]+$/.test(String(value));
   return el(
     "div",
-    { class: "meta-row" },
-    el("span", { class: "kpi__label", text: label }),
-    el("span", { class: isNumeric ? "num meta-row__value" : "meta-row__value", text: value }),
+    { class: "repo-meta__item" },
+    el("dt", { class: "repo-meta__label", text: label }),
+    el("dd", {
+      class: `${isNumeric ? "num " : ""}repo-meta__value${extraClass ? ` ${extraClass}` : ""}`,
+      text: value,
+    }),
   );
 }
 
@@ -244,6 +269,7 @@ function renderCycleTable() {
     period,
     stars: repo.periods?.[period.id],
     growth: repo.growth?.[period.id],
+    covered: repo.covered?.[period.id] ?? 0,
     rank: repo.ranks?.[period.id],
   })).filter((r) => r.stars != null);
 
@@ -254,7 +280,18 @@ function renderCycleTable() {
   return el(
     "table",
     { class: "mini-table" },
-    el("thead", {}, el("tr", {}, el("th", { text: "周期" }), el("th", { text: "排名" }), el("th", { text: "Star 增长" }))),
+    el(
+      "thead",
+      {},
+      el(
+        "tr",
+        {},
+        el("th", { text: "周期" }),
+        el("th", { text: "排名" }),
+        el("th", { text: "Star 总数" }),
+        el("th", { text: "周期增长" }),
+      ),
+    ),
     el(
       "tbody",
       {},
@@ -262,31 +299,37 @@ function renderCycleTable() {
         el(
           "tr",
           {},
-          el("td", { style: row.period.id === "week" ? "color:var(--accent);font-weight:500" : "", text: `本${row.period.label}` }),
+          el("td", { class: row.period.id === "week" ? "is-current" : "", text: `本${row.period.label}` }),
           el("td", { class: row.rank ? "num" : "cell-muted", text: row.rank ? `No.${row.rank}` : "—" }),
-          el("td", { class: row.growth == null ? "cell-muted" : "num", style: row.growth == null ? "" : "color:var(--success)", text: row.growth == null ? "暂无基线" : `+${formatNumber(row.growth)}` }),
+          el("td", { class: "num", text: formatNumber(row.stars) }),
+          el(
+            "td",
+            { class: row.growth == null ? "cell-muted" : "num" },
+            row.growth == null
+              ? "暂无基线"
+              : el(
+                  "span",
+                  { class: "growth-cell" },
+                  el("span", { class: "growth-cell__value", text: `+${formatNumber(row.growth)}` }),
+                  row.covered < row.period.days
+                    ? el("span", { class: "cell-note", text: `${row.covered} 天` })
+                    : null,
+                ),
+          ),
         ),
       ),
     ),
   );
 }
 
-async function drawChart() {
-  const host = document.querySelector("#chart-host");
-  if (!host) return;
+/**
+ * 按当前时间范围计算图表序列。
+ * 结果缓存在 chartSeries，供 render() 读取（图例需要知道数据点数量）。
+ */
+let chartSeries = { daily: [], cumulative: [], labels: [] };
+
+function buildChartSeries() {
   const history = repo.history || [];
-
-  if (history.length < 2) {
-    mount(
-      host,
-      emptyState({
-        title: "趋势序列不足",
-        desc: "需要至少两个历史快照才能绘制增长曲线。GitHub Actions 每 2 小时采集一次，通常 2–3 天内可看到完整曲线。",
-      }),
-    );
-    return;
-  }
-
   // 按 chartRange 截取最近 N 天，snapshot 内每天一个记录
   const sliced = history.slice(-chartRange);
   const daily = sliced.map((point) => point.delta ?? 0);
@@ -294,8 +337,28 @@ async function drawChart() {
     sliced.slice(0, index + 1).reduce((acc, p) => acc + (p.delta ?? 0), 0),
   );
   const labels = sliced.map((point) => String(point.date).slice(5));
+  chartSeries = { daily, cumulative, labels };
+  return chartSeries;
+}
 
-  mount(host, renderTrendChart({ daily, cumulative, labels }));
+async function drawChart() {
+  const host = document.querySelector("#chart-host");
+  if (!host) return;
+  const history = repo.history || [];
+
+  if (!history.length) {
+    mount(
+      host,
+      emptyState({
+        title: "尚无历史快照",
+        desc: "GitHub Actions 每 2 小时采集一次，每天落一条快照。积累到第二天就会出现第一根柱子。",
+      }),
+    );
+    return;
+  }
+
+  const series = buildChartSeries();
+  mount(host, renderTrendChart(series));
 }
 
 async function boot() {
@@ -328,13 +391,20 @@ async function boot() {
     // 派生字段：KPI 直接读这三个值，避免在模板里做可能产生 NaN 的运算。
     const currentPeriod = getState().period || "week";
     repo.weekGrowth = repo.growth?.[currentPeriod] ?? null;
+    repo.weekCovered = repo.covered?.[currentPeriod] ?? 0;
     repo.rank = repo.ranks?.[currentPeriod] ?? null;
 
-    // 近 30 日累计：只有覆盖满 30 天才算完整，否则标为「暂无基线」
+    // 近 30 日累计增长。
+    //
+    // 口径说明：这里累加的是「已积累的每日增长」。
+    // 当历史天数不足 30 天时，给出的是「至今累计」而不是 null ——
+    // 因为「暂无基线」会让人误以为完全没有数据。
+    // 但必须同时告知实际覆盖天数，否则数字会被误读成完整的 30 日值。
+    repo.historyDays = repo.history.length;
     const cutoff = Date.now() - 30 * 86400000;
-    const within30 = repo.history.filter((p) => new Date(p.date).getTime() >= cutoff);
-    repo.history30 =
-      within30.length >= 30 ? within30.reduce((acc, p) => acc + (p.delta || 0), 0) : null;
+    const within30 = repo.history.filter((p) => new Date(`${p.date}T00:00:00Z`).getTime() >= cutoff);
+    repo.history30 = within30.length ? within30.reduce((acc, p) => acc + (p.delta || 0), 0) : null;
+    repo.history30Complete = repo.historyDays >= 30;
 
     render();
 
