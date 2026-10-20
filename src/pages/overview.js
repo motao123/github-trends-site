@@ -40,7 +40,7 @@ function render() {
         ),
         el(
           "div",
-          { style: "display:flex;gap:10px" },
+          { class: "action-row" },
           el("a", { class: "btn btn--ghost", href: "./index.html", text: "返回榜单" }),
           el(
             "button",
@@ -61,7 +61,7 @@ function render() {
       el(
         "div",
         { class: "kpi-row" },
-        kpi({ label: "周榜新增 Star", value: formatNumber(summary.week.growth), delta: `覆盖 ${formatNumber(summary.week.count)} 个项目`, deltaKind: "up" }),
+        kpi({ primary: true, label: "周榜新增 Star", value: formatNumber(summary.week.growth), delta: `覆盖 ${formatNumber(summary.week.count)} 个项目`, deltaKind: "up" }),
         kpi({ label: "月榜新增 Star", value: formatNumber(summary.month.growth), delta: `覆盖 ${formatNumber(summary.month.count)} 个项目`, deltaKind: "up" }),
         kpi({ label: "季度新增 Star", value: formatNumber(summary.quarter.growth), delta: `覆盖 ${formatNumber(summary.quarter.count)} 个项目`, deltaKind: "up" }),
         kpi({ label: "年度新增 Star", value: formatNumber(summary.year.growth), delta: `覆盖 ${formatNumber(summary.year.count)} 个项目`, deltaKind: "up" }),
@@ -98,7 +98,7 @@ function render() {
               el(
                 "div",
                 { class: "rank-list__item" },
-                el("span", { class: `rank-badge${index > 2 ? " rank-badge--muted" : ""}`, text: String(index + 1) }),
+                el("span", { class: `rank-badge${index < 3 ? " rank-badge--top" : ""}`, text: String(index + 1) }),
                 el("a", { class: "rank-list__name", href: `./project.html?full_name=${encodeURIComponent(row.fullName)}`, style: "color:inherit", text: row.fullName }),
                 el("span", { class: "rank-list__value num", text: row.periodGrowth == null ? "暂无基线" : `+${formatNumber(row.periodGrowth)}` }),
               ),
