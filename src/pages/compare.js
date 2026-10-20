@@ -6,7 +6,7 @@ import { loadSnapshot, buildRanking, PERIOD_MAP } from "../lib/data.js";
 import { getState } from "../lib/store.js";
 import { getCompare, toggleCompare, clearCompare } from "../lib/store.js";
 import { el, mount, icon, formatNumber, relativeTime, langColor, toast, exportCsv } from "../lib/ui.js";
-import { renderTopbar, bindTopbarSearch, emptyState, loadingState, renderFooter } from "../components/ui.js";
+import { renderTopbar, bindTopbarSearch, setSearchValue, emptyState, loadingState, renderFooter } from "../components/ui.js";
 
 const app = document.querySelector("#app");
 let snapshot = null;
@@ -68,6 +68,7 @@ function render() {
     renderFooter(),
   );
 
+  setSearchValue(getState().keyword);
   bindTopbarSearch((keyword) => {
     window.location.href = `./index.html?q=${encodeURIComponent(keyword)}`;
   });
