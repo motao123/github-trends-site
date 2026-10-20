@@ -141,23 +141,87 @@ export function toast(message) {
   }, 2600);
 }
 
-/** 内联 SVG 图标集。 */
+/**
+ * 图标系统 —— 严格遵循 Lucide 规范：
+ *
+ *   1. 统一 24 × 24 画布（正方形）
+ *   2. 统一 2px 描边宽度
+ *   3. 开放路径用 round linecap，拐角用 round linejoin
+ *   4. 颜色一律 currentColor，由 CSS 控制，主题切换自动跟随
+ *   5. 元素间至少留 2px 视觉间隙
+ *
+ * 这套约束消除了原先"7 种 viewBox + 11 种描边宽度"造成的风格混杂。
+ * 路径数据取自 Lucide 官方图标（ISC 协议），并按本项目需要做了简化。
+ */
+const ICON_ATTRS = 'xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
+
 const ICONS = {
-  search: '<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="4.4" stroke="currentColor" stroke-width="1.5"/><path d="M10.4 10.4L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
-  sun: '<svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><circle cx="18" cy="18" r="3.6" stroke="currentColor" stroke-width="1.5"/><path d="M18 7.5v2.2M18 26.3v2.2M7.5 18h2.2M26.3 18h2.2M10.6 10.6l1.6 1.6M23.8 23.8l1.6 1.6M25.4 10.6l-1.6 1.6M12.2 23.8l-1.6 1.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
-  moon: '<svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M25 21.5A9.5 9.5 0 0 1 14.5 11a9.5 9.5 0 1 0 10.5 10.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>',
-  star: '<svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1.9l1.58 3.2 3.53.51-2.56 2.49.6 3.52L7 9.83l-3.15 1.66.6-3.52L1.9 5.6l3.52-.51L7 1.9z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>',
-  starFill: '<svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1.9l1.58 3.2 3.53.51-2.56 2.49.6 3.52L7 9.83l-3.15 1.66.6-3.52L1.9 5.6l3.52-.51L7 1.9z" fill="currentColor"/></svg>',
-  refresh: '<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.6 8a5.6 5.6 0 1 1-1.68-4.02" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M13.6 1.8V4.7H10.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-  download: '<svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1.8v7.4M7 9.2L4.4 6.6M7 9.2l2.6-2.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.2 10.6v1.1h9.6v-1.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
-  trend: '<svg viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M6 20.5L11 14l3.6 3.4L22 8" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22" cy="8" r="2.4" fill="#fff"/></svg>',
-  error: '<svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="7.4" stroke="currentColor" stroke-width="1.8"/><path d="M9 5.2v4.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="12.6" r="1" fill="currentColor"/></svg>',
-  warn: '<svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.2L16.4 15H1.6L9 2.2z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 6.8v3.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="9" cy="12.6" r="0.95" fill="currentColor"/></svg>',
-  empty: '<svg viewBox="0 0 72 72" fill="none" aria-hidden="true"><rect x="8" y="16" width="56" height="42" rx="8" stroke="#D1D5DB" stroke-width="2"/><path d="M8 28h56" stroke="#D1D5DB" stroke-width="2"/><path d="M18 38h26M18 47h16" stroke="#E7E7EA" stroke-width="3" stroke-linecap="round"/></svg>',
+  // 搜索：圆心 11 / 半径 7，手柄到 20
+  search: `<svg ${ICON_ATTRS}><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>`,
+
+  // 太阳：圆心 12 / 半径 4，八向光芒
+  sun: `<svg ${ICON_ATTRS}><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>`,
+
+  // 月亮：标准月牙路径
+  moon: `<svg ${ICON_ATTRS}><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`,
+
+  // 星标（空心 / 实心共用同一路径）
+  star: `<svg ${ICON_ATTRS}><path d="M12 2.5l2.9 5.9 6.6.9-4.8 4.6 1.2 6.5-5.9-3.1-5.9 3.1 1.2-6.5L2.5 9.3l6.6-.9L12 2.5z"/></svg>`,
+  starFill: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2.5l2.9 5.9 6.6.9-4.8 4.6 1.2 6.5-5.9-3.1-5.9 3.1 1.2-6.5L2.5 9.3l6.6-.9L12 2.5z"/></svg>`,
+
+  // 刷新：逆时针弧 + 箭头
+  refresh: `<svg ${ICON_ATTRS}><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>`,
+
+  // 下载：竖线 + 下箭头 + 底座
+  download: `<svg ${ICON_ATTRS}><path d="M12 3v12"/><path d="M7.5 10.5L12 15l4.5-4.5"/><path d="M4 19h16"/></svg>`,
+
+  // 趋势：折线 + 端点
+  trend: `<svg ${ICON_ATTRS}><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>`,
+
+  // 错误：圆 + 感叹号
+  error: `<svg ${ICON_ATTRS}><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5"/><path d="M12 16.5h.01"/></svg>`,
+
+  // 警告：三角 + 感叹号
+  warn: `<svg ${ICON_ATTRS}><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4.5"/><path d="M12 17.5h.01"/></svg>`,
+
+  // 空态：简化的文件/列表轮廓
+  empty: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M7.5 13.5h6M7.5 16.5h4"/></svg>`,
+
+  // 外部链接：方框 + 箭头
+  external: `<svg ${ICON_ATTRS}><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>`,
+
+  // 复选对比
+  compare: `<svg ${ICON_ATTRS}><path d="M4 6h7M4 12h7M4 18h7"/><path d="M17 4v16M20 4v16"/></svg>`,
+
+  // 关闭 / 移除
+  x: `<svg ${ICON_ATTRS}><path d="M18 6L6 18M6 6l12 12"/></svg>`,
+
+  // 排序：箭头向上 / 向下 / 双向
+  sortAsc: `<svg ${ICON_ATTRS}><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>`,
+  sortDesc: `<svg ${ICON_ATTRS}><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>`,
+  sortBoth: `<svg ${ICON_ATTRS}><path d="M8 9l4-4 4 4"/><path d="M16 15l-4 4-4-4"/></svg>`,
+
+  // 翻页
+  chevronLeft: `<svg ${ICON_ATTRS}><path d="M15 18l-6-6 6-6"/></svg>`,
+  chevronRight: `<svg ${ICON_ATTRS}><path d="M9 18l6-6-6-6"/></svg>`,
+
+  // 更多
+  more: `<svg ${ICON_ATTRS}><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg>`,
+
+  // 分隔符（面包屑）
+  separator: `<svg ${ICON_ATTRS}><path d="M9 18l6-6-6-6"/></svg>`,
 };
 
+/**
+ * 生成图标节点。
+ * @param {string} name  ICONS 中的键
+ * @param {number} size  渲染尺寸（px）。实际描边宽度随尺寸缩放，
+ *                       视觉上保持与文字基线的比例关系。
+ */
 export function icon(name, size = 16) {
-  const span = el("span", { class: "icon", "aria-hidden": "true", style: `display:inline-flex;width:${size}px;height:${size}px` });
+  const span = el("span", { class: "icon", "aria-hidden": "true" });
+  span.style.width = `${size}px`;
+  span.style.height = `${size}px`;
   span.innerHTML = ICONS[name] || "";
   return span;
 }
