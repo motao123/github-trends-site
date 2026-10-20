@@ -96,12 +96,61 @@ export function clear(node) {
   while (node.firstChild) node.removeChild(node.firstChild);
 }
 
+/**
+ * 挂载子节点（原地协调）。
+ *
+ * 为什么不用「先 clear 再 append」：
+ *   clear() 会把所有旧子节点移出文档，而节点一旦被移出文档，
+ *   正在被聚焦的输入框立刻失焦（activeElement 回落到 body）。
+ *   哪怕紧接着又把同一个节点插回去，焦点也回不来了 ——
+ *   这正是"搜索框里打了字但看不见、光标还会跳回开头"的根因。
+ *
+ * 这里改为逐位置比较：
+ *   - 已经在正确位置上的节点 → 完全不动（焦点得以保留）
+ *   - 需要新增/移动的节点 → 用 insertBefore 精确插入
+ *
+ * 顺带在末尾保留一道焦点兜底：若确实发生了移动，恢复焦点与光标位置。
+ */
 export function mount(node, ...children) {
-  clear(node);
-  for (const child of children.flat()) {
-    if (child == null || child === false) continue;
-    node.append(child instanceof Node ? child : document.createTextNode(String(child)));
+  const list = children.flat().filter((c) => c != null && c !== false);
+  const keep = new Set(list);
+
+  // 记录重绘前的焦点与光标（仅在被移除时才需要恢复）
+  const active = document.activeElement;
+  const isInput = active && (active.tagName === "INPUT" || active.tagName === "TEXTAREA");
+  const selStart = isInput ? active.selectionStart : null;
+  const selEnd = isInput ? active.selectionEnd : null;
+
+  // 移除不再需要的旧节点
+  for (const child of Array.from(node.childNodes)) {
+    if (!keep.has(child)) node.removeChild(child);
   }
+
+  // 按目标顺序插入。已就位的节点跳过 —— 这一步是保留焦点的关键。
+  let cursor = node.firstChild;
+  for (const child of list) {
+    if (child === cursor) {
+      cursor = cursor.nextSibling;
+      continue;
+    }
+    node.insertBefore(child, cursor);
+  }
+
+  // 兜底：焦点节点确实被移出过文档时，恢复焦点与光标
+  if (isInput && !document.contains(active)) {
+    requestAnimationFrame(() => {
+      if (!active.isConnected) return;
+      active.focus({ preventScroll: true });
+      if (selStart != null && typeof active.setSelectionRange === "function") {
+        try {
+          active.setSelectionRange(selStart, selEnd);
+        } catch {
+          /* type="search" 在部分浏览器不支持 setSelectionRange */
+        }
+      }
+    });
+  }
+
   return node;
 }
 
