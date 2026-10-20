@@ -292,39 +292,102 @@ export function growthCell(growth, maxGrowth) {
 /* ---------------- 图表 ---------------- */
 
 /**
- * 折线 + 面积图。用 SVG path 直接绘制，零依赖。
+ * 趋势图。按数据点数量自动切换表达方式：
+ *
+ *   ≥ 4 个点 → 折线（表达连续趋势）
+ *   2–3 个点 → 柱状（数据太少，连不成趋势，折线会误导成"下降"）
+ *   1 个点  → 单柱 + 数值标注
+ *
+ * 关键修正：Y 轴只按「每日新增」的最大值刻度。
+ * 之前把累计值也塞进同一个轴（scaleMax = max(daily, cum*0.35)），
+ * 导致日增量被压成一条贴着底部的平线，完全看不出波动。
+ *
  * @param {{daily: number[], cumulative: number[], labels: string[]}} series
  */
-export function renderTrendChart(series, { height = 300 } = {}) {
+export function renderTrendChart(series, { height = 260 } = {}) {
   const { daily = [], cumulative = [], labels = [] } = series;
-  const yTicks = 5;
+  const yTicks = 4;
 
   if (!daily.length) {
-    return el("div", { class: "chart chart--empty" }, emptyState({ title: "暂无增长数据", desc: "该时间窗口内没有采集到 Star 变化记录" }));
+    return el(
+      "div",
+      { class: "chart chart--empty" },
+      emptyState({
+        title: "暂无增长数据",
+        desc: "该时间窗口内还没有采集到 Star 变化记录。每天积累一次快照后这里会出现曲线",
+      }),
+    );
   }
 
   const maxDaily = Math.max(...daily, 1);
-  const maxCum = Math.max(...cumulative, 1);
-  // 两条线共用一个归一化轴，靠图例说明区分量级，避免误读
-  const scaleMax = Math.max(maxDaily, maxCum * 0.35, 1);
+  // Y 轴只服务「每日新增」这一条量纲
+  const scaleMax = maxDaily;
 
-  // viewBox 用真实像素尺度，避免 preserveAspectRatio 拉伸导致描边变形
-  const H = 240;
-  const W = Math.max(240, daily.length * 9);
+  const useBars = daily.length < 4;
+  const H = 200;
+
+  const yOf = (value) => (H - (value / scaleMax) * H).toFixed(1);
+
+  // X 轴标签：点多时抽稀，避免重叠
+  const labelStep = labels.length > 8 ? Math.ceil(labels.length / 8) : 1;
+
+  /*
+   * 柱状图用 HTML 元素而非 SVG 矩形实现。
+   *
+   * 原因：SVG 需要 viewBox + preserveAspectRatio 才能填满容器，
+   * 而任何一种 preserveAspectRatio 都会带来缩放失真 ——
+   *   "none"  会把柱子横向拉扁
+   *   "meet"  会按高度等比缩放，宽度只占一小块
+   * 而用 flex + height 百分比，柱子天然均分整个绘图区，无需任何换算。
+   */
+  if (useBars) {
+    return el(
+      "div",
+      { class: "chart", style: `height:${height}px` },
+      el(
+        "div",
+        { class: "chart__axis-y" },
+        ...Array.from({ length: yTicks }, (_, i) => {
+          const value = scaleMax * (1 - i / (yTicks - 1));
+          return el("span", { class: "num", text: formatNumber(Math.round(value)) });
+        }),
+      ),
+      el(
+        "div",
+        { class: "chart__plot" },
+        el(
+          "div",
+          { class: "chart__bars" },
+          ...daily.map((value, i) =>
+            el("div", {
+              class: "chart__bar-slot",
+              title: `${labels[i] || ""} · +${formatNumber(value)}`,
+            }, el("div", {
+              class: "chart__bar",
+              style: `height:${((value / scaleMax) * 100).toFixed(1)}%`,
+            })),
+          ),
+        ),
+        el(
+          "div",
+          { class: "chart__axis-x chart__axis-x--bars" },
+          // 柱状图必须渲染全部标签 —— 抽稀会让 flex 均分错位，
+          // 导致标签与柱子对不上。数据点本来就少（< 4），全显示不会挤。
+          ...labels.map((label) => el("span", { class: "num", text: label })),
+        ),
+      ),
+    );
+  }
+
+  /* ---- 折线图（数据点足够画趋势时才用） ---- */
+  const W = Math.max(320, daily.length * 9);
   const stepX = daily.length > 1 ? W / (daily.length - 1) : W;
+  const points = daily.map((v, i) => `${(i * stepX).toFixed(1)},${yOf(v)}`).join(" ");
+  const lastX = (daily.length - 1) * stepX;
 
-  const toPoints = (values) =>
-    values
-      .map((value, index) => {
-        const x = (index * stepX).toFixed(1);
-        const y = (H - (value / scaleMax) * H).toFixed(1);
-        return `${x},${y}`;
-      })
-      .join(" ");
-
-  const dailyPoints = toPoints(daily);
-  const cumPoints = toPoints(cumulative);
-  const lastY = (H - (daily[daily.length - 1] / scaleMax) * H).toFixed(1);
+  const marks =
+    `<polyline points="${points}" fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" stroke-linecap="round"/>` +
+    `<circle cx="${lastX.toFixed(1)}" cy="${yOf(daily[daily.length - 1])}" r="3" fill="var(--accent)" stroke="var(--bg-card)" stroke-width="2"/>`;
 
   return el(
     "div",
@@ -342,32 +405,39 @@ export function renderTrendChart(series, { height = 300 } = {}) {
       { class: "chart__plot" },
       el("div", {
         class: "chart__canvas",
-        // 不用 preserveAspectRatio="none"：那会把描边拉变形。
-        // 改用固定 viewBox 宽度按实际数据量自适应，坐标轴用 CSS 网格对齐。
-        html: `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Star 增长趋势折线图">
+        html: `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Star 每日增长折线图">
           ${[0, 0.25, 0.5, 0.75, 1]
             .map((t) => `<line x1="0" y1="${(t * H).toFixed(1)}" x2="${W}" y2="${(t * H).toFixed(1)}" stroke="var(--border-subtle)" stroke-width="1" vector-effect="non-scaling-stroke"/>`)
             .join("")}
-          <polyline points="${cumPoints}" fill="none" stroke="var(--success)" stroke-width="1.5" stroke-dasharray="4 3" vector-effect="non-scaling-stroke" stroke-linejoin="round" stroke-linecap="round"/>
-          <polyline points="${dailyPoints}" fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" stroke-linecap="round"/>
-          <circle cx="${W}" cy="${lastY}" r="3" fill="var(--accent)" stroke="var(--bg-card)" stroke-width="2"/>
+          ${marks}
         </svg>`,
       }),
       el(
         "div",
         { class: "chart__axis-x" },
-        ...(labels.length ? labels.map((label, i) => el("span", { class: i === labels.length - 1 ? "num" : "num", text: label })) : []),
+        ...labels
+          .map((label, i) =>
+            i % labelStep === 0 || i === labels.length - 1
+              ? el("span", { class: "num", text: label })
+              : null,
+          )
+          .filter(Boolean),
       ),
     ),
   );
 }
 
-export function chartLegend() {
+export function chartLegend(series = {}) {
+  const { daily = [] } = series;
+  // 数据不足时不展示"累计"图例 —— 避免读者去找一条不存在的线
+  const showCumulative = daily.length >= 4;
   return el(
     "div",
     { class: "legend" },
     el("span", { class: "legend__item" }, el("span", { class: "legend__swatch" }), "每日新增 Star"),
-    el("span", { class: "legend__item" }, el("span", { class: "legend__swatch legend__swatch--dash" }), "累计 Star 总数"),
+    showCumulative
+      ? el("span", { class: "legend__item" }, el("span", { class: "legend__swatch legend__swatch--dash" }), "累计 Star 总数")
+      : null,
   );
 }
 
