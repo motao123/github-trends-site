@@ -2,7 +2,7 @@
  * 共享 UI 组件：顶栏、状态区、表格行、图表。
  */
 
-import { el, mount, icon, initials, avatarColor, langColor, formatNumber, relativeTime } from "../lib/ui.js";
+import { el, mount, icon, langColor, formatNumber, relativeTime } from "../lib/ui.js";
 import { getTheme, setTheme } from "../lib/store.js";
 import { PERIODS, freshnessLabel, clockLabel } from "../lib/data.js";
 
@@ -186,11 +186,17 @@ export function renderPeriodTabs(current, onChange) {
 
 /* ---------------- 数据行 ---------------- */
 
+/**
+ * 项目单元格。
+ *
+ * 这里刻意不放头像/色块：GitHub Trending 官方榜单也不放，而随机配色的
+ * 首字母方块（facebook/react → "FA"）既无辨识价值，又会在几十行里
+ * 形成视觉噪音。项目名本身（owner/repo）已经是唯一标识。
+ */
 export function repoCell(repo) {
   return el(
     "div",
     { class: "repo" },
-    el("span", { class: "repo__avatar", style: `background:${avatarColor(repo.owner || repo.fullName)}`, text: initials(repo.fullName) }),
     el(
       "span",
       { class: "repo__text" },
