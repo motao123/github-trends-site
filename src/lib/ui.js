@@ -66,26 +66,6 @@ export function relativeTime(iso) {
   return `${Math.floor(months / 12)} 年前`;
 }
 
-/** 仓库名首字母，用作无图头像。 */
-export function initials(fullName) {
-  const cleaned = String(fullName || "?").replace(/[-_.]/g, " ");
-  const parts = cleaned.split(" ").filter(Boolean);
-  if (!parts.length) return "?";
-  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
-  return (parts[0][0] + parts[1][0]).toUpperCase();
-}
-
-/** 按 owner 名派生一个稳定的头像底色。 */
-export function avatarColor(seed) {
-  const palette = ["#5046E5", "#10B981", "#F59E0B", "#EF4444", "#0EA5E9", "#8B5CF6"];
-  let hash = 0;
-  const str = String(seed || "");
-  for (let i = 0; i < str.length; i += 1) {
-    hash = (hash * 31 + str.charCodeAt(i)) >>> 0;
-  }
-  return palette[hash % palette.length];
-}
-
 /**
  * 极简 hyperscript。
  * el("div", {class: "x"}, [child, "text"])
@@ -210,6 +190,9 @@ const ICONS = {
 
   // 分隔符（面包屑）
   separator: `<svg ${ICON_ATTRS}><path d="M9 18l6-6-6-6"/></svg>`,
+
+  // 仓库（GitHub 官方仓库轮廓，用于替代项目头像）
+  repo: `<svg ${ICON_ATTRS}><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
 };
 
 /**
