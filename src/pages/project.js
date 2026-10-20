@@ -6,7 +6,7 @@
 import { loadSnapshot, buildRanking, PERIODS, PERIOD_MAP, freshnessLabel } from "../lib/data.js";
 import { getFavorites, toggleFavorite, getCompare, toggleCompare, getState, COMPARE_LIMIT } from "../lib/store.js";
 import { fetchStarTimeline } from "../lib/github-api.js";
-import { el, mount, icon, formatNumber, formatPercent, relativeTime, toast, avatarColor, initials } from "../lib/ui.js";
+import { el, mount, icon, formatNumber, formatPercent, relativeTime, toast } from "../lib/ui.js";
 import {
   renderTopbar,
   loadingState,
@@ -93,11 +93,11 @@ function render() {
         el(
           "div",
           { class: "card__lead" },
-          el("span", {
-            class: "repo__avatar",
-            style: `width:64px;height:64px;border-radius:14px;background:${avatarColor(repo.owner)};font-size:20px`,
-            text: initials(repo.fullName),
-          }),
+          el(
+            "span",
+            { class: "repo__mark" },
+            icon("repo", 26),
+          ),
           el(
             "div",
             { class: "card__lead-text" },
