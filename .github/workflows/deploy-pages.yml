@@ -92,9 +92,10 @@ jobs:
         with:
           node-version: "20"
 
-      # 本项目是纯静态站点，没有编译步骤。这一步做两件事：
+      # 本项目是纯静态站点，没有编译步骤。这一步做三件事：
       #   1. 校验数据快照是否合法，避免把坏数据推上线
-      #   2. 组装 staging 目录，只发布运行时真正需要的文件
+      #   2. 构建期预渲染 —— 把真实榜单内容写进 HTML，让爬虫无需执行 JS
+      #   3. 组装 staging 目录，只发布运行时真正需要的文件
       #
       # 为什么不用 path: "."：那会把 .git 之外的开发文件（workflow、docs、
       # 临时脚本）也一起发布出去，仓库体积和部署产物都会变大。
@@ -111,6 +112,26 @@ jobs:
             echo "⚠ 尚无数据快照，站点将回退到浏览器直连 API。"
           fi
 
+      # 构建期预渲染（SSG）。
+      #
+      # 本站是纯客户端渲染，爬虫拿到的初始 HTML 只有一个空 div。
+      # Google 虽会执行 JS，但那是「渲染队列」里的第二遍，可能延迟数小时
+      # 到数周；其他搜索引擎与 AI 抓取器往往根本不渲染。
+      #
+      # Google 在 2025-12 的文档更新中明确：动态渲染（给爬虫单独返回
+      # 预渲染 HTML）已被标记为过时方案，官方推荐 SSG / SSR。
+      # 对本项目（纯静态 + 数据定期更新）SSG 是最合适的解法。
+      - name: Prerender static HTML
+        run: |
+          set -euo pipefail
+          node scripts/prerender.mjs
+
+      # 校验预渲染产物：SEO 元信息完整、XML 合法、sitemap URL 不死链。
+      # 坏掉的 feed 会让阅读器静默丢弃，坏掉的 sitemap 会让搜索引擎
+      # 以为站点没有内容 —— 两者都比构建失败更难排查，所以在这里拦下。
+      - name: Validate SEO artifacts
+        run: node scripts/check-seo.mjs
+
       - name: Assemble staging directory
         run: |
           set -euo pipefail
@@ -118,8 +139,18 @@ jobs:
           rm -rf "$STAGE"
           mkdir -p "$STAGE"
 
-          # 页面入口（404.html 用于无扩展名路径兜底）
-          cp index.html overview.html project.html favorites.html compare.html 404.html "$STAGE/"
+          # 页面入口。
+          #
+          # 优先用预渲染产物（含真实内容 + 完整 SEO 元信息）；
+          # 若预渲染缺失（无快照等异常情况），回退到原始页面 ——
+          # 站点仍可访问，只是 SEO 效果下降。
+          if [ -d "_prerendered" ]; then
+            echo "✓ 使用预渲染产物"
+            cp -r _prerendered/. "$STAGE/"
+          else
+            echo "⚠ 无预渲染产物，回退到原始页面"
+            cp index.html overview.html project.html favorites.html compare.html 404.html "$STAGE/"
+          fi
 
           # 自定义域名（仅在用户创建了 CNAME 时）
           if [ -f CNAME ]; then
@@ -135,7 +166,8 @@ jobs:
           touch "$STAGE/.nojekyll"
 
           echo "── staging 内容 ──"
-          find "$STAGE" -type f | sed "s|$STAGE/||" | sort
+          find "$STAGE" -type f | sed "s|$STAGE/||" | sort | head -30
+          echo "总文件数：$(find "$STAGE" -type f | wc -l)"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

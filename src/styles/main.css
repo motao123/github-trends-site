@@ -1656,6 +1656,60 @@ table.rank tbody tr:hover td {
   color: var(--accent-text);
 }
 
+/* ============ 构建期预渲染内容 ============ */
+
+/*
+ * 预渲染块的作用：为「不执行 JavaScript 的爬虫」和「禁用 JS 的用户」
+ * 提供可读的实质内容。
+ *
+ * 客户端 JS 启动后会渲染完整界面，此时预渲染块会造成重复显示。
+ * 因此用 .js-ready 类做开关 —— 客户端脚本启动时给 <html> 加上它，
+ * 预渲染块随即隐藏。整个过程不依赖 JS 的执行顺序：
+ *   - JS 正常 → 加上 js-ready → 预渲染块隐藏，界面由 JS 渲染
+ *   - JS 禁用 → 不会有 js-ready → 预渲染块保持可见
+ *
+ * 注意默认状态必须是「可见」—— 爬虫拿到的就是这份没有 js-ready 的 HTML，
+ * 如果默认 display:none，预渲染就白做了。
+ */
+html:not(.js-ready) .prerender-block {
+  display: block;
+}
+
+html.js-ready .prerender-block {
+  display: none;
+}
+
+/* 无 JS 环境下，页面容器不再需要为 JS 预留的空白 */
+html:not(.js-ready) .prerender-inner {
+  max-width: var(--layout-max);
+  margin: 0 auto;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+html:not(.js-ready) body {
+  background: var(--bg-page);
+}
+
+html:not(.js-ready) .prerender-inner .card,
+html:not(.js-ready) .prerender-inner .kpi,
+html:not(.js-ready) .prerender-inner .table-wrap,
+html:not(.js-ready) .prerender-inner .repo-head {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+html:not(.js-ready) .prerender-inner .repo-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: var(--space-5);
+  align-items: start;
+}
+
 /* ============ 语义布局类（替代散落的内联 style）============ */
 .action-row {
   display: flex;

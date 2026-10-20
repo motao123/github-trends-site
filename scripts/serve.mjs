@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 /**
  * 零依赖静态服务器，用于本地验证。
- * 用法：node scripts/serve.mjs [port]
+ * 用法：node scripts/serve.mjs [port] [root]
+ *
+ *   node scripts/serve.mjs              # 以仓库根为根目录
+ *   node scripts/serve.mjs 4180 _site   # 以 _site/ 为根目录（预览预渲染产物）
  *
  * 注意：这是 file:// 之外最省事的本地验证方式。ES Module 在 file:// 协议下
  * 会被 CORS 拦截，因此必须通过 http 打开。
@@ -14,7 +17,7 @@ import { fileURLToPath } from "node:url";
 import { dirname } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = resolve(__dirname, "..");
+const ROOT = resolve(__dirname, "..", process.argv[3] || ".");
 const PORT = Number(process.argv[2]) || 4173;
 
 const MIME = {
@@ -29,6 +32,11 @@ const MIME = {
   ".webp": "image/webp",
   ".ico": "image/x-icon",
   ".md": "text/markdown; charset=utf-8",
+  // RSS / Atom / sitemap 的 Content-Type 必须正确，
+  // 否则阅读器与搜索引擎可能拒绝解析。
+  ".xml": "application/xml; charset=utf-8",
+  ".txt": "text/plain; charset=utf-8",
+  ".webmanifest": "application/manifest+json; charset=utf-8",
 };
 
 const server = createServer(async (req, res) => {

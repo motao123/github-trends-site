@@ -2,6 +2,19 @@
  * 轻量 DOM / 格式化工具。不引入框架，保持纯静态可部署。
  */
 
+/**
+ * 标记 JS 已接管页面。
+ *
+ * 构建期预渲染的内容（.prerender-block）是为「不执行 JS 的爬虫」和
+ * 「禁用 JS 的用户」准备的。客户端脚本一启动就移除它，
+ * 避免与 JS 渲染的界面重复。
+ *
+ * 预渲染块放在 #app 之外（因为 mount() 只会清空 #app 内部），
+ * 所以这里要显式移除。同时给 <html> 加上 js-ready 类作为 CSS 兜底。
+ */
+document.documentElement.classList.add("js-ready");
+document.querySelectorAll(".prerender-block").forEach((node) => node.remove());
+
 export const LANG_COLORS = {
   Python: "#3178C6",
   TypeScript: "#3178C6",

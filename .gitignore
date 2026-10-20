@@ -6,3 +6,7 @@ node_modules
 
 # 构建产物
 _site_staging/
+
+# 预渲染产物（由 scripts/prerender.mjs 在 CI 里生成，不入库）
+_prerendered/
+_site_test/

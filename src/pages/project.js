@@ -1,7 +1,33 @@
 /**
  * 页面二：项目详情（含 Star 增长趋势图）。
- * 路由：project.html?full_name=owner/repo
+ *
+ * 路由支持两种形式：
+ *   1. project.html?full_name=owner/repo   —— 原始形式
+ *   2. project/owner/repo.html              —— SEO 友好的静态路径
+ *
+ * 第 2 种是给搜索引擎和可分享链接用的：路径形式比查询参数形式
+ * 语义更清晰，也更容易被收录与聚合。
  */
+
+/** 从当前 URL 解析目标项目名。 */
+function resolveTarget() {
+  const params = new URLSearchParams(window.location.search);
+  const fromQuery = params.get("full_name");
+  if (fromQuery) return fromQuery;
+
+  // 路径形式：/project/owner/repo.html
+  const match = window.location.pathname.match(/\/project\/([^/]+)\/([^/]+)\.html?$/);
+  if (match) {
+    // 文件名里的 _ 可能原本是 /（如 morluto_rea.html → morluto/rea）
+    const owner = decodeURIComponent(match[1]);
+    const name = decodeURIComponent(match[2]).replace(/_/g, "/");
+    return `${owner}/${name}`;
+  }
+  return "";
+}
+
+const app = document.querySelector("#app");
+const target = resolveTarget();
 
 import { loadSnapshot, buildRanking, PERIODS, PERIOD_MAP, freshnessLabel } from "../lib/data.js";
 import { getFavorites, toggleFavorite, getCompare, toggleCompare, getState, COMPARE_LIMIT } from "../lib/store.js";
@@ -17,10 +43,6 @@ import {
   renderFooter,
   renderCompareTray,
 } from "../components/ui.js";
-
-const app = document.querySelector("#app");
-const params = new URLSearchParams(window.location.search);
-const target = params.get("full_name") || "";
 
 let snapshot = null;
 let repo = null;
