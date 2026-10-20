@@ -75,7 +75,7 @@ function render() {
                         { style: "text-align:right" },
                         el(
                           "span",
-                          { style: "display:inline-flex;gap:6px" },
+                          { class: "row-actions" },
                           el(
                             "button",
                             {
