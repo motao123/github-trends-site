@@ -8,7 +8,35 @@ import { PERIODS, freshnessLabel, clockLabel } from "../lib/data.js";
 
 /* ---------------- 顶栏 ---------------- */
 
-export function renderTopbar(active = "leaderboard") {
+/**
+ * 顶栏的持久化节点。
+ *
+ * 背景：页面每次状态变化都会整体重绘（mount(app, ...)）。如果顶栏跟着
+ * 一起重建，会出两个问题：
+ *   1. 搜索框被换成新节点，用户输入的文字随旧节点一起被丢弃
+ *      —— 表现为"打了字但框里看不见"
+ *   2. 节点被移动出文档的瞬间会失焦，光标跳回开头
+ *
+ * 解决：整个顶栏只构建一次，之后只更新「当前导航项」这一个属性。
+ * 这样输入框节点与它的父容器都不再移动，焦点与光标自然保持。
+ */
+let topbarNode = null;
+let topbarNav = null;
+
+/** 获取（必要时创建）持久化的搜索输入框节点。 */
+function getSearchInput() {
+  if (!topbarNode) buildTopbar();
+  return topbarNode.querySelector("#global-search");
+}
+
+/** 把当前关键词同步进搜索框（用于 URL 参数初始化等场景）。 */
+export function setSearchValue(value) {
+  const input = getSearchInput();
+  if (input && input.value !== value) input.value = value;
+}
+
+/** 构建顶栏（只执行一次）。 */
+function buildTopbar() {
   const items = [
     { id: "leaderboard", label: "趋势榜单", href: "./index.html" },
     { id: "overview", label: "总览面板", href: "./overview.html" },
@@ -21,6 +49,7 @@ export function renderTopbar(active = "leaderboard") {
     placeholder: "搜索项目 / 话题 / 作者",
     "aria-label": "搜索项目",
     id: "global-search",
+    autocomplete: "off",
   });
 
   const themeBtn = el("button", {
@@ -46,12 +75,13 @@ export function renderTopbar(active = "leaderboard") {
         class: "nav__item",
         href: item.href,
         text: item.label,
-        "aria-current": item.id === active ? "page" : null,
+        dataset: { navId: item.id },
       }),
     ),
   );
+  topbarNav = nav;
 
-  return el(
+  topbarNode = el(
     "header",
     { class: "topbar" },
     el(
@@ -71,12 +101,37 @@ export function renderTopbar(active = "leaderboard") {
       themeBtn,
     ),
   );
+
+  return topbarNode;
 }
 
-/** 顶栏搜索框与状态层联动，供各页面挂载。 */
+/**
+ * 返回顶栏节点。
+ * 重绘时只更新当前导航项的高亮状态，其余部分（含搜索框）原样保留。
+ */
+export function renderTopbar(active = "leaderboard") {
+  if (!topbarNode) buildTopbar();
+  if (topbarNav) {
+    for (const link of topbarNav.querySelectorAll(".nav__item")) {
+      if (link.dataset.navId === active) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    }
+  }
+  return topbarNode;
+}
+
+/**
+ * 顶栏搜索框与状态层联动，供各页面挂载。
+ *
+ * 因为输入框是持久化节点，这里的监听器只需绑定一次；
+ * 即使重复调用，旧的 input 事件监听也不会导致重复触发
+ * （同一个节点上只挂一次，用标记位守卫）。
+ */
+let searchBound = false;
 export function bindTopbarSearch(onSearch) {
-  const input = document.querySelector("#global-search");
-  if (!input) return;
+  const input = getSearchInput();
+  if (!input || searchBound) return;
+  searchBound = true;
   let timer = null;
   input.addEventListener("input", () => {
     clearTimeout(timer);
