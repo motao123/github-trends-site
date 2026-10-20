@@ -168,6 +168,7 @@ function renderKpis(state) {
     "div",
     { class: "kpi-row" },
     kpi({
+      primary: true,
       label: `${period.label}新增 Star`,
       value: formatNumber(growthSum),
       delta: hasBaseline ? "基于上一次快照计算" : "暂无基线 · 明日起可计算增长",
@@ -250,7 +251,7 @@ function renderTable(state, rows, maxGrowth) {
               : null,
           },
           col.label,
-          col.sortable ? el("span", { class: "sort-arrow", text: state.sort === col.key ? (state.direction === "desc" ? "↓" : "↑") : "↕" }) : null,
+          col.sortable ? el("span", { class: "sort-arrow" }, icon(state.sort === col.key ? (state.direction === "desc" ? "sortDesc" : "sortAsc") : "sortBoth", 12)) : null,
         ),
       ),
     ),
@@ -297,14 +298,14 @@ function renderTable(state, rows, maxGrowth) {
       return el(
         "tr",
         {},
-        el("td", { class: "col-rank" }, el("span", { class: `rank-badge${absoluteRank > 3 ? " rank-badge--muted" : ""}`, text: String(absoluteRank) })),
+        el("td", { class: "col-rank" }, el("span", { class: `rank-badge${absoluteRank <= 3 ? " rank-badge--top" : ""}`, text: String(absoluteRank) })),
         el("td", { class: "col-repo" }, el("a", { href: `./project.html?full_name=${encodeURIComponent(repo.fullName)}`, style: "color:inherit;display:block" }, repoCell(repo))),
         el("td", { class: "col-lang" }, langCell(repo.language)),
         el("td", { class: "num col-num", text: formatNumber(repo.stars) }),
         el("td", { class: "col-growth" }, growthCell(repo.periodGrowth, maxGrowth)),
         el("td", { class: "num col-fork", text: formatNumber(repo.forks) }),
         el("td", { class: "col-updated", style: "color:var(--text-secondary)", text: relativeTime(repo.pushedAt) }),
-        el("td", { class: "col-actions" }, el("span", { style: "display:inline-flex;gap:6px;align-items:center;justify-content:flex-end" }, favBtn, cmpBtn)),
+        el("td", { class: "col-actions" }, el("span", { class: "row-actions" }, favBtn, cmpBtn)),
       );
     }),
   );
@@ -329,9 +330,9 @@ function renderPagination(state, totalPages) {
     );
 
   add(1);
-  if (state.page > 3) pageButtons.push(el("span", { text: "···", style: "color:var(--text-tertiary)" }));
+  if (state.page > 3) pageButtons.push(el("span", { class: "pager__gap" }, icon("more", 14)));
   for (let p = Math.max(2, state.page - 1); p <= Math.min(totalPages, state.page + 1); p += 1) add(p);
-  if (state.page < totalPages - 2) pageButtons.push(el("span", { text: "···", style: "color:var(--text-tertiary)" }));
+  if (state.page < totalPages - 2) pageButtons.push(el("span", { class: "pager__gap" }, icon("more", 14)));
   if (totalPages > 1) add(totalPages);
 
   return el(
@@ -344,9 +345,9 @@ function renderPagination(state, totalPages) {
       el(
         "div",
         { class: "pager" },
-        el("button", { type: "button", text: "‹", "aria-label": "上一页", disabled: state.page <= 1, onclick: () => setState({ page: state.page - 1 }) }),
+        el("button", { class: "pager__nav", type: "button", "aria-label": "上一页", disabled: state.page <= 1, onclick: () => setState({ page: state.page - 1 }) }, icon("chevronLeft", 14)),
         pageButtons,
-        el("button", { type: "button", text: "›", "aria-label": "下一页", disabled: state.page >= totalPages, onclick: () => setState({ page: state.page + 1 }) }),
+        el("button", { class: "pager__nav", type: "button", "aria-label": "下一页", disabled: state.page >= totalPages, onclick: () => setState({ page: state.page + 1 }) }, icon("chevronRight", 14)),
       ),
     ),
   );
