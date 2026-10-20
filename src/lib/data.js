@@ -24,11 +24,27 @@ export const PERIOD_MAP = new Map(PERIODS.map((p) => [p.id, p]));
 
 /**
  * 静态快照候选路径。
- * 站点是纯静态多页结构，快照放在仓库的 public/data/ 下；Pages 以仓库根为站点根，
- * 因此线上路径为 /public/data/trending.json。本地开发服务器的 public 映射也能命中。
- * 保留多个候选是为了兼容「把 public 目录当站点根」的其他部署方式。
+ *
+ * 站点是纯静态多页结构，快照放在仓库的 public/data/ 下。
+ *
+ * 关键：必须用「站点根相对」的绝对路径，不能用相对路径。
+ *   相对路径 "public/data/trending.json" 在 /index.html 下能解析成
+ *   /public/data/trending.json（正确），但在 /project/owner/repo.html
+ *   下会解析成 /project/owner/public/data/trending.json（404），
+ *   于是页面会回退去直连 GitHub API —— 匿名调用必然 422。
+ *
+ * 基路径的推导：脚本自身的 URL 形如
+ *   <站点根>/src/lib/data.js
+ * 去掉末尾 /src/lib/data.js 就是站点根。这样无论站点部署在
+ * 仓库子路径（/github-trends-site/）还是域名根，都能正确解析。
  */
-const SNAPSHOT_PATHS = ["public/data/trending.json", "data/trending.json"];
+const SITE_BASE = new URL("../..", import.meta.url).pathname.replace(/\/+$/, "");
+const SNAPSHOT_PATHS = [
+  `${SITE_BASE}/public/data/trending.json`,
+  `${SITE_BASE}/data/trending.json`,
+  "/public/data/trending.json",
+  "data/trending.json",
+];
 const CACHE_KEY = "gh_trends_snapshot_v1";
 const CACHE_TTL = 2 * 60 * 60 * 1000; // 2 小时，与 Actions 频率对齐
 
