@@ -1,9 +1,9 @@
 {
   "version": 1,
   "source": "actions",
-  "generatedAt": "2026-10-30T12:30:00.076Z",
-  "baselineAt": "2026-10-30T05:08:10.771Z",
-  "periodCount": 121,
+  "generatedAt": "2026-10-30T19:05:01.083Z",
+  "baselineAt": "2026-10-30T12:30:00.076Z",
+  "periodCount": 120,
   "items": [
     {
       "id": 54346799,
@@ -12,10 +12,10 @@
       "name": "public-apis",
       "description": "A collective list of free APIs",
       "language": "Python",
-      "stars": 493424,
-      "forks": 55031,
-      "watchers": 493424,
-      "openIssues": 2495,
+      "stars": 493507,
+      "forks": 55053,
+      "watchers": 493507,
+      "openIssues": 2479,
       "topics": [
         "api",
         "apis",
@@ -33,23 +33,23 @@
       ],
       "license": "MIT",
       "createdAt": "2016-03-20T23:49:42Z",
-      "updatedAt": "2026-10-30T12:27:29Z",
-      "pushedAt": "2026-10-29T14:36:24Z",
+      "updatedAt": "2026-10-30T18:58:56Z",
+      "pushedAt": "2026-10-30T16:40:39Z",
       "url": "https://github.com/public-apis/public-apis",
       "homepage": "https://APILayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo",
       "periods": {
-        "week": 493424,
-        "month": 493424,
-        "quarter": 493424,
-        "half": 493424,
-        "year": 493424
+        "week": 493507,
+        "month": 493507,
+        "quarter": 493507,
+        "half": 493507,
+        "year": 493507
       },
       "growth": {
-        "week": 2014,
-        "month": 3000,
-        "quarter": 3000,
-        "half": 3000,
-        "year": 3000
+        "week": 2097,
+        "month": 3083,
+        "quarter": 3083,
+        "half": 3083,
+        "year": 3083
       },
       "covered": {
         "week": 8,
@@ -66,10 +66,10 @@
       "name": "freeCodeCamp",
       "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
       "language": "TypeScript",
-      "stars": 458219,
-      "forks": 48732,
-      "watchers": 458219,
-      "openIssues": 156,
+      "stars": 458239,
+      "forks": 48744,
+      "watchers": 458239,
+      "openIssues": 161,
       "topics": [
         "careers",
         "certification",
@@ -89,23 +89,23 @@
       ],
       "license": "BSD-3-Clause",
       "createdAt": "2014-12-24T17:49:19Z",
-      "updatedAt": "2026-10-30T12:20:59Z",
-      "pushedAt": "2026-10-30T08:34:26Z",
+      "updatedAt": "2026-10-30T18:53:23Z",
+      "pushedAt": "2026-10-30T15:47:47Z",
       "url": "https://github.com/freeCodeCamp/freeCodeCamp",
       "homepage": "https://contribute.freecodecamp.org",
       "periods": {
-        "week": 458219,
-        "month": 458219,
-        "quarter": 458219,
-        "half": 458219,
-        "year": 458219
+        "week": 458239,
+        "month": 458239,
+        "quarter": 458239,
+        "half": 458239,
+        "year": 458239
       },
       "growth": {
-        "week": 499,
-        "month": 714,
-        "quarter": 714,
-        "half": 714,
-        "year": 714
+        "week": 519,
+        "month": 734,
+        "quarter": 734,
+        "half": 734,
+        "year": 734
       },
       "covered": {
         "week": 8,
@@ -122,10 +122,10 @@
       "name": "rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "language": "TypeScript",
-      "stars": 410338,
-      "forks": 102699,
-      "watchers": 410338,
-      "openIssues": 1321,
+      "stars": 411639,
+      "forks": 103003,
+      "watchers": 411639,
+      "openIssues": 1320,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -150,23 +150,23 @@
       ],
       "license": "MIT",
       "createdAt": "2026-04-14T00:51:32Z",
-      "updatedAt": "2026-10-30T12:29:12Z",
-      "pushedAt": "2026-10-30T12:07:03Z",
+      "updatedAt": "2026-10-30T19:04:11Z",
+      "pushedAt": "2026-10-30T18:25:31Z",
       "url": "https://github.com/morluto/rea",
       "homepage": "https://rea.tools",
       "periods": {
-        "week": 410338,
-        "month": 410338,
-        "quarter": 410341,
-        "half": 410341,
-        "year": 410341
+        "week": 411639,
+        "month": 411639,
+        "quarter": 411639,
+        "half": 411640,
+        "year": 411641
       },
       "growth": {
-        "week": 44421,
-        "month": 76812,
-        "quarter": 76812,
-        "half": 76812,
-        "year": 76812
+        "week": 45722,
+        "month": 78113,
+        "quarter": 78113,
+        "half": 78113,
+        "year": 78113
       },
       "covered": {
         "week": 8,
@@ -183,9 +183,9 @@
       "name": "free-programming-books",
       "description": ":books: Freely available programming books",
       "language": "Python",
-      "stars": 400526,
+      "stars": 400549,
       "forks": 67033,
-      "watchers": 400526,
+      "watchers": 400549,
       "openIssues": 89,
       "topics": [
         "books",
@@ -196,23 +196,23 @@
       ],
       "license": "CC-BY-4.0",
       "createdAt": "2013-10-11T06:50:37Z",
-      "updatedAt": "2026-10-30T12:28:27Z",
+      "updatedAt": "2026-10-30T18:57:30Z",
       "pushedAt": "2026-10-27T20:40:54Z",
       "url": "https://github.com/EbookFoundation/free-programming-books",
       "homepage": "https://ebookfoundation.github.io/free-programming-books/",
       "periods": {
-        "week": 400526,
-        "month": 400526,
-        "quarter": 400526,
-        "half": 400526,
-        "year": 400526
+        "week": 400549,
+        "month": 400549,
+        "quarter": 400549,
+        "half": 400549,
+        "year": 400549
       },
       "growth": {
-        "week": 681,
-        "month": 950,
-        "quarter": 950,
-        "half": 950,
-        "year": 950
+        "week": 704,
+        "month": 973,
+        "quarter": 973,
+        "half": 973,
+        "year": 973
       },
       "covered": {
         "week": 8,
@@ -229,10 +229,10 @@
       "name": "openclaw",
       "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
       "language": "TypeScript",
-      "stars": 393428,
-      "forks": 82697,
-      "watchers": 393428,
-      "openIssues": 7909,
+      "stars": 393468,
+      "forks": 82705,
+      "watchers": 393468,
+      "openIssues": 7897,
       "topics": [
         "ai",
         "assistant",
@@ -244,23 +244,23 @@
       ],
       "license": "MIT",
       "createdAt": "2025-11-24T10:16:47Z",
-      "updatedAt": "2026-10-30T12:27:05Z",
-      "pushedAt": "2026-10-30T12:27:04Z",
+      "updatedAt": "2026-10-30T19:03:11Z",
+      "pushedAt": "2026-10-30T19:03:53Z",
       "url": "https://github.com/openclaw/openclaw",
       "homepage": "https://openclaw.ai",
       "periods": {
-        "week": 393428,
-        "month": 393428,
-        "quarter": 393428,
-        "half": 393428,
-        "year": 393428
+        "week": 393468,
+        "month": 393468,
+        "quarter": 393468,
+        "half": 393468,
+        "year": 393468
       },
       "growth": {
-        "week": 642,
-        "month": 1154,
-        "quarter": 1154,
-        "half": 1154,
-        "year": 1154
+        "week": 682,
+        "month": 1194,
+        "quarter": 1194,
+        "half": 1194,
+        "year": 1194
       },
       "covered": {
         "week": 8,
@@ -277,10 +277,10 @@
       "name": "developer-roadmap",
       "description": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
       "language": "TypeScript",
-      "stars": 370792,
-      "forks": 45160,
-      "watchers": 370792,
-      "openIssues": 3,
+      "stars": 370817,
+      "forks": 45161,
+      "watchers": 370817,
+      "openIssues": 5,
       "topics": [
         "angular-roadmap",
         "backend-roadmap",
@@ -303,23 +303,23 @@
       ],
       "license": "NOASSERTION",
       "createdAt": "2017-03-15T13:45:52Z",
-      "updatedAt": "2026-10-30T12:29:02Z",
+      "updatedAt": "2026-10-30T19:00:26Z",
       "pushedAt": "2026-10-30T10:44:36Z",
       "url": "https://github.com/nilbuild/developer-roadmap",
       "homepage": "https://roadmap.sh",
       "periods": {
-        "week": 370792,
-        "month": 370792,
-        "quarter": 370792,
-        "half": 370792,
-        "year": 370792
+        "week": 370817,
+        "month": 370817,
+        "quarter": 370817,
+        "half": 370817,
+        "year": 370817
       },
       "growth": {
-        "week": 634,
-        "month": 912,
-        "quarter": 912,
-        "half": 912,
-        "year": 912
+        "week": 659,
+        "month": 937,
+        "quarter": 937,
+        "half": 937,
+        "year": 937
       },
       "covered": {
         "week": 8,
@@ -336,9 +336,9 @@
       "name": "awesome-selfhosted",
       "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
       "language": "—",
-      "stars": 331977,
-      "forks": 15641,
-      "watchers": 331977,
+      "stars": 332082,
+      "forks": 15648,
+      "watchers": 332082,
       "openIssues": 0,
       "topics": [
         "awesome",
@@ -352,23 +352,23 @@
       ],
       "license": "NOASSERTION",
       "createdAt": "2015-06-01T02:33:17Z",
-      "updatedAt": "2026-10-30T12:23:49Z",
+      "updatedAt": "2026-10-30T19:00:07Z",
       "pushedAt": "2026-10-29T10:27:46Z",
       "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
       "homepage": "https://awesome-selfhosted.net/",
       "periods": {
-        "week": 331977,
-        "month": 331977,
-        "quarter": 331977,
-        "half": 331977,
-        "year": 331977
+        "week": 332082,
+        "month": 332082,
+        "quarter": 332082,
+        "half": 332082,
+        "year": 332082
       },
       "growth": {
-        "week": 2637,
-        "month": 3677,
-        "quarter": 3677,
-        "half": 3677,
-        "year": 3677
+        "week": 2742,
+        "month": 3782,
+        "quarter": 3782,
+        "half": 3782,
+        "year": 3782
       },
       "covered": {
         "week": 8,
@@ -385,9 +385,9 @@
       "name": "awesome-python",
       "description": "The definitive list that answers \"I want to do X in Python, which tool should I use?\"",
       "language": "Python",
-      "stars": 331308,
-      "forks": 29034,
-      "watchers": 331308,
+      "stars": 331367,
+      "forks": 29038,
+      "watchers": 331367,
       "openIssues": 22,
       "topics": [
         "awesome",
@@ -399,23 +399,23 @@
       ],
       "license": "NOASSERTION",
       "createdAt": "2014-06-27T21:00:06Z",
-      "updatedAt": "2026-10-30T12:27:38Z",
+      "updatedAt": "2026-10-30T18:57:22Z",
       "pushedAt": "2026-10-29T12:38:48Z",
       "url": "https://github.com/vinta/awesome-python",
       "homepage": "https://awesome-python.com/",
       "periods": {
-        "week": 331308,
-        "month": 331308,
-        "quarter": 331308,
-        "half": 331308,
-        "year": 331308
+        "week": 331367,
+        "month": 331367,
+        "quarter": 331367,
+        "half": 331367,
+        "year": 331367
       },
       "growth": {
-        "week": 1814,
-        "month": 2633,
-        "quarter": 2633,
-        "half": 2633,
-        "year": 2633
+        "week": 1873,
+        "month": 2692,
+        "quarter": 2692,
+        "half": 2692,
+        "year": 2692
       },
       "covered": {
         "week": 8,
@@ -432,9 +432,9 @@
       "name": "superpowers",
       "description": "An agentic skills framework & software development methodology that works.",
       "language": "Shell",
-      "stars": 309099,
-      "forks": 27487,
-      "watchers": 309099,
+      "stars": 309297,
+      "forks": 27515,
+      "watchers": 309297,
       "openIssues": 374,
       "topics": [
         "ai",
@@ -448,23 +448,23 @@
       ],
       "license": "MIT",
       "createdAt": "2025-10-09T19:45:18Z",
-      "updatedAt": "2026-10-30T12:27:34Z",
+      "updatedAt": "2026-10-30T19:04:24Z",
       "pushedAt": "2026-10-29T23:35:34Z",
       "url": "https://github.com/obra/superpowers",
       "homepage": "",
       "periods": {
-        "week": 309099,
-        "month": 309099,
-        "quarter": 309100,
-        "half": 309100,
-        "year": 309100
+        "week": 309297,
+        "month": 309297,
+        "quarter": 309297,
+        "half": 309297,
+        "year": 309297
       },
       "growth": {
-        "week": 5383,
-        "month": 6961,
-        "quarter": 6961,
-        "half": 6961,
-        "year": 6961
+        "week": 5581,
+        "month": 7159,
+        "quarter": 7159,
+        "half": 7159,
+        "year": 7159
       },
       "covered": {
         "week": 8,
@@ -481,30 +481,30 @@
       "name": "skills",
       "description": "Skills for Real Engineers. Straight from my .agents directory.",
       "language": "Shell",
-      "stars": 307025,
-      "forks": 25829,
-      "watchers": 307025,
-      "openIssues": 208,
+      "stars": 307322,
+      "forks": 25862,
+      "watchers": 307322,
+      "openIssues": 191,
       "topics": [],
       "license": "MIT",
       "createdAt": "2026-02-03T11:15:53Z",
-      "updatedAt": "2026-10-30T12:29:24Z",
-      "pushedAt": "2026-10-29T10:43:06Z",
+      "updatedAt": "2026-10-30T19:04:19Z",
+      "pushedAt": "2026-10-30T14:00:30Z",
       "url": "https://github.com/mattpocock/skills",
       "homepage": "https://aihero.dev/skills",
       "periods": {
-        "week": 307025,
-        "month": 307025,
-        "quarter": 307025,
-        "half": 307025,
-        "year": 307025
+        "week": 307322,
+        "month": 307322,
+        "quarter": 307322,
+        "half": 307322,
+        "year": 307322
       },
       "growth": {
-        "week": 6171,
-        "month": 9851,
-        "quarter": 9851,
-        "half": 9851,
-        "year": 9851
+        "week": 6468,
+        "month": 10148,
+        "quarter": 10148,
+        "half": 10148,
+        "year": 10148
       },
       "covered": {
         "week": 8,
@@ -521,10 +521,10 @@
       "name": "ECC",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "language": "JavaScript",
-      "stars": 293055,
-      "forks": 43359,
-      "watchers": 293055,
-      "openIssues": 179,
+      "stars": 293287,
+      "forks": 43395,
+      "watchers": 293287,
+      "openIssues": 185,
       "topics": [
         "ai-agents",
         "anthropic",
@@ -537,23 +537,23 @@
       ],
       "license": "MIT",
       "createdAt": "2026-01-18T00:51:51Z",
-      "updatedAt": "2026-10-30T12:27:52Z",
+      "updatedAt": "2026-10-30T19:02:57Z",
       "pushedAt": "2026-10-30T03:06:42Z",
       "url": "https://github.com/affaan-m/ECC",
       "homepage": "https://ecc.tools",
       "periods": {
-        "week": 293055,
-        "month": 293055,
-        "quarter": 293055,
-        "half": 293055,
-        "year": 293055
+        "week": 293287,
+        "month": 293287,
+        "quarter": 293287,
+        "half": 293287,
+        "year": 293288
       },
       "growth": {
-        "week": 6560,
-        "month": 9156,
-        "quarter": 9156,
-        "half": 9156,
-        "year": 9156
+        "week": 6792,
+        "month": 9388,
+        "quarter": 9388,
+        "half": 9388,
+        "year": 9388
       },
       "covered": {
         "week": 8,
@@ -570,9 +570,9 @@
       "name": "project-based-learning",
       "description": "Curated list of project-based tutorials",
       "language": "Python",
-      "stars": 288437,
-      "forks": 36758,
-      "watchers": 288437,
+      "stars": 288475,
+      "forks": 36759,
+      "watchers": 288475,
       "openIssues": 237,
       "topics": [
         "beginner-project",
@@ -586,23 +586,23 @@
       ],
       "license": "MIT",
       "createdAt": "2017-04-12T05:07:46Z",
-      "updatedAt": "2026-10-30T12:27:48Z",
+      "updatedAt": "2026-10-30T18:36:30Z",
       "pushedAt": "2026-10-26T07:13:08Z",
       "url": "https://github.com/practical-tutorials/project-based-learning",
       "homepage": "",
       "periods": {
-        "week": 288437,
-        "month": 288437,
-        "quarter": 288437,
-        "half": 288437,
-        "year": 288437
+        "week": 288475,
+        "month": 288475,
+        "quarter": 288475,
+        "half": 288475,
+        "year": 288475
       },
       "growth": {
-        "week": 788,
-        "month": 1153,
-        "quarter": 1153,
-        "half": 1153,
-        "year": 1153
+        "week": 826,
+        "month": 1191,
+        "quarter": 1191,
+        "half": 1191,
+        "year": 1191
       },
       "covered": {
         "week": 8,
@@ -619,9 +619,9 @@
       "name": "deepseek-harness",
       "description": "DeepSeek Harness: Everything is a Plugin.",
       "language": "TypeScript",
-      "stars": 266450,
-      "forks": 32301,
-      "watchers": 266450,
+      "stars": 266663,
+      "forks": 32327,
+      "watchers": 266663,
       "openIssues": 0,
       "topics": [
         "ai-agents",
@@ -631,23 +631,23 @@
       ],
       "license": "MIT",
       "createdAt": "2026-08-13T11:56:32Z",
-      "updatedAt": "2026-10-30T12:28:31Z",
+      "updatedAt": "2026-10-30T19:04:24Z",
       "pushedAt": "2026-10-30T06:54:11Z",
       "url": "https://github.com/deepseek-ai/deepseek-harness",
       "homepage": "https://deepseek.com/harness",
       "periods": {
-        "week": 266450,
-        "month": 266450,
-        "quarter": 266450,
-        "half": 266450,
-        "year": 266450
+        "week": 266663,
+        "month": 266663,
+        "quarter": 266663,
+        "half": 266663,
+        "year": 266663
       },
       "growth": {
-        "week": 8312,
-        "month": 12395,
-        "quarter": 12395,
-        "half": 12395,
-        "year": 12395
+        "week": 8525,
+        "month": 12608,
+        "quarter": 12608,
+        "half": 12608,
+        "year": 12608
       },
       "covered": {
         "week": 8,
@@ -664,10 +664,10 @@
       "name": "hermes-agent",
       "description": "The agent that grows with you",
       "language": "Python",
-      "stars": 258707,
-      "forks": 56840,
-      "watchers": 258707,
-      "openIssues": 52039,
+      "stars": 258829,
+      "forks": 56886,
+      "watchers": 258829,
+      "openIssues": 52048,
       "topics": [
         "ai",
         "ai-agent",
@@ -685,23 +685,23 @@
       ],
       "license": "MIT",
       "createdAt": "2025-07-22T22:22:28Z",
-      "updatedAt": "2026-10-30T12:25:09Z",
-      "pushedAt": "2026-10-30T12:27:56Z",
+      "updatedAt": "2026-10-30T19:02:26Z",
+      "pushedAt": "2026-10-30T18:11:01Z",
       "url": "https://github.com/NousResearch/hermes-agent",
       "homepage": "https://hermes-agent.nousresearch.com",
       "periods": {
-        "week": 258707,
-        "month": 258707,
-        "quarter": 258707,
-        "half": 258707,
-        "year": 258707
+        "week": 258829,
+        "month": 258829,
+        "quarter": 258829,
+        "half": 258829,
+        "year": 258829
       },
       "growth": {
-        "week": 2475,
-        "month": 3515,
-        "quarter": 3515,
-        "half": 3515,
-        "year": 3515
+        "week": 2597,
+        "month": 3637,
+        "quarter": 3637,
+        "half": 3637,
+        "year": 3637
       },
       "covered": {
         "week": 8,
@@ -718,30 +718,30 @@
       "name": "linux",
       "description": "Linux kernel source tree",
       "language": "C",
-      "stars": 253826,
-      "forks": 67497,
-      "watchers": 253826,
+      "stars": 253861,
+      "forks": 67504,
+      "watchers": 253861,
       "openIssues": 3,
       "topics": [],
       "license": "NOASSERTION",
       "createdAt": "2011-09-04T22:48:12Z",
-      "updatedAt": "2026-10-30T12:23:43Z",
-      "pushedAt": "2026-10-30T00:07:06Z",
+      "updatedAt": "2026-10-30T18:48:40Z",
+      "pushedAt": "2026-10-30T18:34:40Z",
       "url": "https://github.com/torvalds/linux",
       "homepage": "",
       "periods": {
-        "week": 253826,
-        "month": 253826,
-        "quarter": 253827,
-        "half": 253827,
-        "year": 253827
+        "week": 253861,
+        "month": 253861,
+        "quarter": 253861,
+        "half": 253861,
+        "year": 253861
       },
       "growth": {
-        "week": 745,
-        "month": 1312,
-        "quarter": 1312,
-        "half": 1312,
-        "year": 1312
+        "week": 780,
+        "month": 1347,
+        "quarter": 1347,
+        "half": 1347,
+        "year": 1347
       },
       "covered": {
         "week": 8,
@@ -758,10 +758,10 @@
       "name": "react",
       "description": "The library for web and native user interfaces.",
       "language": "JavaScript",
-      "stars": 251759,
-      "forks": 51597,
-      "watchers": 251759,
-      "openIssues": 1504,
+      "stars": 251765,
+      "forks": 51600,
+      "watchers": 251765,
+      "openIssues": 1473,
       "topics": [
         "declarative",
         "frontend",
@@ -772,23 +772,23 @@
       ],
       "license": "MIT",
       "createdAt": "2013-05-24T16:15:54Z",
-      "updatedAt": "2026-10-30T12:28:25Z",
-      "pushedAt": "2026-10-30T11:46:27Z",
+      "updatedAt": "2026-10-30T17:42:45Z",
+      "pushedAt": "2026-10-30T18:07:32Z",
       "url": "https://github.com/react/react",
       "homepage": "https://react.dev",
       "periods": {
-        "week": 251759,
-        "month": 251759,
-        "quarter": 251759,
-        "half": 251759,
-        "year": 251759
+        "week": 251765,
+        "month": 251765,
+        "quarter": 251765,
+        "half": 251765,
+        "year": 251765
       },
       "growth": {
-        "week": 280,
-        "month": 605,
-        "quarter": 605,
-        "half": 605,
-        "year": 605
+        "week": 286,
+        "month": 611,
+        "quarter": 611,
+        "half": 611,
+        "year": 611
       },
       "covered": {
         "week": 8,
@@ -805,30 +805,30 @@
       "name": "opencode",
       "description": "The open source coding agent.",
       "language": "TypeScript",
-      "stars": 223179,
-      "forks": 29938,
-      "watchers": 223179,
-      "openIssues": 3819,
+      "stars": 223281,
+      "forks": 29960,
+      "watchers": 223281,
+      "openIssues": 3851,
       "topics": [],
       "license": "MIT",
       "createdAt": "2025-04-30T20:08:00Z",
-      "updatedAt": "2026-10-30T12:25:47Z",
-      "pushedAt": "2026-10-30T12:26:59Z",
+      "updatedAt": "2026-10-30T18:52:42Z",
+      "pushedAt": "2026-10-30T18:48:03Z",
       "url": "https://github.com/anomalyco/opencode",
       "homepage": "https://opencode.ai",
       "periods": {
-        "week": 223179,
-        "month": 223179,
-        "quarter": 223179,
-        "half": 223179,
-        "year": 223179
+        "week": 223281,
+        "month": 223281,
+        "quarter": 223281,
+        "half": 223281,
+        "year": 223281
       },
       "growth": {
-        "week": 2995,
-        "month": 5708,
-        "quarter": 5708,
-        "half": 5708,
-        "year": 5708
+        "week": 3097,
+        "month": 5810,
+        "quarter": 5810,
+        "half": 5810,
+        "year": 5810
       },
       "covered": {
         "week": 8,
@@ -845,10 +845,10 @@
       "name": "n8n",
       "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
       "language": "TypeScript",
-      "stars": 209105,
-      "forks": 61315,
-      "watchers": 209105,
-      "openIssues": 1192,
+      "stars": 209137,
+      "forks": 61319,
+      "watchers": 209137,
+      "openIssues": 1186,
       "topics": [
         "ai",
         "apis",
@@ -873,23 +873,23 @@
       ],
       "license": "NOASSERTION",
       "createdAt": "2019-06-22T09:24:21Z",
-      "updatedAt": "2026-10-30T12:23:41Z",
-      "pushedAt": "2026-10-30T12:28:56Z",
+      "updatedAt": "2026-10-30T19:00:35Z",
+      "pushedAt": "2026-10-30T18:55:30Z",
       "url": "https://github.com/n8n-io/n8n",
       "homepage": "https://n8n.io",
       "periods": {
-        "week": 209105,
-        "month": 209105,
-        "quarter": 209105,
-        "half": 209105,
-        "year": 209105
+        "week": 209137,
+        "month": 209137,
+        "quarter": 209137,
+        "half": 209137,
+        "year": 209137
       },
       "growth": {
-        "week": 755,
-        "month": 1092,
-        "quarter": 1092,
-        "half": 1092,
-        "year": 1092
+        "week": 787,
+        "month": 1124,
+        "quarter": 1124,
+        "half": 1124,
+        "year": 1124
       },
       "covered": {
         "week": 8,
@@ -906,10 +906,10 @@
       "name": "yt-dlp",
       "description": "A feature-rich command-line audio/video downloader",
       "language": "Python",
-      "stars": 203852,
-      "forks": 17903,
-      "watchers": 203852,
-      "openIssues": 2740,
+      "stars": 203931,
+      "forks": 17910,
+      "watchers": 203931,
+      "openIssues": 2739,
       "topics": [
         "cli",
         "downloader",
@@ -921,23 +921,23 @@
       ],
       "license": "Unlicense",
       "createdAt": "2020-10-26T04:22:55Z",
-      "updatedAt": "2026-10-30T12:26:17Z",
+      "updatedAt": "2026-10-30T18:58:16Z",
       "pushedAt": "2026-10-29T20:36:18Z",
       "url": "https://github.com/yt-dlp/yt-dlp",
       "homepage": "https://discord.gg/H5MNcFW63r",
       "periods": {
-        "week": 203852,
-        "month": 203852,
-        "quarter": 203852,
-        "half": 203852,
-        "year": 203852
+        "week": 203931,
+        "month": 203931,
+        "quarter": 203931,
+        "half": 203932,
+        "year": 203932
       },
       "growth": {
-        "week": 3410,
-        "month": 4327,
-        "quarter": 4327,
-        "half": 4327,
-        "year": 4327
+        "week": 3489,
+        "month": 4406,
+        "quarter": 4406,
+        "half": 4406,
+        "year": 4406
       },
       "covered": {
         "week": 8,
@@ -954,10 +954,10 @@
       "name": "tensorflow",
       "description": "An Open Source Machine Learning Framework for Everyone",
       "language": "C++",
-      "stars": 201219,
-      "forks": 78738,
-      "watchers": 201219,
-      "openIssues": 3455,
+      "stars": 201223,
+      "forks": 78746,
+      "watchers": 201223,
+      "openIssues": 3453,
       "topics": [
         "deep-learning",
         "deep-neural-networks",
@@ -970,23 +970,23 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2015-11-07T01:19:20Z",
-      "updatedAt": "2026-10-30T12:27:16Z",
-      "pushedAt": "2026-10-30T12:25:13Z",
+      "updatedAt": "2026-10-30T18:55:49Z",
+      "pushedAt": "2026-10-30T19:00:45Z",
       "url": "https://github.com/tensorflow/tensorflow",
       "homepage": "https://tensorflow.org",
       "periods": {
-        "week": 201219,
-        "month": 201219,
-        "quarter": 201219,
-        "half": 201219,
-        "year": 201219
+        "week": 201223,
+        "month": 201223,
+        "quarter": 201223,
+        "half": 201223,
+        "year": 201223
       },
       "growth": {
-        "week": 163,
-        "month": 224,
-        "quarter": 224,
-        "half": 224,
-        "year": 224
+        "week": 167,
+        "month": 228,
+        "quarter": 228,
+        "half": 228,
+        "year": 228
       },
       "covered": {
         "week": 8,
@@ -1003,10 +1003,10 @@
       "name": "firecrawl",
       "description": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
       "language": "TypeScript",
-      "stars": 196924,
-      "forks": 10399,
-      "watchers": 196924,
-      "openIssues": 707,
+      "stars": 197044,
+      "forks": 10407,
+      "watchers": 197044,
+      "openIssues": 715,
       "topics": [
         "ai",
         "ai-agents",
@@ -1030,23 +1030,23 @@
       ],
       "license": "AGPL-3.0",
       "createdAt": "2024-04-15T21:02:29Z",
-      "updatedAt": "2026-10-30T12:28:58Z",
-      "pushedAt": "2026-10-30T11:28:21Z",
+      "updatedAt": "2026-10-30T18:49:56Z",
+      "pushedAt": "2026-10-30T18:56:22Z",
       "url": "https://github.com/firecrawl/firecrawl",
       "homepage": "https://firecrawl.dev",
       "periods": {
-        "week": 196924,
-        "month": 196924,
-        "quarter": 196924,
-        "half": 196924,
-        "year": 196924
+        "week": 197044,
+        "month": 197044,
+        "quarter": 197044,
+        "half": 197044,
+        "year": 197044
       },
       "growth": {
-        "week": 2633,
-        "month": 3920,
-        "quarter": 3920,
-        "half": 3920,
-        "year": 3920
+        "week": 2753,
+        "month": 4040,
+        "quarter": 4040,
+        "half": 4040,
+        "year": 4040
       },
       "covered": {
         "week": 8,
@@ -1063,30 +1063,30 @@
       "name": "claw-code",
       "description": "An agent-managed museum exhibit, built in Rust with Gajae-Code / LazyCodex — developed and maintained with no human intervention.",
       "language": "Rust",
-      "stars": 194976,
-      "forks": 107632,
-      "watchers": 194976,
+      "stars": 194991,
+      "forks": 107634,
+      "watchers": 194991,
       "openIssues": 1,
       "topics": [],
       "license": "MIT",
       "createdAt": "2026-03-31T08:58:08Z",
-      "updatedAt": "2026-10-30T12:06:46Z",
+      "updatedAt": "2026-10-30T18:45:52Z",
       "pushedAt": "2026-10-28T19:59:24Z",
       "url": "https://github.com/ultraworkers/claw-code",
       "homepage": "",
       "periods": {
-        "week": 194976,
-        "month": 194976,
-        "quarter": 194976,
-        "half": 194976,
-        "year": 194976
+        "week": 194991,
+        "month": 194991,
+        "quarter": 194991,
+        "half": 194991,
+        "year": 194991
       },
       "growth": {
-        "week": 35,
-        "month": 312,
-        "quarter": 312,
-        "half": 312,
-        "year": 312
+        "week": 50,
+        "month": 327,
+        "quarter": 327,
+        "half": 327,
+        "year": 327
       },
       "covered": {
         "week": 6,
@@ -1103,10 +1103,10 @@
       "name": "vscode",
       "description": "Visual Studio Code",
       "language": "TypeScript",
-      "stars": 194371,
-      "forks": 44911,
-      "watchers": 194371,
-      "openIssues": 21963,
+      "stars": 194379,
+      "forks": 44924,
+      "watchers": 194379,
+      "openIssues": 21962,
       "topics": [
         "editor",
         "electron",
@@ -1116,23 +1116,23 @@
       ],
       "license": "MIT",
       "createdAt": "2015-09-03T20:23:38Z",
-      "updatedAt": "2026-10-30T12:28:36Z",
-      "pushedAt": "2026-10-30T12:28:03Z",
+      "updatedAt": "2026-10-30T19:02:15Z",
+      "pushedAt": "2026-10-30T19:02:04Z",
       "url": "https://github.com/microsoft/vscode",
       "homepage": "https://code.visualstudio.com",
       "periods": {
-        "week": 194371,
-        "month": 194371,
-        "quarter": 194371,
-        "half": 194371,
-        "year": 194371
+        "week": 194379,
+        "month": 194379,
+        "quarter": 194379,
+        "half": 194379,
+        "year": 194379
       },
       "growth": {
-        "week": 274,
-        "month": 527,
-        "quarter": 527,
-        "half": 527,
-        "year": 527
+        "week": 282,
+        "month": 535,
+        "quarter": 535,
+        "half": 535,
+        "year": 535
       },
       "covered": {
         "week": 8,
@@ -1149,10 +1149,10 @@
       "name": "markitdown",
       "description": "Python tool for converting files and office documents to Markdown.",
       "language": "Python",
-      "stars": 192985,
-      "forks": 14443,
-      "watchers": 192985,
-      "openIssues": 768,
+      "stars": 193048,
+      "forks": 14451,
+      "watchers": 193048,
+      "openIssues": 769,
       "topics": [
         "autogen",
         "autogen-extension",
@@ -1164,23 +1164,23 @@
       ],
       "license": "MIT",
       "createdAt": "2024-11-13T19:56:40Z",
-      "updatedAt": "2026-10-30T12:26:38Z",
+      "updatedAt": "2026-10-30T18:40:44Z",
       "pushedAt": "2026-10-28T15:33:14Z",
       "url": "https://github.com/microsoft/markitdown",
       "homepage": "",
       "periods": {
-        "week": 192985,
-        "month": 192985,
-        "quarter": 192985,
-        "half": 192985,
-        "year": 192985
+        "week": 193048,
+        "month": 193048,
+        "quarter": 193048,
+        "half": 193048,
+        "year": 193048
       },
       "growth": {
-        "week": 1326,
-        "month": 1839,
-        "quarter": 1839,
-        "half": 1839,
-        "year": 1839
+        "week": 1389,
+        "month": 1902,
+        "quarter": 1902,
+        "half": 1902,
+        "year": 1902
       },
       "covered": {
         "week": 8,
@@ -1197,10 +1197,10 @@
       "name": "awesome-go",
       "description": "A curated list of awesome Go frameworks, libraries and software",
       "language": "Go",
-      "stars": 191124,
+      "stars": 191173,
       "forks": 13683,
-      "watchers": 191124,
-      "openIssues": 97,
+      "watchers": 191173,
+      "openIssues": 95,
       "topics": [
         "awesome",
         "awesome-list",
@@ -1211,23 +1211,23 @@
       ],
       "license": "MIT",
       "createdAt": "2014-07-06T13:42:15Z",
-      "updatedAt": "2026-10-30T12:29:03Z",
-      "pushedAt": "2026-10-26T09:02:58Z",
+      "updatedAt": "2026-10-30T18:57:30Z",
+      "pushedAt": "2026-10-30T14:13:08Z",
       "url": "https://github.com/avelino/awesome-go",
       "homepage": "https://awesome-go.com",
       "periods": {
-        "week": 191124,
-        "month": 191124,
-        "quarter": 191124,
-        "half": 191124,
-        "year": 191124
+        "week": 191173,
+        "month": 191173,
+        "quarter": 191174,
+        "half": 191174,
+        "year": 191174
       },
       "growth": {
-        "week": 1312,
-        "month": 1896,
-        "quarter": 1896,
-        "half": 1896,
-        "year": 1896
+        "week": 1361,
+        "month": 1945,
+        "quarter": 1945,
+        "half": 1945,
+        "year": 1945
       },
       "covered": {
         "week": 8,
@@ -1244,9 +1244,9 @@
       "name": "ohmyzsh",
       "description": "🙃   A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.",
       "language": "Shell",
-      "stars": 190244,
-      "forks": 28656,
-      "watchers": 190244,
+      "stars": 190249,
+      "forks": 28661,
+      "watchers": 190249,
       "openIssues": 303,
       "topics": [
         "cli",
@@ -1267,23 +1267,23 @@
       ],
       "license": "MIT",
       "createdAt": "2009-08-28T18:15:37Z",
-      "updatedAt": "2026-10-30T11:56:15Z",
+      "updatedAt": "2026-10-30T18:03:32Z",
       "pushedAt": "2026-10-27T11:37:50Z",
       "url": "https://github.com/ohmyzsh/ohmyzsh",
       "homepage": "https://ohmyz.sh",
       "periods": {
-        "week": 190244,
-        "month": 190244,
-        "quarter": 190244,
-        "half": 190244,
-        "year": 190244
+        "week": 190249,
+        "month": 190249,
+        "quarter": 190249,
+        "half": 190249,
+        "year": 190249
       },
       "growth": {
-        "week": 122,
-        "month": 183,
-        "quarter": 183,
-        "half": 183,
-        "year": 183
+        "week": 127,
+        "month": 188,
+        "quarter": 188,
+        "half": 188,
+        "year": 188
       },
       "covered": {
         "week": 8,
@@ -1300,10 +1300,10 @@
       "name": "AutoGPT",
       "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
       "language": "Python",
-      "stars": 187826,
-      "forks": 45900,
-      "watchers": 187826,
-      "openIssues": 743,
+      "stars": 187836,
+      "forks": 45907,
+      "watchers": 187836,
+      "openIssues": 738,
       "topics": [
         "agentic-ai",
         "agents",
@@ -1319,23 +1319,23 @@
       ],
       "license": "NOASSERTION",
       "createdAt": "2023-03-16T09:21:07Z",
-      "updatedAt": "2026-10-30T12:06:53Z",
-      "pushedAt": "2026-10-30T12:24:56Z",
+      "updatedAt": "2026-10-30T19:04:13Z",
+      "pushedAt": "2026-10-30T19:04:20Z",
       "url": "https://github.com/Significant-Gravitas/AutoGPT",
       "homepage": "https://agpt.co",
       "periods": {
-        "week": 187826,
-        "month": 187826,
-        "quarter": 187826,
-        "half": 187826,
-        "year": 187826
+        "week": 187836,
+        "month": 187836,
+        "quarter": 187836,
+        "half": 187836,
+        "year": 187836
       },
       "growth": {
-        "week": 114,
-        "month": 171,
-        "quarter": 171,
-        "half": 171,
-        "year": 171
+        "week": 124,
+        "month": 181,
+        "quarter": 181,
+        "half": 181,
+        "year": 181
       },
       "covered": {
         "week": 8,
@@ -1352,9 +1352,9 @@
       "name": "CS-Notes",
       "description": ":books: 技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计",
       "language": "Python",
-      "stars": 186384,
-      "forks": 50660,
-      "watchers": 186384,
+      "stars": 186393,
+      "forks": 50661,
+      "watchers": 186393,
       "openIssues": 174,
       "topics": [
         "algorithm",
@@ -1368,23 +1368,23 @@
       ],
       "license": "—",
       "createdAt": "2018-02-13T14:56:24Z",
-      "updatedAt": "2026-10-30T12:25:31Z",
-      "pushedAt": "2026-10-30T12:21:21Z",
+      "updatedAt": "2026-10-30T18:27:46Z",
+      "pushedAt": "2026-10-30T16:24:13Z",
       "url": "https://github.com/CyC2018/CS-Notes",
       "homepage": "http://cyc2018.xyz",
       "periods": {
-        "week": 186384,
-        "month": 186384,
-        "quarter": 186384,
-        "half": 186384,
-        "year": 186384
+        "week": 186393,
+        "month": 186393,
+        "quarter": 186393,
+        "half": 186393,
+        "year": 186393
       },
       "growth": {
-        "week": 84,
-        "month": 84,
-        "quarter": 84,
-        "half": 84,
-        "year": 84
+        "week": 93,
+        "month": 93,
+        "quarter": 93,
+        "half": 93,
+        "year": 93
       },
       "covered": {
         "week": 8,
@@ -1401,10 +1401,10 @@
       "name": "HelloGitHub",
       "description": ":octocat: 分享 GitHub 上有趣、入门级的开源项目。Share interesting, entry-level open source projects on GitHub.",
       "language": "Python",
-      "stars": 185723,
-      "forks": 13148,
-      "watchers": 185723,
-      "openIssues": 1183,
+      "stars": 185780,
+      "forks": 13155,
+      "watchers": 185780,
+      "openIssues": 1185,
       "topics": [
         "awesome",
         "github",
@@ -1413,23 +1413,23 @@
       ],
       "license": "—",
       "createdAt": "2016-05-04T06:24:11Z",
-      "updatedAt": "2026-10-30T12:28:22Z",
+      "updatedAt": "2026-10-30T18:55:54Z",
       "pushedAt": "2026-10-28T00:06:52Z",
       "url": "https://github.com/521xueweihan/HelloGitHub",
       "homepage": "https://hellogithub.com",
       "periods": {
-        "week": 185723,
-        "month": 185723,
-        "quarter": 185723,
-        "half": 185723,
-        "year": 185723
+        "week": 185780,
+        "month": 185780,
+        "quarter": 185780,
+        "half": 185780,
+        "year": 185780
       },
       "growth": {
-        "week": 1986,
-        "month": 2559,
-        "quarter": 2559,
-        "half": 2559,
-        "year": 2559
+        "week": 2043,
+        "month": 2616,
+        "quarter": 2616,
+        "half": 2616,
+        "year": 2616
       },
       "covered": {
         "week": 8,
@@ -1446,10 +1446,10 @@
       "name": "ollama",
       "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
       "language": "Go",
-      "stars": 185332,
-      "forks": 18761,
-      "watchers": 185332,
-      "openIssues": 4495,
+      "stars": 185356,
+      "forks": 18769,
+      "watchers": 185356,
+      "openIssues": 4500,
       "topics": [
         "deepseek",
         "gemma",
@@ -1468,23 +1468,23 @@
       ],
       "license": "MIT",
       "createdAt": "2023-06-26T19:39:32Z",
-      "updatedAt": "2026-10-30T12:18:40Z",
-      "pushedAt": "2026-10-30T01:53:49Z",
+      "updatedAt": "2026-10-30T18:54:39Z",
+      "pushedAt": "2026-10-30T17:49:58Z",
       "url": "https://github.com/ollama/ollama",
       "homepage": "https://ollama.com",
       "periods": {
-        "week": 185332,
-        "month": 185332,
-        "quarter": 185332,
-        "half": 185332,
-        "year": 185332
+        "week": 185356,
+        "month": 185356,
+        "quarter": 185356,
+        "half": 185356,
+        "year": 185356
       },
       "growth": {
-        "week": 1009,
-        "month": 1688,
-        "quarter": 1688,
-        "half": 1688,
-        "year": 1688
+        "week": 1033,
+        "month": 1712,
+        "quarter": 1712,
+        "half": 1712,
+        "year": 1712
       },
       "covered": {
         "week": 8,
@@ -1501,32 +1501,83 @@
       "name": "skills",
       "description": "Public repository for Agent Skills",
       "language": "Python",
-      "stars": 184963,
-      "forks": 21874,
-      "watchers": 184963,
+      "stars": 185157,
+      "forks": 21885,
+      "watchers": 185157,
       "openIssues": 1450,
       "topics": [
         "agent-skills"
       ],
       "license": "—",
       "createdAt": "2025-09-22T15:53:31Z",
-      "updatedAt": "2026-10-30T12:25:12Z",
+      "updatedAt": "2026-10-30T19:03:42Z",
       "pushedAt": "2026-10-28T19:20:39Z",
       "url": "https://github.com/anthropics/skills",
       "homepage": "",
       "periods": {
-        "week": 184963,
-        "month": 184963,
-        "quarter": 184963,
-        "half": 184963,
-        "year": 184963
+        "week": 185157,
+        "month": 185158,
+        "quarter": 185158,
+        "half": 185158,
+        "year": 185158
       },
       "growth": {
-        "week": 1938,
-        "month": 2681,
-        "quarter": 2681,
-        "half": 2681,
-        "year": 2681
+        "week": 2132,
+        "month": 2875,
+        "quarter": 2875,
+        "half": 2875,
+        "year": 2875
+      },
+      "covered": {
+        "week": 8,
+        "month": 12,
+        "quarter": 12,
+        "half": 12,
+        "year": 12
+      }
+    },
+    {
+      "id": 1266797999,
+      "fullName": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "language": "JavaScript",
+      "stars": 180857,
+      "forks": 9935,
+      "watchers": 180857,
+      "openIssues": 140,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "cursor-rules",
+        "developer-tools",
+        "llm",
+        "prompt-engineering",
+        "yagni"
+      ],
+      "license": "MIT",
+      "createdAt": "2026-06-12T00:52:37Z",
+      "updatedAt": "2026-10-30T19:03:27Z",
+      "pushedAt": "2026-10-29T11:59:31Z",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "homepage": "https://ponytail.dev",
+      "periods": {
+        "week": 180857,
+        "month": 180857,
+        "quarter": 180857,
+        "half": 180857,
+        "year": 180857
+      },
+      "growth": {
+        "week": 7468,
+        "month": 13074,
+        "quarter": 13074,
+        "half": 13074,
+        "year": 13074
       },
       "covered": {
         "week": 8,
@@ -1543,10 +1594,10 @@
       "name": "flutter",
       "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
       "language": "Dart",
-      "stars": 180678,
-      "forks": 33379,
-      "watchers": 180678,
-      "openIssues": 13491,
+      "stars": 180719,
+      "forks": 33384,
+      "watchers": 180719,
+      "openIssues": 13502,
       "topics": [
         "android",
         "app-framework",
@@ -1570,74 +1621,23 @@
       ],
       "license": "BSD-3-Clause",
       "createdAt": "2015-03-06T22:54:58Z",
-      "updatedAt": "2026-10-30T12:22:15Z",
-      "pushedAt": "2026-10-30T10:46:17Z",
+      "updatedAt": "2026-10-30T18:58:17Z",
+      "pushedAt": "2026-10-30T18:44:41Z",
       "url": "https://github.com/flutter/flutter",
       "homepage": "https://flutter.dev",
       "periods": {
-        "week": 180678,
-        "month": 180679,
-        "quarter": 180679,
-        "half": 180679,
-        "year": 180679
+        "week": 180719,
+        "month": 180719,
+        "quarter": 180719,
+        "half": 180719,
+        "year": 180719
       },
       "growth": {
-        "week": 343,
-        "month": 392,
-        "quarter": 392,
-        "half": 392,
-        "year": 392
-      },
-      "covered": {
-        "week": 8,
-        "month": 12,
-        "quarter": 12,
-        "half": 12,
-        "year": 12
-      }
-    },
-    {
-      "id": 1266797999,
-      "fullName": "DietrichGebert/ponytail",
-      "owner": "DietrichGebert",
-      "name": "ponytail",
-      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "language": "JavaScript",
-      "stars": 180651,
-      "forks": 9924,
-      "watchers": 180651,
-      "openIssues": 140,
-      "topics": [
-        "agent-skills",
-        "ai-agents",
-        "claude",
-        "claude-code",
-        "claude-code-plugin",
-        "cursor-rules",
-        "developer-tools",
-        "llm",
-        "prompt-engineering",
-        "yagni"
-      ],
-      "license": "MIT",
-      "createdAt": "2026-06-12T00:52:37Z",
-      "updatedAt": "2026-10-30T12:29:28Z",
-      "pushedAt": "2026-10-29T11:59:31Z",
-      "url": "https://github.com/DietrichGebert/ponytail",
-      "homepage": "https://ponytail.dev",
-      "periods": {
-        "week": 180651,
-        "month": 180651,
-        "quarter": 180651,
-        "half": 180651,
-        "year": 180651
-      },
-      "growth": {
-        "week": 7262,
-        "month": 12868,
-        "quarter": 12868,
-        "half": 12868,
-        "year": 12868
+        "week": 384,
+        "month": 433,
+        "quarter": 433,
+        "half": 433,
+        "year": 433
       },
       "covered": {
         "week": 8,
@@ -1654,26 +1654,26 @@
       "name": "gitignore",
       "description": "A collection of useful .gitignore templates",
       "language": "—",
-      "stars": 176111,
-      "forks": 82055,
-      "watchers": 176111,
-      "openIssues": 59,
+      "stars": 176108,
+      "forks": 82053,
+      "watchers": 176108,
+      "openIssues": 58,
       "topics": [
         "git",
         "gitignore"
       ],
       "license": "CC0-1.0",
       "createdAt": "2010-11-08T20:17:14Z",
-      "updatedAt": "2026-10-30T12:02:07Z",
-      "pushedAt": "2026-10-30T05:49:12Z",
+      "updatedAt": "2026-10-30T18:28:45Z",
+      "pushedAt": "2026-10-30T14:56:21Z",
       "url": "https://github.com/github/gitignore",
       "homepage": "",
       "periods": {
-        "week": 176111,
-        "month": 176111,
-        "quarter": 176111,
-        "half": 176111,
-        "year": 176111
+        "week": 176108,
+        "month": 176108,
+        "quarter": 176108,
+        "half": 176108,
+        "year": 176108
       },
       "growth": {
         "week": 89,
@@ -1697,10 +1697,10 @@
       "name": "prompts.chat",
       "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
       "language": "HTML",
-      "stars": 175180,
-      "forks": 22359,
-      "watchers": 175180,
-      "openIssues": 80,
+      "stars": 175252,
+      "forks": 22371,
+      "watchers": 175252,
+      "openIssues": 79,
       "topics": [
         "ai",
         "artificial-intelligence",
@@ -1723,23 +1723,23 @@
       ],
       "license": "NOASSERTION",
       "createdAt": "2022-12-05T13:54:13Z",
-      "updatedAt": "2026-10-30T12:15:30Z",
-      "pushedAt": "2026-10-30T07:24:06Z",
+      "updatedAt": "2026-10-30T19:02:13Z",
+      "pushedAt": "2026-10-30T14:30:36Z",
       "url": "https://github.com/f/prompts.chat",
       "homepage": "https://prompts.chat",
       "periods": {
-        "week": 175180,
-        "month": 175180,
-        "quarter": 175180,
-        "half": 175180,
-        "year": 175180
+        "week": 175252,
+        "month": 175252,
+        "quarter": 175252,
+        "half": 175252,
+        "year": 175252
       },
       "growth": {
-        "week": 1178,
-        "month": 1629,
-        "quarter": 1629,
-        "half": 1629,
-        "year": 1629
+        "week": 1250,
+        "month": 1701,
+        "quarter": 1701,
+        "half": 1701,
+        "year": 1701
       },
       "covered": {
         "week": 8,
@@ -1757,9 +1757,9 @@
       "description": "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.",
       "language": "MDX",
       "stars": 174968,
-      "forks": 78503,
+      "forks": 78505,
       "watchers": 174968,
-      "openIssues": 294,
+      "openIssues": 295,
       "topics": [
         "bootstrap",
         "css",
@@ -1771,7 +1771,7 @@
       ],
       "license": "MIT",
       "createdAt": "2011-07-29T21:19:00Z",
-      "updatedAt": "2026-10-30T11:28:51Z",
+      "updatedAt": "2026-10-30T18:19:43Z",
       "pushedAt": "2026-10-30T09:29:25Z",
       "url": "https://github.com/twbs/bootstrap",
       "homepage": "https://getbootstrap.com",
@@ -1804,10 +1804,10 @@
       "name": "transformers",
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "language": "Python",
-      "stars": 168348,
-      "forks": 35039,
-      "watchers": 168348,
-      "openIssues": 1030,
+      "stars": 168360,
+      "forks": 35047,
+      "watchers": 168360,
+      "openIssues": 1012,
       "topics": [
         "audio",
         "deep-learning",
@@ -1831,23 +1831,23 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2018-10-29T13:56:00Z",
-      "updatedAt": "2026-10-30T12:18:43Z",
-      "pushedAt": "2026-10-30T12:27:39Z",
+      "updatedAt": "2026-10-30T18:55:26Z",
+      "pushedAt": "2026-10-30T17:40:42Z",
       "url": "https://github.com/huggingface/transformers",
       "homepage": "https://huggingface.co/transformers",
       "periods": {
-        "week": 168348,
-        "month": 168348,
-        "quarter": 168348,
-        "half": 168348,
-        "year": 168348
+        "week": 168360,
+        "month": 168360,
+        "quarter": 168360,
+        "half": 168360,
+        "year": 168360
       },
       "growth": {
-        "week": 359,
-        "month": 503,
-        "quarter": 503,
-        "half": 503,
-        "year": 503
+        "week": 371,
+        "month": 515,
+        "quarter": 515,
+        "half": 515,
+        "year": 515
       },
       "covered": {
         "week": 8,
@@ -1864,30 +1864,30 @@
       "name": "agency-agents",
       "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
       "language": "Shell",
-      "stars": 165316,
-      "forks": 26725,
-      "watchers": 165316,
+      "stars": 165432,
+      "forks": 26760,
+      "watchers": 165432,
       "openIssues": 212,
       "topics": [],
       "license": "MIT",
       "createdAt": "2025-10-13T12:12:29Z",
-      "updatedAt": "2026-10-30T12:27:38Z",
+      "updatedAt": "2026-10-30T19:02:14Z",
       "pushedAt": "2026-10-25T01:43:20Z",
       "url": "https://github.com/msitarzewski/agency-agents",
       "homepage": "",
       "periods": {
-        "week": 165316,
-        "month": 165316,
-        "quarter": 165316,
-        "half": 165316,
-        "year": 165316
+        "week": 165432,
+        "month": 165432,
+        "quarter": 165432,
+        "half": 165432,
+        "year": 165432
       },
       "growth": {
-        "week": 2075,
-        "month": 3730,
-        "quarter": 3730,
-        "half": 3730,
-        "year": 3730
+        "week": 2191,
+        "month": 3846,
+        "quarter": 3846,
+        "half": 3846,
+        "year": 3846
       },
       "covered": {
         "week": 8,
@@ -1904,10 +1904,10 @@
       "name": "dify",
       "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
       "language": "Python",
-      "stars": 159989,
-      "forks": 25278,
-      "watchers": 159989,
-      "openIssues": 1151,
+      "stars": 160019,
+      "forks": 25286,
+      "watchers": 160019,
+      "openIssues": 1141,
       "topics": [
         "agent",
         "agentic-ai",
@@ -1931,23 +1931,23 @@
       ],
       "license": "NOASSERTION",
       "createdAt": "2023-04-12T07:40:24Z",
-      "updatedAt": "2026-10-30T12:26:56Z",
-      "pushedAt": "2026-10-30T12:23:51Z",
+      "updatedAt": "2026-10-30T18:55:25Z",
+      "pushedAt": "2026-10-30T18:53:47Z",
       "url": "https://github.com/langgenius/dify",
       "homepage": "https://dify.ai",
       "periods": {
-        "week": 159989,
-        "month": 159989,
-        "quarter": 159989,
-        "half": 159989,
-        "year": 159989
+        "week": 160019,
+        "month": 160019,
+        "quarter": 160019,
+        "half": 160019,
+        "year": 160019
       },
       "growth": {
-        "week": 710,
-        "month": 1085,
-        "quarter": 1085,
-        "half": 1085,
-        "year": 1085
+        "week": 740,
+        "month": 1115,
+        "quarter": 1115,
+        "half": 1115,
+        "year": 1115
       },
       "covered": {
         "week": 8,
@@ -1964,9 +1964,9 @@
       "name": "JavaGuide",
       "description": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
       "language": "JavaScript",
-      "stars": 159341,
+      "stars": 159350,
       "forks": 46131,
-      "watchers": 159341,
+      "watchers": 159350,
       "openIssues": 18,
       "topics": [
         "agent",
@@ -1985,23 +1985,23 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2018-05-07T13:27:00Z",
-      "updatedAt": "2026-10-30T12:27:23Z",
+      "updatedAt": "2026-10-30T18:44:56Z",
       "pushedAt": "2026-10-25T11:47:10Z",
       "url": "https://github.com/Snailclimb/JavaGuide",
       "homepage": "https://javaguide.cn",
       "periods": {
-        "week": 159341,
-        "month": 159341,
-        "quarter": 159341,
-        "half": 159341,
-        "year": 159341
+        "week": 159350,
+        "month": 159350,
+        "quarter": 159350,
+        "half": 159350,
+        "year": 159350
       },
       "growth": {
-        "week": 134,
-        "month": 208,
-        "quarter": 208,
-        "half": 208,
-        "year": 208
+        "week": 143,
+        "month": 217,
+        "quarter": 217,
+        "half": 217,
+        "year": 217
       },
       "covered": {
         "week": 8,
@@ -2018,10 +2018,10 @@
       "name": "open-webui",
       "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "language": "Python",
-      "stars": 157244,
-      "forks": 22880,
-      "watchers": 157244,
-      "openIssues": 157,
+      "stars": 157264,
+      "forks": 22881,
+      "watchers": 157264,
+      "openIssues": 166,
       "topics": [
         "ai",
         "llm",
@@ -2041,23 +2041,23 @@
       ],
       "license": "NOASSERTION",
       "createdAt": "2023-10-06T22:08:27Z",
-      "updatedAt": "2026-10-30T12:14:38Z",
+      "updatedAt": "2026-10-30T18:59:46Z",
       "pushedAt": "2026-10-30T09:41:21Z",
       "url": "https://github.com/open-webui/open-webui",
       "homepage": "https://openwebui.com",
       "periods": {
-        "week": 157244,
-        "month": 157244,
-        "quarter": 157244,
-        "half": 157244,
-        "year": 157244
+        "week": 157264,
+        "month": 157264,
+        "quarter": 157264,
+        "half": 157264,
+        "year": 157264
       },
       "growth": {
-        "week": 760,
-        "month": 1073,
-        "quarter": 1073,
-        "half": 1073,
-        "year": 1073
+        "week": 780,
+        "month": 1093,
+        "quarter": 1093,
+        "half": 1093,
+        "year": 1093
       },
       "covered": {
         "week": 8,
@@ -2074,10 +2074,10 @@
       "name": "langflow",
       "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.",
       "language": "Python",
-      "stars": 156158,
-      "forks": 10272,
-      "watchers": 156158,
-      "openIssues": 1253,
+      "stars": 156166,
+      "forks": 10280,
+      "watchers": 156166,
+      "openIssues": 1258,
       "topics": [
         "agents",
         "chatgpt",
@@ -2088,23 +2088,23 @@
       ],
       "license": "MIT",
       "createdAt": "2023-02-08T22:28:03Z",
-      "updatedAt": "2026-10-30T11:34:21Z",
-      "pushedAt": "2026-10-30T02:00:01Z",
+      "updatedAt": "2026-10-30T18:28:51Z",
+      "pushedAt": "2026-10-30T19:02:15Z",
       "url": "https://github.com/langflow-ai/langflow",
       "homepage": "http://www.langflow.org",
       "periods": {
-        "week": 156158,
-        "month": 156158,
-        "quarter": 156158,
-        "half": 156158,
-        "year": 156158
+        "week": 156166,
+        "month": 156166,
+        "quarter": 156166,
+        "half": 156166,
+        "year": 156166
       },
       "growth": {
-        "week": 229,
-        "month": 327,
-        "quarter": 327,
-        "half": 327,
-        "year": 327
+        "week": 237,
+        "month": 335,
+        "quarter": 335,
+        "half": 335,
+        "year": 335
       },
       "covered": {
         "week": 8,
@@ -2121,10 +2121,10 @@
       "name": "clash-verge-rev",
       "description": "A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience",
       "language": "Rust",
-      "stars": 155079,
-      "forks": 11140,
-      "watchers": 155079,
-      "openIssues": 560,
+      "stars": 155159,
+      "forks": 11145,
+      "watchers": 155159,
+      "openIssues": 557,
       "topics": [
         "clash",
         "clash-meta",
@@ -2137,23 +2137,23 @@
       ],
       "license": "GPL-3.0",
       "createdAt": "2023-11-21T18:24:03Z",
-      "updatedAt": "2026-10-30T12:28:49Z",
-      "pushedAt": "2026-10-30T12:10:04Z",
+      "updatedAt": "2026-10-30T19:00:47Z",
+      "pushedAt": "2026-10-30T15:59:22Z",
       "url": "https://github.com/clash-verge-rev/clash-verge-rev",
       "homepage": "https://www.clashverge.dev",
       "periods": {
-        "week": 155079,
-        "month": 155079,
-        "quarter": 155079,
-        "half": 155079,
-        "year": 155079
+        "week": 155159,
+        "month": 155159,
+        "quarter": 155159,
+        "half": 155159,
+        "year": 155159
       },
       "growth": {
-        "week": 1868,
-        "month": 2585,
-        "quarter": 2585,
-        "half": 2585,
-        "year": 2585
+        "week": 1948,
+        "month": 2665,
+        "quarter": 2665,
+        "half": 2665,
+        "year": 2665
       },
       "covered": {
         "week": 8,
@@ -2170,30 +2170,30 @@
       "name": "claude-code",
       "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
       "language": "TypeScript",
-      "stars": 153919,
-      "forks": 26085,
-      "watchers": 153919,
-      "openIssues": 16099,
+      "stars": 153959,
+      "forks": 26089,
+      "watchers": 153959,
+      "openIssues": 16165,
       "topics": [],
       "license": "—",
       "createdAt": "2025-02-22T17:41:21Z",
-      "updatedAt": "2026-10-30T12:21:18Z",
-      "pushedAt": "2026-10-30T01:06:26Z",
+      "updatedAt": "2026-10-30T19:02:26Z",
+      "pushedAt": "2026-10-30T16:40:04Z",
       "url": "https://github.com/anthropics/claude-code",
       "homepage": "https://code.claude.com/docs/en/overview",
       "periods": {
-        "week": 153919,
-        "month": 153919,
-        "quarter": 153919,
-        "half": 153919,
-        "year": 153919
+        "week": 153959,
+        "month": 153959,
+        "quarter": 153959,
+        "half": 153959,
+        "year": 153959
       },
       "growth": {
-        "week": 1011,
-        "month": 1672,
-        "quarter": 1672,
-        "half": 1672,
-        "year": 1672
+        "week": 1051,
+        "month": 1712,
+        "quarter": 1712,
+        "half": 1712,
+        "year": 1712
       },
       "covered": {
         "week": 8,
@@ -2210,10 +2210,10 @@
       "name": "scrcpy",
       "description": "Display and control your Android device",
       "language": "C",
-      "stars": 153563,
-      "forks": 14097,
-      "watchers": 153563,
-      "openIssues": 2941,
+      "stars": 153591,
+      "forks": 14098,
+      "watchers": 153591,
+      "openIssues": 2942,
       "topics": [
         "android",
         "c",
@@ -2227,23 +2227,23 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2017-11-21T18:00:27Z",
-      "updatedAt": "2026-10-30T12:15:09Z",
+      "updatedAt": "2026-10-30T18:38:00Z",
       "pushedAt": "2026-10-26T22:10:06Z",
       "url": "https://github.com/Genymobile/scrcpy",
       "homepage": "",
       "periods": {
-        "week": 153563,
-        "month": 153563,
-        "quarter": 153563,
-        "half": 153563,
-        "year": 153563
+        "week": 153591,
+        "month": 153591,
+        "quarter": 153591,
+        "half": 153591,
+        "year": 153591
       },
       "growth": {
-        "week": 676,
-        "month": 1024,
-        "quarter": 1024,
-        "half": 1024,
-        "year": 1024
+        "week": 704,
+        "month": 1052,
+        "quarter": 1052,
+        "half": 1052,
+        "year": 1052
       },
       "covered": {
         "week": 8,
@@ -2260,10 +2260,10 @@
       "name": "cc-switch",
       "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more. Only official website: ccswitch.io",
       "language": "Rust",
-      "stars": 150317,
-      "forks": 9879,
-      "watchers": 150317,
-      "openIssues": 1118,
+      "stars": 150384,
+      "forks": 9881,
+      "watchers": 150384,
+      "openIssues": 1120,
       "topics": [
         "ai-tools",
         "claude-code",
@@ -2287,23 +2287,23 @@
       ],
       "license": "MIT",
       "createdAt": "2025-08-04T14:16:16Z",
-      "updatedAt": "2026-10-30T12:29:05Z",
-      "pushedAt": "2026-10-30T12:24:11Z",
+      "updatedAt": "2026-10-30T19:02:27Z",
+      "pushedAt": "2026-10-30T16:02:33Z",
       "url": "https://github.com/farion1231/cc-switch",
       "homepage": "https://ccswitch.io",
       "periods": {
-        "week": 150317,
-        "month": 150317,
-        "quarter": 150317,
-        "half": 150317,
-        "year": 150317
+        "week": 150384,
+        "month": 150384,
+        "quarter": 150384,
+        "half": 150384,
+        "year": 150384
       },
       "growth": {
-        "week": 2652,
-        "month": 4022,
-        "quarter": 4022,
-        "half": 4022,
-        "year": 4022
+        "week": 2719,
+        "month": 4089,
+        "quarter": 4089,
+        "half": 4089,
+        "year": 4089
       },
       "covered": {
         "week": 8,
@@ -2320,10 +2320,10 @@
       "name": "langchain",
       "description": "The agent engineering platform.",
       "language": "Python",
-      "stars": 148707,
-      "forks": 24982,
-      "watchers": 148707,
-      "openIssues": 693,
+      "stars": 148720,
+      "forks": 24989,
+      "watchers": 148720,
+      "openIssues": 695,
       "topics": [
         "agents",
         "ai",
@@ -2348,23 +2348,23 @@
       ],
       "license": "MIT",
       "createdAt": "2022-10-17T02:58:36Z",
-      "updatedAt": "2026-10-30T12:02:48Z",
-      "pushedAt": "2026-10-30T08:26:32Z",
+      "updatedAt": "2026-10-30T19:01:22Z",
+      "pushedAt": "2026-10-30T18:03:44Z",
       "url": "https://github.com/langchain-ai/langchain",
       "homepage": "https://docs.langchain.com/langchain/",
       "periods": {
-        "week": 148707,
-        "month": 148707,
-        "quarter": 148707,
-        "half": 148707,
-        "year": 148707
+        "week": 148720,
+        "month": 148720,
+        "quarter": 148720,
+        "half": 148720,
+        "year": 148720
       },
       "growth": {
-        "week": 431,
-        "month": 638,
-        "quarter": 638,
-        "half": 638,
-        "year": 638
+        "week": 444,
+        "month": 651,
+        "quarter": 651,
+        "half": 651,
+        "year": 651
       },
       "covered": {
         "week": 8,
@@ -2381,10 +2381,10 @@
       "name": "ComfyUI",
       "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
       "language": "Python",
-      "stars": 144109,
-      "forks": 17102,
-      "watchers": 144109,
-      "openIssues": 5390,
+      "stars": 144173,
+      "forks": 17112,
+      "watchers": 144173,
+      "openIssues": 5392,
       "topics": [
         "ai",
         "comfy",
@@ -2395,23 +2395,23 @@
       ],
       "license": "GPL-3.0",
       "createdAt": "2023-01-17T03:15:56Z",
-      "updatedAt": "2026-10-30T12:27:38Z",
-      "pushedAt": "2026-10-30T11:20:08Z",
+      "updatedAt": "2026-10-30T18:45:19Z",
+      "pushedAt": "2026-10-30T18:54:19Z",
       "url": "https://github.com/Comfy-Org/ComfyUI",
       "homepage": "https://www.comfy.org/",
       "periods": {
-        "week": 144109,
-        "month": 144109,
-        "quarter": 144109,
-        "half": 144109,
-        "year": 144109
+        "week": 144173,
+        "month": 144173,
+        "quarter": 144173,
+        "half": 144173,
+        "year": 144173
       },
       "growth": {
-        "week": 2103,
-        "month": 4679,
-        "quarter": 4679,
-        "half": 4679,
-        "year": 4679
+        "week": 2167,
+        "month": 4743,
+        "quarter": 4743,
+        "half": 4743,
+        "year": 4743
       },
       "covered": {
         "week": 8,
@@ -2428,10 +2428,10 @@
       "name": "spec-kit",
       "description": "💫 Toolkit to help you get started with SDD or any other process!",
       "language": "Python",
-      "stars": 144034,
-      "forks": 12902,
-      "watchers": 144034,
-      "openIssues": 229,
+      "stars": 144091,
+      "forks": 12916,
+      "watchers": 144091,
+      "openIssues": 218,
       "topics": [
         "ai",
         "copilot",
@@ -2443,23 +2443,23 @@
       ],
       "license": "MIT",
       "createdAt": "2025-08-21T22:54:31Z",
-      "updatedAt": "2026-10-30T12:24:56Z",
-      "pushedAt": "2026-10-29T21:55:58Z",
+      "updatedAt": "2026-10-30T18:58:47Z",
+      "pushedAt": "2026-10-30T16:19:58Z",
       "url": "https://github.com/github/spec-kit",
       "homepage": "https://github.github.com/spec-kit/",
       "periods": {
-        "week": 144034,
-        "month": 144034,
-        "quarter": 144034,
-        "half": 144034,
-        "year": 144034
+        "week": 144091,
+        "month": 144091,
+        "quarter": 144091,
+        "half": 144091,
+        "year": 144091
       },
       "growth": {
-        "week": 1570,
-        "month": 2104,
-        "quarter": 2104,
-        "half": 2104,
-        "year": 2104
+        "week": 1627,
+        "month": 2161,
+        "quarter": 2161,
+        "half": 2161,
+        "year": 2161
       },
       "covered": {
         "week": 8,
@@ -2476,10 +2476,10 @@
       "name": "next.js",
       "description": "The React Framework",
       "language": "JavaScript",
-      "stars": 143205,
-      "forks": 34164,
-      "watchers": 143205,
-      "openIssues": 3775,
+      "stars": 143213,
+      "forks": 34169,
+      "watchers": 143213,
+      "openIssues": 3778,
       "topics": [
         "blog",
         "browser",
@@ -2498,23 +2498,23 @@
       ],
       "license": "MIT",
       "createdAt": "2016-10-05T23:32:51Z",
-      "updatedAt": "2026-10-30T12:24:01Z",
-      "pushedAt": "2026-10-30T12:26:35Z",
+      "updatedAt": "2026-10-30T18:51:01Z",
+      "pushedAt": "2026-10-30T19:02:01Z",
       "url": "https://github.com/vercel/next.js",
       "homepage": "https://nextjs.org",
       "periods": {
-        "week": 143205,
-        "month": 143205,
-        "quarter": 143205,
-        "half": 143205,
-        "year": 143205
+        "week": 143213,
+        "month": 143213,
+        "quarter": 143213,
+        "half": 143213,
+        "year": 143213
       },
       "growth": {
-        "week": 164,
-        "month": 284,
-        "quarter": 284,
-        "half": 284,
-        "year": 284
+        "week": 172,
+        "month": 292,
+        "quarter": 292,
+        "half": 292,
+        "year": 292
       },
       "covered": {
         "week": 8,
@@ -2531,9 +2531,9 @@
       "name": "ui-ux-pro-max-skill",
       "description": "An AI skill that provides design intelligence for building professional UI/UX across multiple platforms.",
       "language": "Python",
-      "stars": 142830,
-      "forks": 15117,
-      "watchers": 142830,
+      "stars": 142968,
+      "forks": 15134,
+      "watchers": 142968,
       "openIssues": 91,
       "topics": [
         "ai-skills",
@@ -2558,23 +2558,23 @@
       ],
       "license": "MIT",
       "createdAt": "2025-11-30T11:36:31Z",
-      "updatedAt": "2026-10-30T12:29:11Z",
+      "updatedAt": "2026-10-30T19:02:32Z",
       "pushedAt": "2026-10-26T10:07:28Z",
       "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
       "homepage": "https://www.uupm.cc/",
       "periods": {
-        "week": 142830,
-        "month": 142830,
-        "quarter": 142830,
-        "half": 142830,
-        "year": 142830
+        "week": 142968,
+        "month": 142968,
+        "quarter": 142968,
+        "half": 142968,
+        "year": 142968
       },
       "growth": {
-        "week": 3832,
-        "month": 5302,
-        "quarter": 5302,
-        "half": 5302,
-        "year": 5302
+        "week": 3970,
+        "month": 5440,
+        "quarter": 5440,
+        "half": 5440,
+        "year": 5440
       },
       "covered": {
         "week": 8,
@@ -2591,10 +2591,10 @@
       "name": "iptv",
       "description": "Collection of publicly available IPTV channels from all over the world",
       "language": "TypeScript",
-      "stars": 142783,
-      "forks": 8460,
-      "watchers": 142783,
-      "openIssues": 61,
+      "stars": 142816,
+      "forks": 8463,
+      "watchers": 142816,
+      "openIssues": 124,
       "topics": [
         "iptv",
         "m3u",
@@ -2604,23 +2604,63 @@
       ],
       "license": "Unlicense",
       "createdAt": "2018-11-14T22:00:57Z",
-      "updatedAt": "2026-10-30T12:16:23Z",
+      "updatedAt": "2026-10-30T19:01:11Z",
       "pushedAt": "2026-10-30T00:12:57Z",
       "url": "https://github.com/iptv-org/iptv",
       "homepage": "https://iptv-org.github.io",
       "periods": {
-        "week": 142783,
-        "month": 142783,
-        "quarter": 142783,
-        "half": 142783,
-        "year": 142783
+        "week": 142816,
+        "month": 142816,
+        "quarter": 142816,
+        "half": 142816,
+        "year": 142816
       },
       "growth": {
-        "week": 753,
-        "month": 1304,
-        "quarter": 1304,
-        "half": 1304,
-        "year": 1304
+        "week": 786,
+        "month": 1337,
+        "quarter": 1337,
+        "half": 1337,
+        "year": 1337
+      },
+      "covered": {
+        "week": 8,
+        "month": 12,
+        "quarter": 12,
+        "half": 12,
+        "year": 12
+      }
+    },
+    {
+      "id": 1039520,
+      "fullName": "ytdl-org/youtube-dl",
+      "owner": "ytdl-org",
+      "name": "youtube-dl",
+      "description": "Command-line program to download videos from YouTube.com and other video sites",
+      "language": "Python",
+      "stars": 141434,
+      "forks": 10675,
+      "watchers": 141434,
+      "openIssues": 4123,
+      "topics": [],
+      "license": "Unlicense",
+      "createdAt": "2010-10-31T14:35:07Z",
+      "updatedAt": "2026-10-30T18:22:41Z",
+      "pushedAt": "2026-10-30T13:24:03Z",
+      "url": "https://github.com/ytdl-org/youtube-dl",
+      "homepage": "http://ytdl-org.github.io/youtube-dl/",
+      "periods": {
+        "week": 141434,
+        "month": 141434,
+        "quarter": 141434,
+        "half": 141434,
+        "year": 141434
+      },
+      "growth": {
+        "week": 74,
+        "month": 106,
+        "quarter": 106,
+        "half": 106,
+        "year": 106
       },
       "covered": {
         "week": 8,
@@ -2637,33 +2677,33 @@
       "name": "free-for-dev",
       "description": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
       "language": "HTML",
-      "stars": 140750,
-      "forks": 15023,
-      "watchers": 140750,
-      "openIssues": 11,
+      "stars": 140802,
+      "forks": 15037,
+      "watchers": 140802,
+      "openIssues": 13,
       "topics": [
         "awesome-list",
         "free-for-developers"
       ],
       "license": "—",
       "createdAt": "2015-03-18T21:06:26Z",
-      "updatedAt": "2026-10-30T12:28:04Z",
+      "updatedAt": "2026-10-30T18:42:35Z",
       "pushedAt": "2026-10-30T10:20:21Z",
       "url": "https://github.com/ripienaar/free-for-dev",
       "homepage": "https://free-for.dev/",
       "periods": {
-        "week": 140750,
-        "month": 140750,
-        "quarter": 140750,
-        "half": 140750,
-        "year": 140751
+        "week": 140802,
+        "month": 140802,
+        "quarter": 140802,
+        "half": 140802,
+        "year": 140802
       },
       "growth": {
-        "week": 813,
-        "month": 941,
-        "quarter": 941,
-        "half": 941,
-        "year": 941
+        "week": 865,
+        "month": 993,
+        "quarter": 993,
+        "half": 993,
+        "year": 993
       },
       "covered": {
         "week": 8,
@@ -2680,10 +2720,10 @@
       "name": "PowerToys",
       "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
       "language": "C",
-      "stars": 140268,
-      "forks": 8675,
-      "watchers": 140268,
-      "openIssues": 7925,
+      "stars": 140286,
+      "forks": 8677,
+      "watchers": 140286,
+      "openIssues": 7939,
       "topics": [
         "advanced-paste",
         "color-picker",
@@ -2700,23 +2740,23 @@
       ],
       "license": "MIT",
       "createdAt": "2019-05-01T17:44:02Z",
-      "updatedAt": "2026-10-30T12:09:30Z",
-      "pushedAt": "2026-10-30T11:47:32Z",
+      "updatedAt": "2026-10-30T18:39:19Z",
+      "pushedAt": "2026-10-30T18:54:54Z",
       "url": "https://github.com/microsoft/PowerToys",
       "homepage": "",
       "periods": {
-        "week": 140268,
-        "month": 140268,
-        "quarter": 140268,
-        "half": 140268,
-        "year": 140268
+        "week": 140286,
+        "month": 140286,
+        "quarter": 140286,
+        "half": 140286,
+        "year": 140286
       },
       "growth": {
-        "week": 683,
-        "month": 786,
-        "quarter": 786,
-        "half": 786,
-        "year": 786
+        "week": 701,
+        "month": 804,
+        "quarter": 804,
+        "half": 804,
+        "year": 804
       },
       "covered": {
         "week": 8,
@@ -2733,10 +2773,10 @@
       "name": "go",
       "description": "The Go programming language",
       "language": "Go",
-      "stars": 139442,
-      "forks": 21609,
-      "watchers": 139442,
-      "openIssues": 9871,
+      "stars": 139454,
+      "forks": 21611,
+      "watchers": 139454,
+      "openIssues": 9855,
       "topics": [
         "go",
         "golang",
@@ -2745,23 +2785,23 @@
       ],
       "license": "BSD-3-Clause",
       "createdAt": "2014-08-19T04:33:40Z",
-      "updatedAt": "2026-10-30T12:26:56Z",
-      "pushedAt": "2026-10-30T07:15:29Z",
+      "updatedAt": "2026-10-30T18:39:11Z",
+      "pushedAt": "2026-10-30T17:10:11Z",
       "url": "https://github.com/golang/go",
       "homepage": "https://go.dev",
       "periods": {
-        "week": 139442,
-        "month": 139442,
-        "quarter": 139442,
-        "half": 139442,
-        "year": 139442
+        "week": 139454,
+        "month": 139454,
+        "quarter": 139454,
+        "half": 139454,
+        "year": 139454
       },
       "growth": {
-        "week": 199,
-        "month": 324,
-        "quarter": 324,
-        "half": 324,
-        "year": 324
+        "week": 211,
+        "month": 336,
+        "quarter": 336,
+        "half": 336,
+        "year": 336
       },
       "covered": {
         "week": 8,
@@ -2778,10 +2818,10 @@
       "name": "graphify",
       "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
       "language": "Python",
-      "stars": 139117,
-      "forks": 13268,
-      "watchers": 139117,
-      "openIssues": 1663,
+      "stars": 139349,
+      "forks": 13287,
+      "watchers": 139349,
+      "openIssues": 1669,
       "topics": [
         "ai-agents",
         "antigravity",
@@ -2806,23 +2846,23 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2026-04-03T15:49:07Z",
-      "updatedAt": "2026-10-30T12:28:25Z",
+      "updatedAt": "2026-10-30T19:02:49Z",
       "pushedAt": "2026-10-27T18:15:35Z",
       "url": "https://github.com/Graphify-Labs/graphify",
       "homepage": "https://www.graphify.com",
       "periods": {
-        "week": 139117,
-        "month": 139117,
-        "quarter": 139117,
-        "half": 139117,
-        "year": 139117
+        "week": 139349,
+        "month": 139349,
+        "quarter": 139350,
+        "half": 139350,
+        "year": 139350
       },
       "growth": {
-        "week": 6224,
-        "month": 10173,
-        "quarter": 10173,
-        "half": 10173,
-        "year": 10173
+        "week": 6456,
+        "month": 10405,
+        "quarter": 10405,
+        "half": 10405,
+        "year": 10405
       },
       "covered": {
         "week": 8,
@@ -2839,30 +2879,30 @@
       "name": "gstack",
       "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
       "language": "TypeScript",
-      "stars": 138235,
-      "forks": 20501,
-      "watchers": 138235,
-      "openIssues": 214,
+      "stars": 138283,
+      "forks": 20513,
+      "watchers": 138283,
+      "openIssues": 218,
       "topics": [],
       "license": "MIT",
       "createdAt": "2026-03-11T21:22:45Z",
-      "updatedAt": "2026-10-30T12:16:29Z",
-      "pushedAt": "2026-10-30T12:17:42Z",
+      "updatedAt": "2026-10-30T19:02:44Z",
+      "pushedAt": "2026-10-30T18:51:02Z",
       "url": "https://github.com/garrytan/gstack",
       "homepage": "",
       "periods": {
-        "week": 138235,
-        "month": 138235,
-        "quarter": 138235,
-        "half": 138235,
-        "year": 138235
+        "week": 138283,
+        "month": 138283,
+        "quarter": 138283,
+        "half": 138283,
+        "year": 138283
       },
       "growth": {
-        "week": 925,
-        "month": 1304,
-        "quarter": 1304,
-        "half": 1304,
-        "year": 1304
+        "week": 973,
+        "month": 1352,
+        "quarter": 1352,
+        "half": 1352,
+        "year": 1352
       },
       "covered": {
         "week": 8,
@@ -2879,10 +2919,10 @@
       "name": "MoneyPrinterTurbo",
       "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
       "language": "Python",
-      "stars": 136437,
-      "forks": 21718,
-      "watchers": 136437,
-      "openIssues": 79,
+      "stars": 136543,
+      "forks": 21739,
+      "watchers": 136543,
+      "openIssues": 84,
       "topics": [
         "ai-video-generator",
         "content-creation",
@@ -2901,23 +2941,23 @@
       ],
       "license": "MIT",
       "createdAt": "2024-03-11T02:57:34Z",
-      "updatedAt": "2026-10-30T12:26:47Z",
+      "updatedAt": "2026-10-30T19:02:20Z",
       "pushedAt": "2026-10-30T03:00:50Z",
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "homepage": "",
       "periods": {
-        "week": 136437,
-        "month": 136437,
-        "quarter": 136437,
-        "half": 136437,
-        "year": 136437
+        "week": 136543,
+        "month": 136543,
+        "quarter": 136543,
+        "half": 136543,
+        "year": 136543
       },
       "growth": {
-        "week": 2214,
-        "month": 3342,
-        "quarter": 3342,
-        "half": 3342,
-        "year": 3342
+        "week": 2320,
+        "month": 3448,
+        "quarter": 3448,
+        "half": 3448,
+        "year": 3448
       },
       "covered": {
         "week": 8,
@@ -2934,10 +2974,10 @@
       "name": "excalidraw",
       "description": "Virtual whiteboard for sketching hand-drawn like diagrams",
       "language": "TypeScript",
-      "stars": 134847,
-      "forks": 15921,
-      "watchers": 134847,
-      "openIssues": 3439,
+      "stars": 134870,
+      "forks": 15928,
+      "watchers": 134870,
+      "openIssues": 3443,
       "topics": [
         "canvas",
         "collaboration",
@@ -2949,23 +2989,23 @@
       ],
       "license": "MIT",
       "createdAt": "2020-01-02T01:04:43Z",
-      "updatedAt": "2026-10-30T11:44:51Z",
-      "pushedAt": "2026-10-30T12:15:16Z",
+      "updatedAt": "2026-10-30T18:49:06Z",
+      "pushedAt": "2026-10-30T15:40:43Z",
       "url": "https://github.com/excalidraw/excalidraw",
       "homepage": "https://excalidraw.com",
       "periods": {
-        "week": 134847,
-        "month": 134847,
-        "quarter": 134847,
-        "half": 134847,
-        "year": 134847
+        "week": 134870,
+        "month": 134870,
+        "quarter": 134870,
+        "half": 134870,
+        "year": 134870
       },
       "growth": {
-        "week": 451,
-        "month": 671,
-        "quarter": 671,
-        "half": 671,
-        "year": 671
+        "week": 474,
+        "month": 694,
+        "quarter": 694,
+        "half": 694,
+        "year": 694
       },
       "covered": {
         "week": 8,
@@ -2982,32 +3022,32 @@
       "name": "llama.cpp",
       "description": "LLM inference in C/C++",
       "language": "C++",
-      "stars": 132828,
-      "forks": 24953,
-      "watchers": 132828,
-      "openIssues": 2576,
+      "stars": 132874,
+      "forks": 24966,
+      "watchers": 132874,
+      "openIssues": 2591,
       "topics": [
         "ggml"
       ],
       "license": "MIT",
       "createdAt": "2023-03-10T18:58:00Z",
-      "updatedAt": "2026-10-30T12:27:19Z",
-      "pushedAt": "2026-10-30T12:19:38Z",
+      "updatedAt": "2026-10-30T18:59:53Z",
+      "pushedAt": "2026-10-30T17:36:21Z",
       "url": "https://github.com/ggml-org/llama.cpp",
       "homepage": "https://llama.app",
       "periods": {
-        "week": 132828,
-        "month": 132828,
-        "quarter": 132828,
-        "half": 132828,
-        "year": 132828
+        "week": 132874,
+        "month": 132874,
+        "quarter": 132874,
+        "half": 132874,
+        "year": 132874
       },
       "growth": {
-        "week": 782,
-        "month": 1116,
-        "quarter": 1116,
-        "half": 1116,
-        "year": 1116
+        "week": 828,
+        "month": 1162,
+        "quarter": 1162,
+        "half": 1162,
+        "year": 1162
       },
       "covered": {
         "week": 8,
@@ -3024,9 +3064,9 @@
       "name": "hello-algo",
       "description": "《Hello 算法》：动画图解、一键运行的数据结构与算法教程。支持简中、繁中、English、日本語，提供 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 等代码实现",
       "language": "Java",
-      "stars": 131746,
+      "stars": 131771,
       "forks": 15578,
-      "watchers": 131746,
+      "watchers": 131771,
       "openIssues": 27,
       "topics": [
         "algo",
@@ -3043,23 +3083,23 @@
       ],
       "license": "NOASSERTION",
       "createdAt": "2022-11-04T11:08:34Z",
-      "updatedAt": "2026-10-30T12:20:48Z",
+      "updatedAt": "2026-10-30T18:36:31Z",
       "pushedAt": "2026-10-30T09:55:57Z",
       "url": "https://github.com/krahets/hello-algo",
       "homepage": "https://www.hello-algo.com",
       "periods": {
-        "week": 131746,
-        "month": 131746,
-        "quarter": 131746,
-        "half": 131746,
-        "year": 131746
+        "week": 131771,
+        "month": 131771,
+        "quarter": 131771,
+        "half": 131771,
+        "year": 131771
       },
       "growth": {
-        "week": 843,
-        "month": 888,
-        "quarter": 888,
-        "half": 888,
-        "year": 888
+        "week": 868,
+        "month": 913,
+        "quarter": 913,
+        "half": 913,
+        "year": 913
       },
       "covered": {
         "week": 8,
@@ -3076,30 +3116,30 @@
       "name": "codex",
       "description": "Lightweight coding agent that runs in your terminal",
       "language": "Rust",
-      "stars": 131660,
-      "forks": 20802,
-      "watchers": 131660,
-      "openIssues": 25655,
+      "stars": 131739,
+      "forks": 20823,
+      "watchers": 131739,
+      "openIssues": 25706,
       "topics": [],
       "license": "Apache-2.0",
       "createdAt": "2025-04-13T05:37:54Z",
-      "updatedAt": "2026-10-30T12:07:01Z",
-      "pushedAt": "2026-10-30T11:40:01Z",
+      "updatedAt": "2026-10-30T19:02:14Z",
+      "pushedAt": "2026-10-30T18:53:31Z",
       "url": "https://github.com/openai/codex",
       "homepage": "",
       "periods": {
-        "week": 131660,
-        "month": 131660,
-        "quarter": 131660,
-        "half": 131660,
-        "year": 131660
+        "week": 131739,
+        "month": 131739,
+        "quarter": 131739,
+        "half": 131739,
+        "year": 131740
       },
       "growth": {
-        "week": 1197,
-        "month": 2035,
-        "quarter": 2035,
-        "half": 2035,
-        "year": 2035
+        "week": 1276,
+        "month": 2114,
+        "quarter": 2114,
+        "half": 2114,
+        "year": 2114
       },
       "covered": {
         "week": 8,
@@ -3116,9 +3156,9 @@
       "name": "30-seconds-of-code",
       "description": "Coding articles to level up your development skills",
       "language": "JavaScript",
-      "stars": 129372,
-      "forks": 12501,
-      "watchers": 129372,
+      "stars": 129378,
+      "forks": 12503,
+      "watchers": 129378,
       "openIssues": 3,
       "topics": [
         "astro",
@@ -3137,23 +3177,23 @@
       ],
       "license": "CC-BY-4.0",
       "createdAt": "2017-11-29T17:35:03Z",
-      "updatedAt": "2026-10-30T11:54:15Z",
+      "updatedAt": "2026-10-30T18:12:58Z",
       "pushedAt": "2026-10-26T16:14:24Z",
       "url": "https://github.com/Chalarangelo/30-seconds-of-code",
       "homepage": "https://30secondsofcode.org/",
       "periods": {
-        "week": 129372,
-        "month": 129372,
-        "quarter": 129372,
-        "half": 129372,
-        "year": 129372
+        "week": 129378,
+        "month": 129378,
+        "quarter": 129378,
+        "half": 129378,
+        "year": 129378
       },
       "growth": {
-        "week": 78,
-        "month": 119,
-        "quarter": 119,
-        "half": 119,
-        "year": 119
+        "week": 84,
+        "month": 125,
+        "quarter": 125,
+        "half": 125,
+        "year": 125
       },
       "covered": {
         "week": 8,
@@ -3171,9 +3211,9 @@
       "description": "Production-Grade Container Scheduling and Management",
       "language": "Go",
       "stars": 128524,
-      "forks": 46374,
+      "forks": 46375,
       "watchers": 128524,
-      "openIssues": 3190,
+      "openIssues": 3205,
       "topics": [
         "cncf",
         "containers",
@@ -3182,8 +3222,8 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2014-06-06T22:56:04Z",
-      "updatedAt": "2026-10-30T11:53:18Z",
-      "pushedAt": "2026-10-30T11:25:51Z",
+      "updatedAt": "2026-10-30T18:55:12Z",
+      "pushedAt": "2026-10-30T18:54:07Z",
       "url": "https://github.com/kubernetes/kubernetes",
       "homepage": "https://kubernetes.io",
       "periods": {
@@ -3215,10 +3255,10 @@
       "name": "rustdesk",
       "description": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
       "language": "Rust",
-      "stars": 127571,
-      "forks": 20169,
-      "watchers": 127571,
-      "openIssues": 204,
+      "stars": 127608,
+      "forks": 20180,
+      "watchers": 127608,
+      "openIssues": 206,
       "topics": [
         "android",
         "anydesk",
@@ -3242,23 +3282,23 @@
       ],
       "license": "AGPL-3.0",
       "createdAt": "2020-09-28T15:36:08Z",
-      "updatedAt": "2026-10-30T12:11:09Z",
-      "pushedAt": "2026-10-30T08:30:26Z",
+      "updatedAt": "2026-10-30T18:59:37Z",
+      "pushedAt": "2026-10-30T14:06:37Z",
       "url": "https://github.com/rustdesk/rustdesk",
       "homepage": "https://rustdesk.com",
       "periods": {
-        "week": 127571,
-        "month": 127571,
-        "quarter": 127571,
-        "half": 127571,
-        "year": 127571
+        "week": 127608,
+        "month": 127608,
+        "quarter": 127608,
+        "half": 127608,
+        "year": 127608
       },
       "growth": {
-        "week": 956,
-        "month": 1260,
-        "quarter": 1260,
-        "half": 1260,
-        "year": 1260
+        "week": 993,
+        "month": 1297,
+        "quarter": 1297,
+        "half": 1297,
+        "year": 1297
       },
       "covered": {
         "week": 8,
@@ -3275,10 +3315,10 @@
       "name": "ui",
       "description": "Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own.",
       "language": "TypeScript",
-      "stars": 126955,
-      "forks": 12569,
-      "watchers": 126955,
-      "openIssues": 1777,
+      "stars": 126981,
+      "forks": 12574,
+      "watchers": 126981,
+      "openIssues": 1779,
       "topics": [
         "ai",
         "base-ui",
@@ -3300,23 +3340,23 @@
       ],
       "license": "MIT",
       "createdAt": "2023-01-04T12:43:27Z",
-      "updatedAt": "2026-10-30T12:20:51Z",
+      "updatedAt": "2026-10-30T18:47:10Z",
       "pushedAt": "2026-10-30T09:01:57Z",
       "url": "https://github.com/shadcn-ui/ui",
       "homepage": "https://ui.shadcn.com",
       "periods": {
-        "week": 126955,
-        "month": 126955,
-        "quarter": 126955,
-        "half": 126955,
-        "year": 126955
+        "week": 126981,
+        "month": 126981,
+        "quarter": 126981,
+        "half": 126981,
+        "year": 126981
       },
       "growth": {
-        "week": 721,
-        "month": 1006,
-        "quarter": 1006,
-        "half": 1006,
-        "year": 1006
+        "week": 747,
+        "month": 1032,
+        "quarter": 1032,
+        "half": 1032,
+        "year": 1032
       },
       "covered": {
         "week": 8,
@@ -3333,10 +3373,10 @@
       "name": "react-native",
       "description": "A framework for building native applications using React",
       "language": "C++",
-      "stars": 126831,
-      "forks": 25452,
-      "watchers": 126831,
-      "openIssues": 1346,
+      "stars": 126835,
+      "forks": 25461,
+      "watchers": 126835,
+      "openIssues": 1335,
       "topics": [
         "android",
         "app-framework",
@@ -3349,23 +3389,23 @@
       ],
       "license": "MIT",
       "createdAt": "2015-01-09T18:10:16Z",
-      "updatedAt": "2026-10-30T12:02:38Z",
-      "pushedAt": "2026-10-30T12:21:52Z",
+      "updatedAt": "2026-10-30T18:46:40Z",
+      "pushedAt": "2026-10-30T18:54:59Z",
       "url": "https://github.com/react/react-native",
       "homepage": "https://reactnative.dev",
       "periods": {
-        "week": 126831,
-        "month": 126831,
-        "quarter": 126831,
-        "half": 126831,
-        "year": 126831
+        "week": 126835,
+        "month": 126835,
+        "quarter": 126835,
+        "half": 126835,
+        "year": 126835
       },
       "growth": {
-        "week": 81,
-        "month": 123,
-        "quarter": 123,
-        "half": 123,
-        "year": 123
+        "week": 85,
+        "month": 127,
+        "quarter": 127,
+        "half": 127,
+        "year": 127
       },
       "covered": {
         "week": 8,
@@ -3382,9 +3422,9 @@
       "name": "awesome-design-md",
       "description": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
       "language": "—",
-      "stars": 124615,
-      "forks": 13835,
-      "watchers": 124615,
+      "stars": 124687,
+      "forks": 13836,
+      "watchers": 124687,
       "openIssues": 311,
       "topics": [
         "awesome-list",
@@ -3399,23 +3439,23 @@
       ],
       "license": "MIT",
       "createdAt": "2026-03-31T16:37:01Z",
-      "updatedAt": "2026-10-30T12:27:18Z",
+      "updatedAt": "2026-10-30T19:02:48Z",
       "pushedAt": "2026-10-28T15:45:40Z",
       "url": "https://github.com/VoltAgent/awesome-design-md",
       "homepage": "https://starterkit.getdesign.md/",
       "periods": {
-        "week": 124615,
-        "month": 124615,
-        "quarter": 124615,
-        "half": 124615,
-        "year": 124615
+        "week": 124687,
+        "month": 124687,
+        "quarter": 124687,
+        "half": 124687,
+        "year": 124687
       },
       "growth": {
-        "week": 1669,
-        "month": 2347,
-        "quarter": 2347,
-        "half": 2347,
-        "year": 2347
+        "week": 1741,
+        "month": 2419,
+        "quarter": 2419,
+        "half": 2419,
+        "year": 2419
       },
       "covered": {
         "week": 8,
@@ -3432,10 +3472,10 @@
       "name": "Awesome-Hacking",
       "description": "A collection of various awesome lists for hackers, pentesters and security researchers",
       "language": "—",
-      "stars": 124072,
-      "forks": 10902,
-      "watchers": 124072,
-      "openIssues": 42,
+      "stars": 124102,
+      "forks": 10907,
+      "watchers": 124102,
+      "openIssues": 43,
       "topics": [
         "android",
         "awesome",
@@ -3449,23 +3489,23 @@
       ],
       "license": "CC0-1.0",
       "createdAt": "2016-03-30T15:47:10Z",
-      "updatedAt": "2026-10-30T12:24:13Z",
+      "updatedAt": "2026-10-30T18:57:22Z",
       "pushedAt": "2026-10-27T01:45:58Z",
       "url": "https://github.com/Hack-with-Github/Awesome-Hacking",
       "homepage": "",
       "periods": {
-        "week": 124072,
-        "month": 124072,
-        "quarter": 124072,
-        "half": 124072,
-        "year": 124072
+        "week": 124102,
+        "month": 124102,
+        "quarter": 124102,
+        "half": 124102,
+        "year": 124102
       },
       "growth": {
-        "week": 713,
-        "month": 974,
-        "quarter": 974,
-        "half": 974,
-        "year": 974
+        "week": 743,
+        "month": 1004,
+        "quarter": 1004,
+        "half": 1004,
+        "year": 1004
       },
       "covered": {
         "week": 8,
@@ -3482,10 +3522,10 @@
       "name": "electron",
       "description": ":electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS",
       "language": "C++",
-      "stars": 123648,
-      "forks": 17841,
-      "watchers": 123648,
-      "openIssues": 780,
+      "stars": 123651,
+      "forks": 17851,
+      "watchers": 123651,
+      "openIssues": 784,
       "topics": [
         "c-plus-plus",
         "chrome",
@@ -3499,23 +3539,23 @@
       ],
       "license": "MIT",
       "createdAt": "2013-04-12T01:47:36Z",
-      "updatedAt": "2026-10-30T12:06:45Z",
-      "pushedAt": "2026-10-30T12:05:18Z",
+      "updatedAt": "2026-10-30T18:27:26Z",
+      "pushedAt": "2026-10-30T18:57:32Z",
       "url": "https://github.com/electron/electron",
       "homepage": "https://electronjs.org",
       "periods": {
-        "week": 123648,
-        "month": 123648,
-        "quarter": 123648,
-        "half": 123648,
-        "year": 123648
+        "week": 123651,
+        "month": 123651,
+        "quarter": 123651,
+        "half": 123651,
+        "year": 123651
       },
       "growth": {
-        "week": 167,
-        "month": 237,
-        "quarter": 237,
-        "half": 237,
-        "year": 237
+        "week": 170,
+        "month": 240,
+        "quarter": 240,
+        "half": 240,
+        "year": 240
       },
       "covered": {
         "week": 8,
@@ -3532,10 +3572,10 @@
       "name": "node",
       "description": "Node.js JavaScript runtime ✨🐢🚀✨",
       "language": "JavaScript",
-      "stars": 123102,
-      "forks": 39310,
-      "watchers": 123102,
-      "openIssues": 1291,
+      "stars": 123113,
+      "forks": 39317,
+      "watchers": 123113,
+      "openIssues": 1293,
       "topics": [
         "javascript",
         "js",
@@ -3549,23 +3589,23 @@
       ],
       "license": "NOASSERTION",
       "createdAt": "2014-11-26T19:57:11Z",
-      "updatedAt": "2026-10-30T12:26:07Z",
-      "pushedAt": "2026-10-30T11:17:17Z",
+      "updatedAt": "2026-10-30T18:21:55Z",
+      "pushedAt": "2026-10-30T18:33:21Z",
       "url": "https://github.com/nodejs/node",
       "homepage": "https://nodejs.org",
       "periods": {
-        "week": 123102,
-        "month": 123102,
-        "quarter": 123102,
-        "half": 123102,
-        "year": 123102
+        "week": 123113,
+        "month": 123113,
+        "quarter": 123113,
+        "half": 123113,
+        "year": 123113
       },
       "growth": {
-        "week": 644,
-        "month": 750,
-        "quarter": 750,
-        "half": 750,
-        "year": 750
+        "week": 655,
+        "month": 761,
+        "quarter": 761,
+        "half": 761,
+        "year": 761
       },
       "covered": {
         "week": 8,
@@ -3582,10 +3622,10 @@
       "name": "generative-ai-for-beginners",
       "description": "21 Lessons, Get Started Building with Generative AI ",
       "language": "Jupyter Notebook",
-      "stars": 122462,
-      "forks": 65229,
-      "watchers": 122462,
-      "openIssues": 15,
+      "stars": 122496,
+      "forks": 65267,
+      "watchers": 122496,
+      "openIssues": 2,
       "topics": [
         "ai",
         "azure",
@@ -3604,23 +3644,23 @@
       ],
       "license": "MIT",
       "createdAt": "2023-06-19T16:28:59Z",
-      "updatedAt": "2026-10-30T11:42:36Z",
-      "pushedAt": "2026-10-29T12:12:03Z",
+      "updatedAt": "2026-10-30T18:59:30Z",
+      "pushedAt": "2026-10-30T16:33:35Z",
       "url": "https://github.com/microsoft/generative-ai-for-beginners",
       "homepage": "",
       "periods": {
-        "week": 122462,
-        "month": 122462,
-        "quarter": 122462,
-        "half": 122462,
-        "year": 122462
+        "week": 122496,
+        "month": 122496,
+        "quarter": 122496,
+        "half": 122496,
+        "year": 122496
       },
       "growth": {
-        "week": 529,
-        "month": 827,
-        "quarter": 827,
-        "half": 827,
-        "year": 827
+        "week": 563,
+        "month": 861,
+        "quarter": 861,
+        "half": 861,
+        "year": 861
       },
       "covered": {
         "week": 8,
@@ -3637,10 +3677,10 @@
       "name": "rust",
       "description": "Empowering everyone to build reliable and efficient software.",
       "language": "Rust",
-      "stars": 120835,
-      "forks": 17988,
-      "watchers": 120835,
-      "openIssues": 12643,
+      "stars": 120847,
+      "forks": 17992,
+      "watchers": 120847,
+      "openIssues": 12653,
       "topics": [
         "compiler",
         "language",
@@ -3648,23 +3688,23 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2010-06-16T20:39:03Z",
-      "updatedAt": "2026-10-30T12:28:08Z",
-      "pushedAt": "2026-10-30T11:33:25Z",
+      "updatedAt": "2026-10-30T18:29:24Z",
+      "pushedAt": "2026-10-30T18:26:27Z",
       "url": "https://github.com/rust-lang/rust",
       "homepage": "https://www.rust-lang.org",
       "periods": {
-        "week": 120835,
-        "month": 120835,
-        "quarter": 120835,
-        "half": 120835,
-        "year": 120835
+        "week": 120847,
+        "month": 120847,
+        "quarter": 120847,
+        "half": 120847,
+        "year": 120847
       },
       "growth": {
-        "week": 268,
-        "month": 399,
-        "quarter": 399,
-        "half": 399,
-        "year": 399
+        "week": 280,
+        "month": 411,
+        "quarter": 411,
+        "half": 411,
+        "year": 411
       },
       "covered": {
         "week": 8,
@@ -3681,10 +3721,10 @@
       "name": "browser-use",
       "description": "Open-source Python library for AI browser agents, plus Browser Use Cloud: stealth browsers and a hosted agent API.",
       "language": "Python",
-      "stars": 119558,
-      "forks": 13308,
-      "watchers": 119558,
-      "openIssues": 634,
+      "stars": 119586,
+      "forks": 13313,
+      "watchers": 119586,
+      "openIssues": 640,
       "topics": [
         "ai-agents",
         "ai-tools",
@@ -3706,23 +3746,23 @@
       ],
       "license": "MIT",
       "createdAt": "2024-10-31T16:00:56Z",
-      "updatedAt": "2026-10-30T12:13:34Z",
+      "updatedAt": "2026-10-30T18:36:23Z",
       "pushedAt": "2026-10-30T04:28:51Z",
       "url": "https://github.com/browser-use/browser-use",
       "homepage": "https://browser-use.com",
       "periods": {
-        "week": 119558,
-        "month": 119558,
-        "quarter": 119558,
-        "half": 119558,
-        "year": 119558
+        "week": 119586,
+        "month": 119586,
+        "quarter": 119586,
+        "half": 119586,
+        "year": 119586
       },
       "growth": {
-        "week": 670,
-        "month": 1053,
-        "quarter": 1053,
-        "half": 1053,
-        "year": 1053
+        "week": 698,
+        "month": 1081,
+        "quarter": 1081,
+        "half": 1081,
+        "year": 1081
       },
       "covered": {
         "week": 8,
@@ -3739,9 +3779,9 @@
       "name": "v2rayN",
       "description": "A GUI client for Windows, Linux and macOS, support Xray and sing-box and others",
       "language": "C#",
-      "stars": 119526,
-      "forks": 16215,
-      "watchers": 119526,
+      "stars": 119558,
+      "forks": 16218,
+      "watchers": 119558,
       "openIssues": 83,
       "topics": [
         "proxy",
@@ -3758,23 +3798,23 @@
       ],
       "license": "GPL-3.0",
       "createdAt": "2019-07-30T03:47:24Z",
-      "updatedAt": "2026-10-30T12:28:59Z",
+      "updatedAt": "2026-10-30T18:51:43Z",
       "pushedAt": "2026-10-29T18:48:08Z",
       "url": "https://github.com/2dust/v2rayN",
       "homepage": "https://v2rayn.2dust.link",
       "periods": {
-        "week": 119526,
-        "month": 119526,
-        "quarter": 119526,
-        "half": 119526,
-        "year": 119526
+        "week": 119558,
+        "month": 119558,
+        "quarter": 119558,
+        "half": 119558,
+        "year": 119558
       },
       "growth": {
-        "week": 674,
-        "month": 936,
-        "quarter": 936,
-        "half": 936,
-        "year": 936
+        "week": 706,
+        "month": 968,
+        "quarter": 968,
+        "half": 968,
+        "year": 968
       },
       "covered": {
         "week": 8,
@@ -3791,10 +3831,10 @@
       "name": "godot",
       "description": "Godot Engine – Multi-platform 2D and 3D game engine",
       "language": "C++",
-      "stars": 119287,
-      "forks": 27279,
-      "watchers": 119287,
-      "openIssues": 18908,
+      "stars": 119298,
+      "forks": 27284,
+      "watchers": 119298,
+      "openIssues": 18899,
       "topics": [
         "game-development",
         "game-engine",
@@ -3806,23 +3846,23 @@
       ],
       "license": "MIT",
       "createdAt": "2014-01-04T16:05:36Z",
-      "updatedAt": "2026-10-30T12:28:58Z",
-      "pushedAt": "2026-10-30T10:21:15Z",
+      "updatedAt": "2026-10-30T18:40:31Z",
+      "pushedAt": "2026-10-30T16:47:09Z",
       "url": "https://github.com/godotengine/godot",
       "homepage": "https://godotengine.org",
       "periods": {
-        "week": 119287,
-        "month": 119287,
-        "quarter": 119287,
-        "half": 119287,
-        "year": 119287
+        "week": 119298,
+        "month": 119298,
+        "quarter": 119298,
+        "half": 119298,
+        "year": 119298
       },
       "growth": {
-        "week": 393,
-        "month": 605,
-        "quarter": 605,
-        "half": 605,
-        "year": 605
+        "week": 404,
+        "month": 616,
+        "quarter": 616,
+        "half": 616,
+        "year": 616
       },
       "covered": {
         "week": 8,
@@ -3839,30 +3879,30 @@
       "name": "pi",
       "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
       "language": "TypeScript",
-      "stars": 118955,
-      "forks": 15256,
-      "watchers": 118955,
-      "openIssues": 320,
+      "stars": 119005,
+      "forks": 15267,
+      "watchers": 119005,
+      "openIssues": 317,
       "topics": [],
       "license": "MIT",
       "createdAt": "2025-08-09T14:03:50Z",
-      "updatedAt": "2026-10-30T12:09:13Z",
-      "pushedAt": "2026-10-30T11:23:51Z",
+      "updatedAt": "2026-10-30T18:42:35Z",
+      "pushedAt": "2026-10-30T18:21:12Z",
       "url": "https://github.com/earendil-works/pi",
       "homepage": "",
       "periods": {
-        "week": 118955,
-        "month": 118955,
-        "quarter": 118955,
-        "half": 118955,
-        "year": 118955
+        "week": 119005,
+        "month": 119005,
+        "quarter": 119005,
+        "half": 119005,
+        "year": 119005
       },
       "growth": {
-        "week": 1746,
-        "month": 2576,
-        "quarter": 2576,
-        "half": 2576,
-        "year": 2576
+        "week": 1796,
+        "month": 2626,
+        "quarter": 2626,
+        "half": 2626,
+        "year": 2626
       },
       "covered": {
         "week": 8,
@@ -3879,10 +3919,10 @@
       "name": "TradingAgents",
       "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
       "language": "Python",
-      "stars": 118536,
-      "forks": 22663,
-      "watchers": 118536,
-      "openIssues": 93,
+      "stars": 118631,
+      "forks": 22686,
+      "watchers": 118631,
+      "openIssues": 96,
       "topics": [
         "agent",
         "finance",
@@ -3892,23 +3932,23 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2024-12-28T03:31:08Z",
-      "updatedAt": "2026-10-30T12:28:38Z",
+      "updatedAt": "2026-10-30T18:47:04Z",
       "pushedAt": "2026-10-27T08:43:04Z",
       "url": "https://github.com/TauricResearch/TradingAgents",
       "homepage": "https://arxiv.org/pdf/2412.20138",
       "periods": {
-        "week": 118536,
-        "month": 118536,
-        "quarter": 118536,
-        "half": 118536,
-        "year": 118536
+        "week": 118631,
+        "month": 118631,
+        "quarter": 118631,
+        "half": 118631,
+        "year": 118631
       },
       "growth": {
-        "week": 5547,
-        "month": 6469,
-        "quarter": 6469,
-        "half": 6469,
-        "year": 6469
+        "week": 5642,
+        "month": 6564,
+        "quarter": 6564,
+        "half": 6564,
+        "year": 6564
       },
       "covered": {
         "week": 8,
@@ -3925,10 +3965,10 @@
       "name": "immich",
       "description": "High performance self-hosted photo and video management solution.",
       "language": "TypeScript",
-      "stars": 117676,
-      "forks": 7419,
-      "watchers": 117676,
-      "openIssues": 682,
+      "stars": 117719,
+      "forks": 7420,
+      "watchers": 117719,
+      "openIssues": 675,
       "topics": [
         "backup-tool",
         "flutter",
@@ -3949,23 +3989,23 @@
       ],
       "license": "AGPL-3.0",
       "createdAt": "2022-02-03T15:56:27Z",
-      "updatedAt": "2026-10-30T12:11:25Z",
-      "pushedAt": "2026-10-30T11:25:35Z",
+      "updatedAt": "2026-10-30T19:04:06Z",
+      "pushedAt": "2026-10-30T18:56:51Z",
       "url": "https://github.com/immich-app/immich",
       "homepage": "https://immich.app",
       "periods": {
-        "week": 117676,
-        "month": 117676,
-        "quarter": 117676,
-        "half": 117676,
-        "year": 117676
+        "week": 117719,
+        "month": 117719,
+        "quarter": 117719,
+        "half": 117719,
+        "year": 117719
       },
       "growth": {
-        "week": 733,
-        "month": 1021,
-        "quarter": 1021,
-        "half": 1021,
-        "year": 1021
+        "week": 776,
+        "month": 1064,
+        "quarter": 1064,
+        "half": 1064,
+        "year": 1064
       },
       "covered": {
         "week": 8,
@@ -3982,10 +4022,10 @@
       "name": "awesome-mac",
       "description": " This project is dedicated to collecting high-quality macOS software and organizing them systematically by different categories for easy search and use.",
       "language": "Swift",
-      "stars": 117374,
-      "forks": 9861,
-      "watchers": 117374,
-      "openIssues": 1771,
+      "stars": 117396,
+      "forks": 9873,
+      "watchers": 117396,
+      "openIssues": 1773,
       "topics": [
         "app",
         "apple",
@@ -4010,23 +4050,23 @@
       ],
       "license": "CC0-1.0",
       "createdAt": "2016-07-17T15:33:47Z",
-      "updatedAt": "2026-10-30T12:15:03Z",
-      "pushedAt": "2026-10-30T11:59:42Z",
+      "updatedAt": "2026-10-30T18:52:21Z",
+      "pushedAt": "2026-10-30T17:50:09Z",
       "url": "https://github.com/jaywcjlove/awesome-mac",
       "homepage": "https://git.io/macx",
       "periods": {
-        "week": 117374,
-        "month": 117374,
-        "quarter": 117374,
-        "half": 117374,
-        "year": 117374
+        "week": 117396,
+        "month": 117396,
+        "quarter": 117396,
+        "half": 117396,
+        "year": 117396
       },
       "growth": {
-        "week": 622,
-        "month": 871,
-        "quarter": 871,
-        "half": 871,
-        "year": 871
+        "week": 644,
+        "month": 893,
+        "quarter": 893,
+        "half": 893,
+        "year": 893
       },
       "covered": {
         "week": 8,
@@ -4043,10 +4083,10 @@
       "name": "three.js",
       "description": "JavaScript 3D Library.",
       "language": "JavaScript",
-      "stars": 117219,
-      "forks": 36820,
-      "watchers": 117219,
-      "openIssues": 383,
+      "stars": 117230,
+      "forks": 36824,
+      "watchers": 117230,
+      "openIssues": 381,
       "topics": [
         "3d",
         "augmented-reality",
@@ -4063,23 +4103,23 @@
       ],
       "license": "MIT",
       "createdAt": "2010-03-23T18:58:01Z",
-      "updatedAt": "2026-10-30T12:20:57Z",
-      "pushedAt": "2026-10-30T09:31:41Z",
+      "updatedAt": "2026-10-30T18:14:53Z",
+      "pushedAt": "2026-10-30T14:56:31Z",
       "url": "https://github.com/mrdoob/three.js",
       "homepage": "https://threejs.org/",
       "periods": {
-        "week": 117219,
-        "month": 117219,
-        "quarter": 117219,
-        "half": 117219,
-        "year": 117219
+        "week": 117230,
+        "month": 117230,
+        "quarter": 117230,
+        "half": 117230,
+        "year": 117230
       },
       "growth": {
-        "week": 432,
-        "month": 592,
-        "quarter": 592,
-        "half": 592,
-        "year": 592
+        "week": 443,
+        "month": 603,
+        "quarter": 603,
+        "half": 603,
+        "year": 603
       },
       "covered": {
         "week": 8,
@@ -4096,9 +4136,9 @@
       "name": "caveman",
       "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
       "language": "Go",
-      "stars": 116228,
-      "forks": 6722,
-      "watchers": 116228,
+      "stars": 116293,
+      "forks": 6727,
+      "watchers": 116293,
       "openIssues": 129,
       "topics": [
         "ai",
@@ -4114,21 +4154,21 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2026-04-04T10:03:00Z",
-      "updatedAt": "2026-10-30T12:25:17Z",
+      "updatedAt": "2026-10-30T19:03:36Z",
       "pushedAt": "2026-10-30T07:41:52Z",
       "url": "https://github.com/JuliusBrussee/caveman",
       "homepage": "https://docs.caveman.so/caveman",
       "periods": {
-        "week": 116228,
-        "month": 116228,
-        "quarter": 116228,
-        "half": 116228
+        "week": 116293,
+        "month": 116293,
+        "quarter": 116293,
+        "half": 116293
       },
       "growth": {
-        "week": 1831,
-        "month": 2610,
-        "quarter": 2610,
-        "half": 2610,
+        "week": 1896,
+        "month": 2675,
+        "quarter": 2675,
+        "half": 2675,
         "year": null
       },
       "covered": {
@@ -4146,10 +4186,10 @@
       "name": "supabase",
       "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
       "language": "TypeScript",
-      "stars": 114338,
-      "forks": 16322,
-      "watchers": 114338,
-      "openIssues": 1172,
+      "stars": 114342,
+      "forks": 16327,
+      "watchers": 114342,
+      "openIssues": 1176,
       "topics": [
         "ai",
         "alternative",
@@ -4173,21 +4213,21 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2019-10-12T05:56:49Z",
-      "updatedAt": "2026-10-30T12:12:57Z",
-      "pushedAt": "2026-10-30T12:12:53Z",
+      "updatedAt": "2026-10-30T18:38:00Z",
+      "pushedAt": "2026-10-30T19:01:13Z",
       "url": "https://github.com/supabase/supabase",
       "homepage": "https://supabase.com",
       "periods": {
-        "week": 114338,
-        "month": 114338,
-        "quarter": 114338,
-        "half": 114338
+        "week": 114342,
+        "month": 114342,
+        "quarter": 114342,
+        "half": 114342
       },
       "growth": {
-        "week": 874,
-        "month": 2568,
-        "quarter": 2568,
-        "half": 2568,
+        "week": 878,
+        "month": 2572,
+        "quarter": 2572,
+        "half": 2572,
         "year": null
       },
       "covered": {
@@ -4205,10 +4245,10 @@
       "name": "tauri",
       "description": "Build smaller, faster, and more secure desktop and mobile applications with a web frontend.",
       "language": "Rust",
-      "stars": 112333,
-      "forks": 4137,
-      "watchers": 112333,
-      "openIssues": 1499,
+      "stars": 112345,
+      "forks": 4138,
+      "watchers": 112345,
+      "openIssues": 1500,
       "topics": [
         "desktop-app",
         "high-performance",
@@ -4220,21 +4260,21 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2019-07-13T09:09:37Z",
-      "updatedAt": "2026-10-30T12:05:41Z",
+      "updatedAt": "2026-10-30T18:41:04Z",
       "pushedAt": "2026-10-29T17:10:26Z",
       "url": "https://github.com/tauri-apps/tauri",
       "homepage": "https://tauri.app",
       "periods": {
-        "week": 112333,
-        "month": 112333,
-        "quarter": 112333,
-        "half": 112333
+        "week": 112345,
+        "month": 112345,
+        "quarter": 112345,
+        "half": 112345
       },
       "growth": {
-        "week": 206,
-        "month": 317,
-        "quarter": 317,
-        "half": 317,
+        "week": 218,
+        "month": 329,
+        "quarter": 329,
+        "half": 329,
         "year": null
       },
       "covered": {
@@ -4252,9 +4292,9 @@
       "name": "agent-skills",
       "description": "Production-grade engineering skills for AI coding agents.",
       "language": "JavaScript",
-      "stars": 111876,
-      "forks": 11708,
-      "watchers": 111876,
+      "stars": 111947,
+      "forks": 11720,
+      "watchers": 111947,
       "openIssues": 145,
       "topics": [
         "agent-skills",
@@ -4266,28 +4306,27 @@
       ],
       "license": "MIT",
       "createdAt": "2026-02-15T20:20:26Z",
-      "updatedAt": "2026-10-30T12:28:31Z",
+      "updatedAt": "2026-10-30T19:03:19Z",
       "pushedAt": "2026-10-29T05:06:58Z",
       "url": "https://github.com/addyosmani/agent-skills",
       "homepage": "https://skills.addy.ie",
       "periods": {
-        "week": 111876,
-        "month": 111876,
-        "quarter": 111876,
-        "half": 111876
+        "week": 111947,
+        "month": 111947,
+        "quarter": 111947
       },
       "growth": {
-        "week": 2229,
-        "month": 3344,
-        "quarter": 3344,
-        "half": 3344,
+        "week": 2300,
+        "month": 3415,
+        "quarter": 3415,
+        "half": null,
         "year": null
       },
       "covered": {
         "week": 8,
         "month": 12,
         "quarter": 12,
-        "half": 12,
+        "half": 0,
         "year": 0
       }
     },
@@ -4298,10 +4337,10 @@
       "name": "TypeScript",
       "description": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
       "language": "Go",
-      "stars": 111675,
-      "forks": 16058,
-      "watchers": 111675,
-      "openIssues": 5225,
+      "stars": 111684,
+      "forks": 16060,
+      "watchers": 111684,
+      "openIssues": 5223,
       "topics": [
         "javascript",
         "language",
@@ -4310,19 +4349,19 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2014-06-17T15:28:39Z",
-      "updatedAt": "2026-10-30T10:47:13Z",
-      "pushedAt": "2026-10-30T07:07:23Z",
+      "updatedAt": "2026-10-30T18:54:07Z",
+      "pushedAt": "2026-10-30T18:59:20Z",
       "url": "https://github.com/microsoft/TypeScript",
       "homepage": "https://www.typescriptlang.org",
       "periods": {
-        "week": 111675,
-        "month": 111675,
-        "quarter": 111675
+        "week": 111684,
+        "month": 111684,
+        "quarter": 111684
       },
       "growth": {
-        "week": 104,
-        "month": 155,
-        "quarter": 155,
+        "week": 113,
+        "month": 164,
+        "quarter": 164,
         "half": null,
         "year": null
       },
@@ -4341,9 +4380,9 @@
       "name": "papers-we-love",
       "description": "Papers from the computer science community to read and discuss.",
       "language": "Shell",
-      "stars": 111047,
-      "forks": 6461,
-      "watchers": 111047,
+      "stars": 111058,
+      "forks": 6463,
+      "watchers": 111058,
       "openIssues": 4,
       "topics": [
         "awesome",
@@ -4356,19 +4395,19 @@
       ],
       "license": "—",
       "createdAt": "2013-12-15T14:31:41Z",
-      "updatedAt": "2026-10-30T12:07:58Z",
+      "updatedAt": "2026-10-30T18:13:56Z",
       "pushedAt": "2026-10-28T23:10:37Z",
       "url": "https://github.com/papers-we-love/papers-we-love",
       "homepage": "http://paperswelove.org/",
       "periods": {
-        "week": 111047,
-        "month": 111047,
-        "quarter": 111047
+        "week": 111058,
+        "month": 111058,
+        "quarter": 111058
       },
       "growth": {
-        "week": 252,
-        "month": 336,
-        "quarter": 336,
+        "week": 263,
+        "month": 347,
+        "quarter": 347,
         "half": null,
         "year": null
       },
@@ -4387,10 +4426,10 @@
       "name": "orca",
       "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
       "language": "TypeScript",
-      "stars": 110690,
-      "forks": 6994,
-      "watchers": 110690,
-      "openIssues": 7875,
+      "stars": 110956,
+      "forks": 7019,
+      "watchers": 110956,
+      "openIssues": 7865,
       "topics": [
         "ade",
         "agent-ide",
@@ -4415,19 +4454,19 @@
       ],
       "license": "MIT",
       "createdAt": "2026-03-17T03:28:57Z",
-      "updatedAt": "2026-10-30T12:28:50Z",
-      "pushedAt": "2026-10-30T12:25:16Z",
+      "updatedAt": "2026-10-30T19:04:24Z",
+      "pushedAt": "2026-10-30T19:02:30Z",
       "url": "https://github.com/stablyai/orca",
       "homepage": "https://orca.dev",
       "periods": {
-        "week": 110690,
-        "month": 110690,
-        "quarter": 110690
+        "week": 110956,
+        "month": 110956,
+        "quarter": 110956
       },
       "growth": {
-        "week": 7985,
-        "month": 11550,
-        "quarter": 11550,
+        "week": 8251,
+        "month": 11816,
+        "quarter": 11816,
         "half": null,
         "year": null
       },
@@ -4446,9 +4485,9 @@
       "name": "frp",
       "description": "A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.",
       "language": "Go",
-      "stars": 110328,
-      "forks": 15286,
-      "watchers": 110328,
+      "stars": 110339,
+      "forks": 15287,
+      "watchers": 110339,
       "openIssues": 33,
       "topics": [
         "expose",
@@ -4464,26 +4503,25 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2015-12-21T15:24:59Z",
-      "updatedAt": "2026-10-30T12:28:51Z",
+      "updatedAt": "2026-10-30T18:37:53Z",
       "pushedAt": "2026-10-23T07:52:16Z",
       "url": "https://github.com/fatedier/frp",
       "homepage": "",
       "periods": {
-        "week": 110328,
-        "month": 110328,
-        "quarter": 110328
+        "week": 110339,
+        "month": 110339
       },
       "growth": {
-        "week": 249,
-        "month": 335,
-        "quarter": 335,
+        "week": 260,
+        "month": 346,
+        "quarter": null,
         "half": null,
         "year": null
       },
       "covered": {
         "week": 8,
         "month": 12,
-        "quarter": 12,
+        "quarter": 0,
         "half": 0,
         "year": 0
       }
@@ -4495,9 +4533,9 @@
       "name": "axios",
       "description": "Promise based HTTP client for the browser and node.js",
       "language": "JavaScript",
-      "stars": 109309,
-      "forks": 11966,
-      "watchers": 109309,
+      "stars": 109308,
+      "forks": 11971,
+      "watchers": 109308,
       "openIssues": 112,
       "topics": [
         "hacktoberfest",
@@ -4508,13 +4546,13 @@
       ],
       "license": "MIT",
       "createdAt": "2014-08-18T22:30:27Z",
-      "updatedAt": "2026-10-30T11:46:57Z",
+      "updatedAt": "2026-10-30T17:43:42Z",
       "pushedAt": "2026-10-28T11:43:41Z",
       "url": "https://github.com/axios/axios",
       "homepage": "https://axios-http.com",
       "periods": {
-        "week": 109309,
-        "month": 109309
+        "week": 109308,
+        "month": 109308
       },
       "growth": {
         "week": 19,
@@ -4538,10 +4576,10 @@
       "name": "paperclip",
       "description": "The open-source app everyone uses to manage agents at work",
       "language": "TypeScript",
-      "stars": 108840,
-      "forks": 18019,
-      "watchers": 108840,
-      "openIssues": 6631,
+      "stars": 108935,
+      "forks": 18035,
+      "watchers": 108935,
+      "openIssues": 6659,
       "topics": [
         "acpx",
         "agent-orchestration",
@@ -4566,17 +4604,17 @@
       ],
       "license": "MIT",
       "createdAt": "2026-03-02T15:01:51Z",
-      "updatedAt": "2026-10-30T12:22:53Z",
-      "pushedAt": "2026-10-30T11:55:44Z",
+      "updatedAt": "2026-10-30T19:02:43Z",
+      "pushedAt": "2026-10-30T19:04:03Z",
       "url": "https://github.com/paperclipai/paperclip",
       "homepage": "https://paperclip.ing",
       "periods": {
-        "week": 108840,
-        "month": 108840
+        "week": 108935,
+        "month": 108935
       },
       "growth": {
-        "week": 2693,
-        "month": 4255,
+        "week": 2788,
+        "month": 4350,
         "quarter": null,
         "half": null,
         "year": null
@@ -4596,10 +4634,10 @@
       "name": "deno",
       "description": "A modern runtime for JavaScript and TypeScript.",
       "language": "Rust",
-      "stars": 108769,
-      "forks": 6471,
-      "watchers": 108769,
-      "openIssues": 1660,
+      "stars": 108771,
+      "forks": 6474,
+      "watchers": 108771,
+      "openIssues": 1661,
       "topics": [
         "deno",
         "javascript",
@@ -4608,17 +4646,17 @@
       ],
       "license": "MIT",
       "createdAt": "2018-05-15T01:34:26Z",
-      "updatedAt": "2026-10-30T11:44:56Z",
+      "updatedAt": "2026-10-30T18:40:57Z",
       "pushedAt": "2026-10-29T08:03:10Z",
       "url": "https://github.com/denoland/deno",
       "homepage": "https://deno.com",
       "periods": {
-        "week": 108769,
-        "month": 108769
+        "week": 108771,
+        "month": 108771
       },
       "growth": {
-        "week": 78,
-        "month": 94,
+        "week": 80,
+        "month": 96,
         "quarter": null,
         "half": null,
         "year": null
@@ -4638,10 +4676,10 @@
       "name": "gemini-cli",
       "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "language": "TypeScript",
-      "stars": 108626,
-      "forks": 14882,
-      "watchers": 108626,
-      "openIssues": 773,
+      "stars": 108631,
+      "forks": 14885,
+      "watchers": 108631,
+      "openIssues": 771,
       "topics": [
         "ai",
         "ai-agents",
@@ -4653,17 +4691,17 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2025-04-17T17:04:31Z",
-      "updatedAt": "2026-10-30T12:08:34Z",
-      "pushedAt": "2026-10-30T01:22:16Z",
+      "updatedAt": "2026-10-30T18:27:34Z",
+      "pushedAt": "2026-10-30T18:14:27Z",
       "url": "https://github.com/google-gemini/gemini-cli",
       "homepage": "https://geminicli.com",
       "periods": {
-        "week": 108626,
-        "month": 108626
+        "week": 108631,
+        "month": 108631
       },
       "growth": {
-        "week": 1107,
-        "month": 1177,
+        "week": 1112,
+        "month": 1182,
         "quarter": null,
         "half": null,
         "year": null
@@ -4683,9 +4721,9 @@
       "name": "LLMs-from-scratch",
       "description": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
       "language": "Jupyter Notebook",
-      "stars": 107554,
-      "forks": 16589,
-      "watchers": 107554,
+      "stars": 107563,
+      "forks": 16593,
+      "watchers": 107563,
       "openIssues": 1,
       "topics": [
         "ai",
@@ -4710,24 +4748,23 @@
       ],
       "license": "NOASSERTION",
       "createdAt": "2023-07-23T18:15:57Z",
-      "updatedAt": "2026-10-30T12:05:51Z",
+      "updatedAt": "2026-10-30T18:51:39Z",
       "pushedAt": "2026-10-30T02:15:16Z",
       "url": "https://github.com/rasbt/LLMs-from-scratch",
       "homepage": "https://amzn.to/4fqvn0D",
       "periods": {
-        "week": 107554,
-        "month": 107554
+        "week": 107563
       },
       "growth": {
-        "week": 444,
-        "month": 652,
+        "week": 453,
+        "month": null,
         "quarter": null,
         "half": null,
         "year": null
       },
       "covered": {
         "week": 8,
-        "month": 12,
+        "month": 0,
         "quarter": 0,
         "half": 0,
         "year": 0
@@ -4740,22 +4777,22 @@
       "name": "weekly",
       "description": "科技爱好者周刊，每周五发布",
       "language": "—",
-      "stars": 107228,
-      "forks": 4555,
-      "watchers": 107228,
-      "openIssues": 9912,
+      "stars": 107240,
+      "forks": 4556,
+      "watchers": 107240,
+      "openIssues": 9914,
       "topics": [],
       "license": "—",
       "createdAt": "2018-10-13T12:36:07Z",
-      "updatedAt": "2026-10-30T12:17:28Z",
+      "updatedAt": "2026-10-30T18:59:02Z",
       "pushedAt": "2026-10-30T00:48:38Z",
       "url": "https://github.com/ruanyf/weekly",
       "homepage": "",
       "periods": {
-        "week": 107228
+        "week": 107240
       },
       "growth": {
-        "week": 452,
+        "week": 464,
         "month": null,
         "quarter": null,
         "half": null,
@@ -4776,10 +4813,10 @@
       "name": "Agent-Reach",
       "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
       "language": "Python",
-      "stars": 106603,
-      "forks": 9461,
-      "watchers": 106603,
-      "openIssues": 269,
+      "stars": 106741,
+      "forks": 9482,
+      "watchers": 106741,
+      "openIssues": 271,
       "topics": [
         "agent-infrastructure",
         "ai-agent",
@@ -4801,15 +4838,15 @@
       ],
       "license": "MIT",
       "createdAt": "2026-02-24T02:10:24Z",
-      "updatedAt": "2026-10-30T12:29:20Z",
+      "updatedAt": "2026-10-30T19:02:44Z",
       "pushedAt": "2026-10-25T04:37:26Z",
       "url": "https://github.com/Panniantong/Agent-Reach",
       "homepage": "",
       "periods": {
-        "week": 106603
+        "week": 106741
       },
       "growth": {
-        "week": 5415,
+        "week": 5553,
         "month": null,
         "quarter": null,
         "half": null,
@@ -4830,10 +4867,10 @@
       "name": "taste-skill",
       "description": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
       "language": "JavaScript",
-      "stars": 105982,
-      "forks": 7162,
-      "watchers": 105982,
-      "openIssues": 7,
+      "stars": 106205,
+      "forks": 7184,
+      "watchers": 106205,
+      "openIssues": 8,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -4849,15 +4886,15 @@
       ],
       "license": "MIT",
       "createdAt": "2026-02-19T21:44:05Z",
-      "updatedAt": "2026-10-30T12:28:05Z",
-      "pushedAt": "2026-10-30T09:24:57Z",
+      "updatedAt": "2026-10-30T19:02:33Z",
+      "pushedAt": "2026-10-30T18:25:22Z",
       "url": "https://github.com/Leonxlnx/taste-skill",
       "homepage": "https://tasteskill.dev",
       "periods": {
-        "week": 105982
+        "week": 106205
       },
       "growth": {
-        "week": 4874,
+        "week": 5097,
         "month": null,
         "quarter": null,
         "half": null,
@@ -4878,10 +4915,10 @@
       "name": "claude-mem",
       "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "language": "TypeScript",
-      "stars": 105385,
-      "forks": 9289,
-      "watchers": 105385,
-      "openIssues": 125,
+      "stars": 105921,
+      "forks": 9332,
+      "watchers": 105921,
+      "openIssues": 134,
       "topics": [
         "ai",
         "ai-agents",
@@ -4906,15 +4943,15 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2025-08-31T20:50:03Z",
-      "updatedAt": "2026-10-30T12:28:24Z",
-      "pushedAt": "2026-10-30T03:07:33Z",
+      "updatedAt": "2026-10-30T19:03:28Z",
+      "pushedAt": "2026-10-30T19:01:44Z",
       "url": "https://github.com/thedotmack/claude-mem",
       "homepage": "https://claude-mem.ai",
       "periods": {
-        "week": 105385
+        "week": 105921
       },
       "growth": {
-        "week": 2083,
+        "week": 2619,
         "month": null,
         "quarter": null,
         "half": null,
@@ -4935,10 +4972,10 @@
       "name": "terminal",
       "description": "The new Windows Terminal and the original Windows console host, all in the same place!",
       "language": "C++",
-      "stars": 105284,
-      "forks": 9700,
-      "watchers": 105284,
-      "openIssues": 1771,
+      "stars": 105290,
+      "forks": 9706,
+      "watchers": 105290,
+      "openIssues": 1772,
       "topics": [
         "cmd",
         "command-line",
@@ -4954,60 +4991,15 @@
       ],
       "license": "MIT",
       "createdAt": "2017-08-11T18:38:22Z",
-      "updatedAt": "2026-10-30T12:10:05Z",
-      "pushedAt": "2026-10-30T04:22:49Z",
+      "updatedAt": "2026-10-30T18:43:04Z",
+      "pushedAt": "2026-10-30T17:23:33Z",
       "url": "https://github.com/microsoft/terminal",
       "homepage": "",
       "periods": {
-        "week": 105284
+        "week": 105290
       },
       "growth": {
-        "week": 72,
-        "month": null,
-        "quarter": null,
-        "half": null,
-        "year": null
-      },
-      "covered": {
-        "week": 8,
-        "month": 0,
-        "quarter": 0,
-        "half": 0,
-        "year": 0
-      }
-    },
-    {
-      "id": 65600975,
-      "fullName": "pytorch/pytorch",
-      "owner": "pytorch",
-      "name": "pytorch",
-      "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
-      "language": "Python",
-      "stars": 105015,
-      "forks": 31874,
-      "watchers": 105015,
-      "openIssues": 17883,
-      "topics": [
-        "autograd",
-        "deep-learning",
-        "gpu",
-        "machine-learning",
-        "neural-network",
-        "numpy",
-        "python",
-        "tensor"
-      ],
-      "license": "NOASSERTION",
-      "createdAt": "2016-08-13T05:26:41Z",
-      "updatedAt": "2026-10-30T12:19:07Z",
-      "pushedAt": "2026-10-30T12:28:20Z",
-      "url": "https://github.com/pytorch/pytorch",
-      "homepage": "https://pytorch.org",
-      "periods": {
-        "week": 105015
-      },
-      "growth": {
-        "week": 204,
+        "week": 78,
         "month": null,
         "quarter": null,
         "half": null,
@@ -5028,10 +5020,10 @@
       "name": "Python",
       "description": "All Algorithms implemented in Python",
       "language": "Python",
-      "stars": 225694,
-      "forks": 51249,
-      "watchers": 225694,
-      "openIssues": 76,
+      "stars": 225712,
+      "forks": 51253,
+      "watchers": 225712,
+      "openIssues": 79,
       "topics": [
         "algorithm",
         "algorithm-competitions",
@@ -5050,22 +5042,22 @@
       ],
       "license": "MIT",
       "createdAt": "2016-07-16T09:44:01Z",
-      "updatedAt": "2026-10-30T12:26:18Z",
+      "updatedAt": "2026-10-30T19:01:43Z",
       "pushedAt": "2026-10-20T05:01:26Z",
       "url": "https://github.com/TheAlgorithms/Python",
       "homepage": "https://thealgorithms.github.io/Python/",
       "periods": {
-        "month": 225694,
-        "quarter": 225694,
-        "half": 225694,
-        "year": 225694
+        "month": 225712,
+        "quarter": 225712,
+        "half": 225712,
+        "year": 225712
       },
       "growth": {
         "week": null,
-        "month": 301,
-        "quarter": 301,
-        "half": 301,
-        "year": 301
+        "month": 319,
+        "quarter": 319,
+        "half": 319,
+        "year": 319
       },
       "covered": {
         "week": 0,
@@ -5082,9 +5074,9 @@
       "name": "Microsoft-Activation-Scripts",
       "description": "Open-source Windows and Office activator featuring HWID, Ohook, TSforge, and Online KMS activation methods, along with advanced troubleshooting.",
       "language": "Batchfile",
-      "stars": 196934,
-      "forks": 18672,
-      "watchers": 196934,
+      "stars": 196980,
+      "forks": 18679,
+      "watchers": 196980,
       "openIssues": 6,
       "topics": [
         "activator",
@@ -5106,22 +5098,22 @@
       ],
       "license": "GPL-3.0",
       "createdAt": "2020-01-12T23:03:34Z",
-      "updatedAt": "2026-10-30T12:27:47Z",
+      "updatedAt": "2026-10-30T19:00:07Z",
       "pushedAt": "2026-10-17T01:33:16Z",
       "url": "https://github.com/massgravel/Microsoft-Activation-Scripts",
       "homepage": "https://massgrave.dev",
       "periods": {
-        "month": 196934,
-        "quarter": 196934,
-        "half": 196935,
-        "year": 196935
+        "month": 196980,
+        "quarter": 196980,
+        "half": 196980,
+        "year": 196980
       },
       "growth": {
         "week": null,
-        "month": 1870,
-        "quarter": 1870,
-        "half": 1870,
-        "year": 1870
+        "month": 1916,
+        "quarter": 1916,
+        "half": 1916,
+        "year": 1916
       },
       "covered": {
         "week": 0,
@@ -5138,9 +5130,9 @@
       "name": "system-prompts-and-models-of-ai-tools",
       "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
       "language": "—",
-      "stars": 144354,
-      "forks": 34705,
-      "watchers": 144354,
+      "stars": 144364,
+      "forks": 34707,
+      "watchers": 144364,
       "openIssues": 163,
       "topics": [
         "ai",
@@ -5166,22 +5158,22 @@
       ],
       "license": "GPL-3.0",
       "createdAt": "2025-03-05T16:38:29Z",
-      "updatedAt": "2026-10-30T12:17:17Z",
+      "updatedAt": "2026-10-30T19:02:23Z",
       "pushedAt": "2026-10-12T15:19:01Z",
       "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "homepage": "",
       "periods": {
-        "month": 144354,
-        "quarter": 144354,
-        "half": 144354,
-        "year": 144354
+        "month": 144364,
+        "quarter": 144364,
+        "half": 144364,
+        "year": 144364
       },
       "growth": {
         "week": null,
-        "month": 262,
-        "quarter": 262,
-        "half": 262,
-        "year": 262
+        "month": 272,
+        "quarter": 272,
+        "half": 272,
+        "year": 272
       },
       "covered": {
         "week": 0,
@@ -5198,9 +5190,9 @@
       "name": "awesome-llm-apps",
       "description": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
       "language": "Python",
-      "stars": 143477,
-      "forks": 21110,
-      "watchers": 143477,
+      "stars": 143507,
+      "forks": 21113,
+      "watchers": 143507,
       "openIssues": 28,
       "topics": [
         "agents",
@@ -5210,22 +5202,22 @@
       ],
       "license": "Apache-2.0",
       "createdAt": "2024-04-29T05:30:25Z",
-      "updatedAt": "2026-10-30T12:27:33Z",
+      "updatedAt": "2026-10-30T18:41:06Z",
       "pushedAt": "2026-10-22T19:10:10Z",
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
       "homepage": "https://www.theunwindai.com",
       "periods": {
-        "month": 143477,
-        "quarter": 143477,
-        "half": 143477,
-        "year": 143477
+        "month": 143507,
+        "quarter": 143507,
+        "half": 143507,
+        "year": 143507
       },
       "growth": {
         "week": null,
-        "month": 1173,
-        "quarter": 1173,
-        "half": 1173,
-        "year": 1173
+        "month": 1203,
+        "quarter": 1203,
+        "half": 1203,
+        "year": 1203
       },
       "covered": {
         "week": 0,
@@ -5242,9 +5234,9 @@
       "name": "fucking-algorithm",
       "description": "Crack LeetCode, not only how, but also why. ",
       "language": "Markdown",
-      "stars": 136002,
-      "forks": 23530,
-      "watchers": 136002,
+      "stars": 136004,
+      "forks": 23531,
+      "watchers": 136004,
       "openIssues": 0,
       "topics": [
         "algorithms",
@@ -5258,22 +5250,22 @@
       ],
       "license": "—",
       "createdAt": "2020-02-19T09:01:23Z",
-      "updatedAt": "2026-10-30T12:17:06Z",
+      "updatedAt": "2026-10-30T18:39:29Z",
       "pushedAt": "2026-10-18T11:43:51Z",
       "url": "https://github.com/labuladong/fucking-algorithm",
       "homepage": "https://labuladong.online/",
       "periods": {
-        "month": 136002,
-        "quarter": 136002,
-        "half": 136002,
-        "year": 136002
+        "month": 136004,
+        "quarter": 136004,
+        "half": 136004,
+        "year": 136004
       },
       "growth": {
         "week": null,
-        "month": 80,
-        "quarter": 80,
-        "half": 80,
-        "year": 80
+        "month": 82,
+        "quarter": 82,
+        "half": 82,
+        "year": 82
       },
       "covered": {
         "week": 0,
@@ -5291,7 +5283,7 @@
       "description": "Bring data to life with SVG, Canvas and HTML. :bar_chart::chart_with_upwards_trend::tada:",
       "language": "Shell",
       "stars": 113826,
-      "forks": 22712,
+      "forks": 22718,
       "watchers": 113826,
       "openIssues": 22,
       "topics": [
@@ -5304,7 +5296,7 @@
       ],
       "license": "ISC",
       "createdAt": "2010-09-27T17:22:42Z",
-      "updatedAt": "2026-10-30T09:06:41Z",
+      "updatedAt": "2026-10-30T18:45:36Z",
       "pushedAt": "2026-10-21T22:24:11Z",
       "url": "https://github.com/d3/d3",
       "homepage": "https://d3js.org",
@@ -5335,9 +5327,9 @@
       "name": "awesome",
       "description": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
       "language": "—",
-      "stars": 527156,
-      "forks": 37902,
-      "watchers": 527156,
+      "stars": 527390,
+      "forks": 37899,
+      "watchers": 527390,
       "openIssues": 105,
       "topics": [
         "awesome",
@@ -5348,21 +5340,21 @@
       ],
       "license": "CC0-1.0",
       "createdAt": "2014-07-11T13:42:37Z",
-      "updatedAt": "2026-10-30T12:28:01Z",
+      "updatedAt": "2026-10-30T19:00:48Z",
       "pushedAt": "2026-09-02T02:10:47Z",
       "url": "https://github.com/sindresorhus/awesome",
       "homepage": "",
       "periods": {
-        "quarter": 527156,
-        "half": 527156,
-        "year": 527156
+        "quarter": 527390,
+        "half": 527390,
+        "year": 527390
       },
       "growth": {
         "week": null,
         "month": null,
-        "quarter": 5656,
-        "half": 5656,
-        "year": 5656
+        "quarter": 5890,
+        "half": 5890,
+        "year": 5890
       },
       "covered": {
         "week": 0,
@@ -5379,10 +5371,10 @@
       "name": "system-design-primer",
       "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
       "language": "Python",
-      "stars": 376186,
-      "forks": 59069,
-      "watchers": 376186,
-      "openIssues": 633,
+      "stars": 376236,
+      "forks": 59079,
+      "watchers": 376236,
+      "openIssues": 634,
       "topics": [
         "design",
         "design-patterns",
@@ -5400,21 +5392,21 @@
       ],
       "license": "NOASSERTION",
       "createdAt": "2017-02-26T16:15:28Z",
-      "updatedAt": "2026-10-30T12:24:27Z",
+      "updatedAt": "2026-10-30T19:03:09Z",
       "pushedAt": "2026-09-15T01:10:09Z",
       "url": "https://github.com/donnemartin/system-design-primer",
       "homepage": "",
       "periods": {
-        "quarter": 376186,
-        "half": 376186,
-        "year": 376186
+        "quarter": 376236,
+        "half": 376236,
+        "year": 376236
       },
       "growth": {
         "week": null,
         "month": null,
-        "quarter": 1370,
-        "half": 1370,
-        "year": 1370
+        "quarter": 1420,
+        "half": 1420,
+        "year": 1420
       },
       "covered": {
         "week": 0,
@@ -5431,9 +5423,9 @@
       "name": "FreeDomain",
       "description": "Free domain registration and practical DNS learning resources for everyone.",
       "language": "Markdown",
-      "stars": 206411,
-      "forks": 4616,
-      "watchers": 206411,
+      "stars": 206468,
+      "forks": 4620,
+      "watchers": 206468,
       "openIssues": 38,
       "topics": [
         "digitalplat",
@@ -5454,21 +5446,21 @@
       ],
       "license": "AGPL-3.0",
       "createdAt": "2024-05-30T13:23:00Z",
-      "updatedAt": "2026-10-30T12:27:34Z",
+      "updatedAt": "2026-10-30T18:55:13Z",
       "pushedAt": "2026-08-12T10:36:46Z",
       "url": "https://github.com/DigitalPlatDev/FreeDomain",
       "homepage": "https://dashboard.digitalplat.org",
       "periods": {
-        "quarter": 206411,
-        "half": 206411,
-        "year": 206411
+        "quarter": 206468,
+        "half": 206468,
+        "year": 206468
       },
       "growth": {
         "week": null,
         "month": null,
-        "quarter": 1452,
-        "half": 1452,
-        "year": 1452
+        "quarter": 1509,
+        "half": 1509,
+        "year": 1509
       },
       "covered": {
         "week": 0,
@@ -5485,9 +5477,9 @@
       "name": "tech-interview-handbook",
       "description": "Curated coding interview preparation materials for busy software engineers",
       "language": "TypeScript",
-      "stars": 143187,
-      "forks": 16873,
-      "watchers": 143187,
+      "stars": 143189,
+      "forks": 16874,
+      "watchers": 143189,
       "openIssues": 38,
       "topics": [
         "algorithm",
@@ -5503,21 +5495,21 @@
       ],
       "license": "MIT",
       "createdAt": "2016-07-05T05:00:48Z",
-      "updatedAt": "2026-10-30T11:38:27Z",
+      "updatedAt": "2026-10-30T18:28:19Z",
       "pushedAt": "2026-08-07T12:06:42Z",
       "url": "https://github.com/yangshun/tech-interview-handbook",
       "homepage": "https://www.techinterviewhandbook.org",
       "periods": {
-        "quarter": 143187,
-        "half": 143187,
-        "year": 143187
+        "quarter": 143189,
+        "half": 143189,
+        "year": 143189
       },
       "growth": {
         "week": null,
         "month": null,
-        "quarter": 117,
-        "half": 117,
-        "year": 117
+        "quarter": 119,
+        "half": 119,
+        "year": 119
       },
       "covered": {
         "week": 0,
@@ -5534,24 +5526,24 @@
       "name": "whisper",
       "description": "Robust Speech Recognition via Large-Scale Weak Supervision",
       "language": "Python",
-      "stars": 111576,
-      "forks": 13515,
-      "watchers": 111576,
+      "stars": 111593,
+      "forks": 13522,
+      "watchers": 111593,
       "openIssues": 180,
       "topics": [],
       "license": "MIT",
       "createdAt": "2022-09-16T20:02:54Z",
-      "updatedAt": "2026-10-30T12:18:15Z",
+      "updatedAt": "2026-10-30T18:39:38Z",
       "pushedAt": "2026-08-31T17:19:19Z",
       "url": "https://github.com/openai/whisper",
       "homepage": "",
       "periods": {
-        "quarter": 111576
+        "quarter": 111593
       },
       "growth": {
         "week": null,
         "month": null,
-        "quarter": 680,
+        "quarter": 697,
         "half": null,
         "year": null
       },
@@ -5570,9 +5562,9 @@
       "name": "build-your-own-x",
       "description": "Master programming by recreating your favorite technologies from scratch.",
       "language": "Markdown",
-      "stars": 557484,
-      "forks": 52168,
-      "watchers": 557484,
+      "stars": 557593,
+      "forks": 52178,
+      "watchers": 557593,
       "openIssues": 685,
       "topics": [
         "awesome-list",
@@ -5584,20 +5576,20 @@
       ],
       "license": "—",
       "createdAt": "2018-05-09T12:03:18Z",
-      "updatedAt": "2026-10-30T12:28:13Z",
+      "updatedAt": "2026-10-30T19:00:32Z",
       "pushedAt": "2026-07-14T19:25:58Z",
       "url": "https://github.com/codecrafters-io/build-your-own-x",
       "homepage": "https://codecrafters.io",
       "periods": {
-        "half": 557484,
-        "year": 557484
+        "half": 557593,
+        "year": 557593
       },
       "growth": {
         "week": null,
         "month": null,
         "quarter": null,
-        "half": 2853,
-        "year": 2853
+        "half": 2962,
+        "year": 2962
       },
       "covered": {
         "week": 0,
@@ -5614,9 +5606,9 @@
       "name": "computer-science",
       "description": "🎓 Path to a free self-taught education in Computer Science!",
       "language": "HTML",
-      "stars": 210523,
-      "forks": 26037,
-      "watchers": 210523,
+      "stars": 210538,
+      "forks": 26041,
+      "watchers": 210538,
       "openIssues": 29,
       "topics": [
         "awesome-list",
@@ -5626,20 +5618,20 @@
       ],
       "license": "MIT",
       "createdAt": "2014-05-04T00:18:39Z",
-      "updatedAt": "2026-10-30T12:16:08Z",
+      "updatedAt": "2026-10-30T18:58:53Z",
       "pushedAt": "2026-07-14T05:38:25Z",
       "url": "https://github.com/ossu/computer-science",
       "homepage": "https://cs.ossu.dev",
       "periods": {
-        "half": 210523,
-        "year": 210523
+        "half": 210538,
+        "year": 210538
       },
       "growth": {
         "week": null,
         "month": null,
         "quarter": null,
-        "half": 370,
-        "year": 370
+        "half": 385,
+        "year": 385
       },
       "covered": {
         "week": 0,
@@ -5656,9 +5648,9 @@
       "name": "javascript-algorithms",
       "description": "📝 Algorithms and data structures implemented in JavaScript with explanations and links to further readings",
       "language": "JavaScript",
-      "stars": 196708,
-      "forks": 30998,
-      "watchers": 196708,
+      "stars": 196711,
+      "forks": 30999,
+      "watchers": 196711,
       "openIssues": 434,
       "topics": [
         "algorithm",
@@ -5672,20 +5664,20 @@
       ],
       "license": "MIT",
       "createdAt": "2018-03-24T07:47:04Z",
-      "updatedAt": "2026-10-30T12:05:47Z",
+      "updatedAt": "2026-10-30T17:21:13Z",
       "pushedAt": "2026-07-26T02:43:08Z",
       "url": "https://github.com/trekhleb/javascript-algorithms",
       "homepage": "",
       "periods": {
-        "half": 196708,
-        "year": 196708
+        "half": 196711,
+        "year": 196711
       },
       "growth": {
         "week": null,
         "month": null,
         "quarter": null,
-        "half": 51,
-        "year": 51
+        "half": 54,
+        "year": 54
       },
       "covered": {
         "week": 0,
@@ -5702,27 +5694,27 @@
       "name": "Python-100-Days",
       "description": "Python - 100天从新手到大师",
       "language": "Jupyter Notebook",
-      "stars": 187582,
-      "forks": 55746,
-      "watchers": 187582,
+      "stars": 187593,
+      "forks": 55747,
+      "watchers": 187593,
       "openIssues": 722,
       "topics": [],
       "license": "—",
       "createdAt": "2018-03-01T16:05:52Z",
-      "updatedAt": "2026-10-30T11:35:55Z",
+      "updatedAt": "2026-10-30T19:03:44Z",
       "pushedAt": "2026-07-29T15:18:29Z",
       "url": "https://github.com/jackfrued/Python-100-Days",
       "homepage": "",
       "periods": {
-        "half": 187582,
-        "year": 187582
+        "half": 187593,
+        "year": 187593
       },
       "growth": {
         "week": null,
         "month": null,
         "quarter": null,
-        "half": 276,
-        "year": 276
+        "half": 287,
+        "year": 287
       },
       "covered": {
         "week": 0,
@@ -5739,9 +5731,9 @@
       "name": "free-programming-books-zh_CN",
       "description": ":books: 免费的计算机编程类中文书籍，欢迎投稿",
       "language": "—",
-      "stars": 119445,
-      "forks": 28259,
-      "watchers": 119445,
+      "stars": 119449,
+      "forks": 28260,
+      "watchers": 119449,
       "openIssues": 7,
       "topics": [
         "android",
@@ -5761,20 +5753,20 @@
       ],
       "license": "GPL-3.0",
       "createdAt": "2013-11-04T01:59:19Z",
-      "updatedAt": "2026-10-30T12:17:55Z",
+      "updatedAt": "2026-10-30T18:46:57Z",
       "pushedAt": "2026-07-29T00:39:06Z",
       "url": "https://github.com/justjavac/free-programming-books-zh_CN",
       "homepage": "http://weibo.com/justjavac",
       "periods": {
-        "half": 119445,
-        "year": 119445
+        "half": 119449,
+        "year": 119449
       },
       "growth": {
         "week": null,
         "month": null,
         "quarter": null,
-        "half": 174,
-        "year": 174
+        "half": 178,
+        "year": 178
       },
       "covered": {
         "week": 0,
@@ -5791,26 +5783,26 @@
       "name": "andrej-karpathy-skills",
       "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
       "language": "—",
-      "stars": 226646,
-      "forks": 22633,
-      "watchers": 226646,
+      "stars": 226742,
+      "forks": 22642,
+      "watchers": 226742,
       "openIssues": 138,
       "topics": [],
       "license": "—",
       "createdAt": "2026-01-27T03:53:13Z",
-      "updatedAt": "2026-10-30T12:27:38Z",
+      "updatedAt": "2026-10-30T19:03:11Z",
       "pushedAt": "2026-04-20T10:05:04Z",
       "url": "https://github.com/multica-ai/andrej-karpathy-skills",
       "homepage": "",
       "periods": {
-        "year": 226646
+        "year": 226742
       },
       "growth": {
         "week": null,
         "month": null,
         "quarter": null,
         "half": null,
-        "year": 5382
+        "year": 5478
       },
       "covered": {
         "week": 0,
@@ -5827,9 +5819,9 @@
       "name": "You-Dont-Know-JS",
       "description": "A book series (2 published editions) on the JS language.",
       "language": "—",
-      "stars": 184835,
+      "stars": 184833,
       "forks": 33358,
-      "watchers": 184835,
+      "watchers": 184833,
       "openIssues": 2,
       "topics": [
         "async",
@@ -5848,12 +5840,12 @@
       ],
       "license": "NOASSERTION",
       "createdAt": "2013-11-16T02:37:24Z",
-      "updatedAt": "2026-10-30T09:51:35Z",
+      "updatedAt": "2026-10-30T18:36:19Z",
       "pushedAt": "2026-02-15T04:36:44Z",
       "url": "https://github.com/getify/You-Dont-Know-JS",
       "homepage": "https://www.amazon.com/dp/B085XXCJ7X",
       "periods": {
-        "year": 184835
+        "year": 184833
       },
       "growth": {
         "week": null,
@@ -5877,9 +5869,9 @@
       "name": "stable-diffusion-webui",
       "description": "Stable Diffusion web UI",
       "language": "Python",
-      "stars": 165180,
-      "forks": 32479,
-      "watchers": 165180,
+      "stars": 165185,
+      "forks": 32478,
+      "watchers": 165185,
       "openIssues": 2510,
       "topics": [
         "ai",
@@ -5901,19 +5893,19 @@
       ],
       "license": "AGPL-3.0",
       "createdAt": "2022-08-22T14:05:26Z",
-      "updatedAt": "2026-10-30T12:27:01Z",
+      "updatedAt": "2026-10-30T18:44:59Z",
       "pushedAt": "2026-03-02T07:00:53Z",
       "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
       "homepage": "",
       "periods": {
-        "year": 165180
+        "year": 165185
       },
       "growth": {
         "week": null,
         "month": null,
         "quarter": null,
         "half": null,
-        "year": 131
+        "year": 136
       },
       "covered": {
         "week": 0,
@@ -5930,9 +5922,9 @@
       "name": "javascript",
       "description": "JavaScript Style Guide",
       "language": "JavaScript",
-      "stars": 148033,
-      "forks": 26530,
-      "watchers": 148033,
+      "stars": 148032,
+      "forks": 26533,
+      "watchers": 148032,
       "openIssues": 169,
       "topics": [
         "arrow-functions",
@@ -5952,12 +5944,12 @@
       ],
       "license": "MIT",
       "createdAt": "2012-11-01T23:13:50Z",
-      "updatedAt": "2026-10-30T12:06:06Z",
+      "updatedAt": "2026-10-30T18:28:46Z",
       "pushedAt": "2026-04-16T19:24:09Z",
       "url": "https://github.com/airbnb/javascript",
       "homepage": "",
       "periods": {
-        "year": 148033
+        "year": 148032
       },
       "growth": {
         "week": null,
@@ -5972,42 +5964,6 @@
         "quarter": 0,
         "half": 0,
         "year": 8
-      }
-    },
-    {
-      "id": 1039520,
-      "fullName": "ytdl-org/youtube-dl",
-      "owner": "ytdl-org",
-      "name": "youtube-dl",
-      "description": "Command-line program to download videos from YouTube.com and other video sites",
-      "language": "Python",
-      "stars": 141430,
-      "forks": 10672,
-      "watchers": 141430,
-      "openIssues": 4123,
-      "topics": [],
-      "license": "Unlicense",
-      "createdAt": "2010-10-31T14:35:07Z",
-      "updatedAt": "2026-10-30T12:16:12Z",
-      "pushedAt": "2026-02-19T16:45:25Z",
-      "url": "https://github.com/ytdl-org/youtube-dl",
-      "homepage": "http://ytdl-org.github.io/youtube-dl/",
-      "periods": {
-        "year": 141430
-      },
-      "growth": {
-        "week": null,
-        "month": null,
-        "quarter": null,
-        "half": null,
-        "year": 102
-      },
-      "covered": {
-        "week": 0,
-        "month": 0,
-        "quarter": 0,
-        "half": 0,
-        "year": 12
       }
     }
   ],
@@ -6059,7 +6015,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 164
+        "delta": 247
       }
     ],
     "freeCodeCamp/freeCodeCamp": [
@@ -6109,7 +6065,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 27
+        "delta": 47
       }
     ],
     "EbookFoundation/free-programming-books": [
@@ -6159,7 +6115,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 39
+        "delta": 62
       }
     ],
     "openclaw/openclaw": [
@@ -6209,7 +6165,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 47
+        "delta": 87
       }
     ],
     "nilbuild/developer-roadmap": [
@@ -6259,7 +6215,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 52
+        "delta": 77
       }
     ],
     "morluto/rea": [
@@ -6309,7 +6265,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 2632
+        "delta": 3933
       }
     ],
     "vinta/awesome-python": [
@@ -6359,7 +6315,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 113
+        "delta": 172
       }
     ],
     "awesome-selfhosted/awesome-selfhosted": [
@@ -6409,7 +6365,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 163
+        "delta": 268
       }
     ],
     "mattpocock/skills": [
@@ -6459,7 +6415,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 424
+        "delta": 721
       }
     ],
     "practical-tutorials/project-based-learning": [
@@ -6509,7 +6465,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 32
+        "delta": 70
       }
     ],
     "affaan-m/ECC": [
@@ -6559,7 +6515,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 364
+        "delta": 596
       }
     ],
     "NousResearch/hermes-agent": [
@@ -6609,7 +6565,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 202
+        "delta": 324
       }
     ],
     "deepseek-ai/deepseek-harness": [
@@ -6659,7 +6615,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 678
+        "delta": 891
       }
     ],
     "torvalds/linux": [
@@ -6709,7 +6665,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 48
+        "delta": 83
       }
     ],
     "react/react": [
@@ -6759,7 +6715,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 17
+        "delta": 23
       }
     ],
     "TheAlgorithms/Python": [
@@ -6809,7 +6765,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 13
+        "delta": 31
       }
     ],
     "anomalyco/opencode": [
@@ -6859,7 +6815,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 127
+        "delta": 229
       }
     ],
     "n8n-io/n8n": [
@@ -6909,7 +6865,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 64
+        "delta": 96
       }
     ],
     "tensorflow/tensorflow": [
@@ -6959,7 +6915,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 8
+        "delta": 12
       }
     ],
     "massgravel/Microsoft-Activation-Scripts": [
@@ -7009,7 +6965,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 68
+        "delta": 114
       }
     ],
     "ultraworkers/claw-code": [
@@ -7051,7 +7007,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 8
+        "delta": 23
       }
     ],
     "microsoft/vscode": [
@@ -7101,7 +7057,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 20
+        "delta": 28
       }
     ],
     "firecrawl/firecrawl": [
@@ -7151,7 +7107,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 160
+        "delta": 280
       }
     ],
     "ohmyzsh/ohmyzsh": [
@@ -7201,7 +7157,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 10
+        "delta": 15
       }
     ],
     "avelino/awesome-go": [
@@ -7251,7 +7207,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 70
+        "delta": 119
       }
     ],
     "Significant-Gravitas/AutoGPT": [
@@ -7301,7 +7257,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 8
+        "delta": 18
       }
     ],
     "ollama/ollama": [
@@ -7351,7 +7307,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 84
+        "delta": 108
       }
     ],
     "flutter/flutter": [
@@ -7401,7 +7357,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 79
+        "delta": 120
       }
     ],
     "twbs/bootstrap": [
@@ -7497,7 +7453,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 89
+        "delta": 161
       }
     ],
     "huggingface/transformers": [
@@ -7547,7 +7503,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 16
+        "delta": 28
       }
     ],
     "DietrichGebert/ponytail": [
@@ -7597,7 +7553,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 501
+        "delta": 707
       }
     ],
     "msitarzewski/agency-agents": [
@@ -7647,7 +7603,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 150
+        "delta": 266
       }
     ],
     "Snailclimb/JavaGuide": [
@@ -7697,7 +7653,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 8
+        "delta": 17
       }
     ],
     "langgenius/dify": [
@@ -7747,7 +7703,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 63
+        "delta": 93
       }
     ],
     "open-webui/open-webui": [
@@ -7797,7 +7753,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 69
+        "delta": 89
       }
     ],
     "langflow-ai/langflow": [
@@ -7847,7 +7803,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 13
+        "delta": 21
       }
     ],
     "Genymobile/scrcpy": [
@@ -7897,7 +7853,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 56
+        "delta": 84
       }
     ],
     "clash-verge-rev/clash-verge-rev": [
@@ -7947,7 +7903,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 166
+        "delta": 246
       }
     ],
     "anthropics/claude-code": [
@@ -7997,7 +7953,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 50
+        "delta": 90
       }
     ],
     "langchain-ai/langchain": [
@@ -8047,7 +8003,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 31
+        "delta": 44
       }
     ],
     "farion1231/cc-switch": [
@@ -8097,7 +8053,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 255
+        "delta": 322
       }
     ],
     "x1xhlol/system-prompts-and-models-of-ai-tools": [
@@ -8147,7 +8103,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 16
+        "delta": 26
       }
     ],
     "vercel/next.js": [
@@ -8197,7 +8153,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 14
+        "delta": 22
       }
     ],
     "Shubhamsaboo/awesome-llm-apps": [
@@ -8247,7 +8203,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 36
+        "delta": 66
       }
     ],
     "github/spec-kit": [
@@ -8297,7 +8253,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 120
+        "delta": 177
       }
     ],
     "iptv-org/iptv": [
@@ -8347,7 +8303,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 48
+        "delta": 81
       }
     ],
     "ripienaar/free-for-dev": [
@@ -8397,7 +8353,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 90
+        "delta": 142
       }
     ],
     "microsoft/PowerToys": [
@@ -8447,7 +8403,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 37
+        "delta": 55
       }
     ],
     "golang/go": [
@@ -8497,7 +8453,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 11
+        "delta": 23
       }
     ],
     "Comfy-Org/ComfyUI": [
@@ -8547,7 +8503,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 121
+        "delta": 185
       }
     ],
     "nextlevelbuilder/ui-ux-pro-max-skill": [
@@ -8597,7 +8553,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 294
+        "delta": 432
       }
     ],
     "garrytan/gstack": [
@@ -8647,7 +8603,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 50
+        "delta": 98
       }
     ],
     "labuladong/fucking-algorithm": [
@@ -8697,7 +8653,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 4
+        "delta": 6
       }
     ],
     "excalidraw/excalidraw": [
@@ -8747,7 +8703,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 41
+        "delta": 64
       }
     ],
     "harry0703/MoneyPrinterTurbo": [
@@ -8797,7 +8753,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 132
+        "delta": 238
       }
     ],
     "ggml-org/llama.cpp": [
@@ -8847,7 +8803,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 52
+        "delta": 98
       }
     ],
     "openai/codex": [
@@ -8897,7 +8853,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 91
+        "delta": 170
       }
     ],
     "Chalarangelo/30-seconds-of-code": [
@@ -8947,7 +8903,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 5
+        "delta": 11
       }
     ],
     "Graphify-Labs/graphify": [
@@ -8997,7 +8953,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 461
+        "delta": 693
       }
     ],
     "kubernetes/kubernetes": [
@@ -9097,7 +9053,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 9
+        "delta": 13
       }
     ],
     "rustdesk/rustdesk": [
@@ -9147,7 +9103,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 68
+        "delta": 105
       }
     ],
     "shadcn-ui/ui": [
@@ -9197,7 +9153,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 55
+        "delta": 81
       }
     ],
     "electron/electron": [
@@ -9247,7 +9203,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 24
+        "delta": 27
       }
     ],
     "nodejs/node": [
@@ -9297,7 +9253,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 13
+        "delta": 24
       }
     ],
     "VoltAgent/awesome-design-md": [
@@ -9347,7 +9303,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 124
+        "delta": 196
       }
     ],
     "microsoft/generative-ai-for-beginners": [
@@ -9397,7 +9353,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 38
+        "delta": 72
       }
     ],
     "rust-lang/rust": [
@@ -9447,7 +9403,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 21
+        "delta": 33
       }
     ],
     "godotengine/godot": [
@@ -9497,7 +9453,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 26
+        "delta": 37
       }
     ],
     "2dust/v2rayN": [
@@ -9547,7 +9503,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 69
+        "delta": 101
       }
     ],
     "browser-use/browser-use": [
@@ -9597,7 +9553,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 64
+        "delta": 92
       }
     ],
     "immich-app/immich": [
@@ -9647,7 +9603,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 51
+        "delta": 94
       }
     ],
     "mrdoob/three.js": [
@@ -9697,7 +9653,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 33
+        "delta": 44
       }
     ],
     "jaywcjlove/awesome-mac": [
@@ -9747,7 +9703,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 35
+        "delta": 57
       }
     ],
     "earendil-works/pi": [
@@ -9797,7 +9753,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 151
+        "delta": 201
       }
     ],
     "JuliusBrussee/caveman": [
@@ -9847,7 +9803,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 131
+        "delta": 196
       }
     ],
     "TauricResearch/TradingAgents": [
@@ -9897,7 +9853,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 220
+        "delta": 315
       }
     ],
     "tauri-apps/tauri": [
@@ -9947,7 +9903,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 26
+        "delta": 38
       }
     ],
     "supabase/supabase": [
@@ -9997,7 +9953,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 28
+        "delta": 32
       }
     ],
     "microsoft/TypeScript": [
@@ -10047,7 +10003,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 11
+        "delta": 20
       }
     ],
     "fatedier/frp": [
@@ -10097,7 +10053,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 31
+        "delta": 42
       }
     ],
     "axios/axios": [
@@ -10189,7 +10145,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 132
+        "delta": 203
       }
     ],
     "google-gemini/gemini-cli": [
@@ -10239,7 +10195,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 11
+        "delta": 16
       }
     ],
     "ruanyf/weekly": [
@@ -10289,7 +10245,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 40
+        "delta": 52
       }
     ],
     "microsoft/terminal": [
@@ -10339,7 +10295,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 8
+        "delta": 14
       }
     ],
     "pytorch/pytorch": [
@@ -10439,7 +10395,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 205
+        "delta": 300
       }
     ],
     "fastapi/fastapi": [
@@ -10661,7 +10617,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 397
+        "delta": 933
       }
     ],
     "angular/angular": [
@@ -10767,7 +10723,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 318
+        "delta": 456
       }
     ],
     "mui/material-ui": [
@@ -10831,7 +10787,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 470
+        "delta": 693
       }
     ],
     "ruvnet/RuView": [
@@ -10903,7 +10859,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 582
+        "delta": 780
       }
     ],
     "yt-dlp/yt-dlp": [
@@ -10953,7 +10909,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 149
+        "delta": 228
       }
     ],
     "microsoft/markitdown": [
@@ -11003,7 +10959,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 89
+        "delta": 152
       }
     ],
     "521xueweihan/HelloGitHub": [
@@ -11053,7 +11009,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 152
+        "delta": 209
       }
     ],
     "anthropics/skills": [
@@ -11103,7 +11059,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 168
+        "delta": 362
       }
     ],
     "github/gitignore": [
@@ -11203,7 +11159,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 65
+        "delta": 90
       }
     ],
     "papers-we-love/papers-we-love": [
@@ -11253,7 +11209,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 14
+        "delta": 25
       }
     ],
     "denoland/deno": [
@@ -11299,7 +11255,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 2
+        "delta": 4
       }
     ],
     "rasbt/LLMs-from-scratch": [
@@ -11349,7 +11305,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 41
+        "delta": 50
       }
     ],
     "sindresorhus/awesome": [
@@ -11399,7 +11355,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 316
+        "delta": 550
       }
     ],
     "donnemartin/system-design-primer": [
@@ -11449,7 +11405,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 67
+        "delta": 117
       }
     ],
     "DigitalPlatDev/FreeDomain": [
@@ -11499,7 +11455,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 77
+        "delta": 134
       }
     ],
     "trekhleb/javascript-algorithms": [
@@ -11549,7 +11505,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 2
+        "delta": 5
       }
     ],
     "jackfrued/Python-100-Days": [
@@ -11599,7 +11555,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 22
+        "delta": 33
       }
     ],
     "yangshun/tech-interview-handbook": [
@@ -11649,7 +11605,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 3
+        "delta": 5
       }
     ],
     "Hack-with-Github/Awesome-Hacking": [
@@ -11699,7 +11655,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 50
+        "delta": 80
       }
     ],
     "justjavac/free-programming-books-zh_CN": [
@@ -11749,7 +11705,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 7
+        "delta": 11
       }
     ],
     "openai/whisper": [
@@ -11799,7 +11755,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 32
+        "delta": 49
       }
     ],
     "codecrafters-io/build-your-own-x": [
@@ -11849,7 +11805,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 121
+        "delta": 230
       }
     ],
     "ossu/computer-science": [
@@ -11899,7 +11855,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 19
+        "delta": 34
       }
     ],
     "d3/d3": [
@@ -11999,7 +11955,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 225
+        "delta": 321
       }
     ],
     "getify/You-Dont-Know-JS": [
@@ -12099,7 +12055,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 5
+        "delta": 10
       }
     ],
     "airbnb/javascript": [
@@ -12183,7 +12139,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 10
+        "delta": 14
       }
     ],
     "stablyai/orca": [
@@ -12229,7 +12185,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 528
+        "delta": 794
       }
     ],
     "CyC2018/CS-Notes": [
@@ -12263,7 +12219,7 @@
       },
       {
         "date": "2026-10-30",
-        "delta": 8
+        "delta": 17
       }
     ]
   }
